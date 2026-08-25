@@ -2956,3 +2956,49 @@ img {
         align-items: center;
     }
 }
+
+/* --- Ajustes da reestruturação -------------------------------------------- */
+
+/* Os cards de caso viraram links inteiros para /casos/<slug>/. */
+a.case-card {
+    color: inherit;
+    text-decoration: none;
+}
+
+a.case-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--violet-300);
+    box-shadow: var(--shadow-md);
+}
+
+a.case-card .btn-link-arrow {
+    margin-top: auto;
+    padding-top: 1.25rem;
+}
+
+/* Os relatos deixaram de usar foto de banco de imagem: no lugar do retrato vai
+   um bloco com o ícone do segmento. Nada de rosto que não é de ninguém. */
+.testimonial-image .avatar-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(160deg, var(--violet-500), var(--navy-900));
+    font-size: 2.5rem;
+}
+
+.testimonial-content .btn-link-arrow {
+    margin-top: 1.25rem;
+}
+
+@media (max-width: 768px) {
+    .testimonial-image {
+        width: 96px;
+        height: 96px;
+        margin: 0 auto;
+    }
+
+    .testimonial-image .avatar-circle {
+        border-radius: 50%;
+        font-size: 2rem;
+    }
+}
