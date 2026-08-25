@@ -1,3 +1,40 @@
+# Guadalupe Sistemas — robots.txt
+# Site 100% estático, sem áreas privadas ou administrativas — aberto para indexação geral.
+
+# Buscadores gerais
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawlers de IA (treinamento e respostas assistidas por IA)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+# Todos os demais agentes
 User-agent: *
 Allow: /
+
 Sitemap: https://guadalupesistemas.com.br/sitemap.xml

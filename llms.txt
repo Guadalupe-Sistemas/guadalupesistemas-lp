@@ -1,0 +1,24 @@
+# Guadalupe Sistemas
+
+> IA, automação e sistemas sob medida para clínicas, consultórios e empresas de engenharia. A Guadalupe Sistemas mapeia processos, identifica onde a IA gera mais retorno e entrega desde agentes de WhatsApp até sistemas completos de gestão, com foco em reduzir tarefas manuais e aumentar o resultado do negócio.
+
+A empresa atua principalmente com dois públicos: clínicas e consultórios (médicos, odontológicos, veterinários) e empresas de engenharia e arquitetura — mas também atende contabilidades, indústrias, comércio e outros negócios técnicos.
+
+## Serviços
+
+- [Diagnóstico de IA](https://guadalupesistemas.com.br/#diagnostico): mapeamento de processos, priorização das automações de maior ROI e roadmap de implementação. A partir de R$ 2.500, valor abatido no projeto caso o cliente siga com a Guadalupe.
+- [Agentes de IA](https://guadalupesistemas.com.br/#servicos): atendimento automatizado 24h via WhatsApp e outros canais — agenda, confirma e remarca consultas, qualifica leads e faz follow-up.
+- [Automação de Processos](https://guadalupesistemas.com.br/#servicos): lembretes, geração de documentos, integrações entre sistemas e alimentação de CRM.
+- [Assistente de Conhecimento](https://guadalupesistemas.com.br/#servicos): IA treinada sobre os documentos da empresa (normas técnicas, projetos, protocolos) para respostas rápidas à equipe.
+- [Sites, Sistemas e Apps sob Medida](https://guadalupesistemas.com.br/#servicos): sites institucionais, sistemas de gestão e aplicativos personalizados, integrados a IA e automação.
+
+## Páginas
+
+- [Página inicial](https://guadalupesistemas.com.br/): apresentação da empresa, desafios por segmento, escada de serviços, casos de sucesso, depoimentos e formulário de contato.
+- [Blog](https://guadalupesistemas.com.br/blog.html): artigos sobre automação, nuvem e segurança de dados para empresas.
+- [Política de Privacidade](https://guadalupesistemas.com.br/politica-de-privacidade.html): tratamento de dados pessoais conforme a LGPD.
+
+## Contato
+
+- WhatsApp: +55 37 99832-3232 (https://wa.me/5537998323232)
+- Instagram: https://instagram.com/guadalupesistemas

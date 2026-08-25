@@ -9,181 +9,163 @@
     <!-- SEO & Open Graph -->
     <meta name="keywords"
         content="blog de tecnologia, computação em nuvem, segurança de dados, automação de processos, dicas para empresas">
+    <meta name="robots" content="index, follow">
     <meta property="og:title" content="Blog | Guadalupe Sistemas">
     <meta property="og:description"
         content="Acompanhe nossos artigos sobre tecnologia, armazenamento em nuvem, segurança da informação e automação.">
     <meta property="og:url" content="https://guadalupesistemas.com.br/blog.html">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Guadalupe Sistemas">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:image" content="https://guadalupesistemas.com.br/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Blog | Guadalupe Sistemas">
+    <meta name="twitter:description"
+        content="Acompanhe nossos artigos sobre tecnologia, armazenamento em nuvem, segurança da informação e automação.">
+    <meta name="twitter:image" content="https://guadalupesistemas.com.br/assets/og-image.jpg">
     <link rel="canonical" href="https://guadalupesistemas.com.br/blog.html">
-    <link rel="icon" type="image/png" href="assets/logo-simbolo.png">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0C0A23">
+
     <title>Blog | Guadalupe Sistemas</title>
 
-    <!-- Google tag (gtag.js) - Lazy Load para Performance -->
-    <script>
-        let gaLoaded = false;
-        function loadGA() {
-            if (gaLoaded) return;
-            gaLoaded = true;
-            const script = document.createElement('script');
-            script.src = "https://www.googletagmanager.com/gtag/js?id=G-QPZ3J2WTTM";
-            script.async = true;
-            document.head.appendChild(script);
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-            gtag('config', 'G-QPZ3J2WTTM');
-            ['scroll', 'mousemove', 'touchstart', 'click'].forEach(e => window.removeEventListener(e, loadGA));
-        }
-        ['scroll', 'mousemove', 'touchstart', 'click'].forEach(e => window.addEventListener(e, loadGA, { once: true }));
-        setTimeout(loadGA, 5000); // Failsafe
-    </script>
+    <!-- Google tag (gtag.js) via banner de consentimento de cookies -->
+    <script src="js/cookie-consent.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@300;400;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@300;400;600;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Ícones -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Ícones (Font Awesome - lazy) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
 </head>
 
-<body class="bg-light">
-    <!-- Navbar -->
-    <nav class="navbar scrolled" id="navbar">
+<body>
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar navbar-solid" id="navbar">
         <div class="container nav-container">
-            <a href="index.html" class="logo d-flex align-items-center">
-                <img src="assets/logo-completa.png" alt="Guadalupe Sistemas" style="height: 125px; width: auto;">
+            <a href="index.html" class="logo" aria-label="Guadalupe Sistemas - Página Inicial">
+                <img src="assets/logo-simbolo.png" alt="Guadalupe Sistemas" class="logo-icon">
+                <span class="logo-text">Guadalupe <strong>Sistemas</strong></span>
             </a>
-            <div class="nav-links">
+
+            <div class="nav-links" id="nav-links">
                 <a href="index.html#inicio">Início</a>
-                <a href="index.html#dores">Soluções</a>
+                <a href="index.html#desafios">Soluções</a>
                 <a href="index.html#servicos">O que fazemos</a>
-                <a href="index.html#projetos">Casos de Sucesso</a>
+                <a href="index.html#casos">Casos de Sucesso</a>
                 <a href="blog.html" class="active">Blog</a>
                 <a href="index.html#contato">Contato</a>
             </div>
-            <a href="https://wa.me/5537998323232" target="_blank" class="btn btn-outline-primary nav-cta">Falar com a
+
+            <a href="https://wa.me/5537998323232" target="_blank" class="btn btn-ghost nav-cta">Falar com a
                 equipe</a>
-            <button class="mobile-menu-btn text-primary" aria-label="Abrir menu">
+
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menu de navegação">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
     </nav>
 
-    <!-- Blog Hero -->
-    <header class="section-padding pt-5 mt-5 bg-white border-bottom">
-        <div class="container text-center" style="max-width: 800px;">
-            <h1 class="text-primary mb-3 text-4xl font-weight-700">Nosso Blog</h1>
-            <p class="text-text-muted text-lg line-height-1-6">Acompanhe nossos artigos sobre tecnologia, armazenamento
-                em nuvem, segurança da informação e automação. Conteúdos criados para ajudar sua empresa a crescer de
-                forma inteligente.</p>
+    <!-- ========== BLOG HERO ========== -->
+    <header class="page-hero section-white">
+        <div class="container">
+            <div class="article-container">
+                <h1 class="article-title">Nosso Blog</h1>
+                <p class="page-hero-subtitle">Acompanhe nossos artigos sobre tecnologia, armazenamento em nuvem,
+                    segurança da informação e automação. Conteúdos criados para ajudar sua empresa a crescer de forma
+                    inteligente.</p>
+            </div>
         </div>
     </header>
 
-    <!-- Listagem de Posts -->
-    <main class="section-padding pt-5 pb-5">
+    <!-- ========== LISTAGEM DE POSTS ========== -->
+    <main class="section-light">
         <div class="container">
-            <div class="blog-grid"
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
-
-                <!-- Post Principal -->
-                <article
-                    class="blog-card-clean bg-white rounded-lg overflow-hidden shadow-sm hover-shadow-md transition">
-                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                        alt="Armazenamento na nuvem" class="w-100" style="height: 220px; object-fit: cover;">
-                    <div class="p-4">
-                        <span class="text-accent font-weight-600 text-xs uppercase d-block mb-1">Tecnologia e
-                            Segurança</span>
-                        <h3 class="text-primary mb-2 text-xl line-height-1-4">7 motivos para colocar seus dados na nuvem
-                        </h3>
-                        <p class="text-text-muted text-sm mb-4 line-height-1-6">No nosso último artigo te contamos sobre
-                            a segurança de guardar os dados na nuvem. Neste artigo vamos te falar sobre 7 motivos para
-                            colocar seus dados na nuvem e melhorar seu ambiente de trabalho.</p>
-                        <div class="d-flex align-items-center justify-content-between border-top pt-3">
-                            <div class="d-flex align-items-center gap-2">
-                                <div class="author-avatar rounded-circle bg-primary text-white d-flex align-items-center justify-content-center"
-                                    style="width: 30px; height: 30px; font-size: 0.8rem; font-weight: bold;">
-                                    EC
-                                </div>
-                                <span class="text-xs text-text-muted font-weight-600">Ezequiel Campos</span>
-                            </div>
-                            <a href="7-motivos-para-colocar-seus-dados-na-nuvem.html"
-                                class="text-primary font-weight-600 text-sm hover-text-accent transition d-inline-flex align-items-center gap-1">Ler
-                                artigo <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
+            <div class="blog-grid">
+                <article class="blog-card reveal">
+                    <span class="blog-tag">Tecnologia e Segurança</span>
+                    <h3>7 motivos para colocar seus dados na nuvem</h3>
+                    <p>No nosso último artigo te contamos sobre a segurança de guardar os dados na nuvem. Neste
+                        artigo vamos te falar sobre 7 motivos para colocar seus dados na nuvem e melhorar seu
+                        ambiente de trabalho.</p>
+                    <a href="7-motivos-para-colocar-seus-dados-na-nuvem.html" class="btn-link-arrow">Ler artigo
+                        <span class="arrow">↗</span></a>
                 </article>
 
-                <!-- Post Antigo (Exemplo) -->
-                <article
-                    class="blog-card-clean bg-white rounded-lg overflow-hidden shadow-sm hover-shadow-md transition">
-                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                        alt="Segurança de dados" class="w-100" style="height: 220px; object-fit: cover;">
-                    <div class="p-4">
-                        <span class="text-accent font-weight-600 text-xs uppercase d-block mb-1">Tecnologia</span>
-                        <h3 class="text-primary mb-2 text-xl line-height-1-4">A segurança de guardar os dados na nuvem
-                        </h3>
-                        <p class="text-text-muted text-sm mb-4 line-height-1-6">Entenda por que a migração para a nuvem
-                            é o passo mais seguro para a integridade dos documentos corporativos e a proteção contra
-                            vazamentos de informações e ataques cibernéticos.</p>
-                        <div class="d-flex align-items-center justify-content-between border-top pt-3">
-                            <div class="d-flex align-items-center gap-2">
-                                <div class="author-avatar rounded-circle bg-primary text-white d-flex align-items-center justify-content-center"
-                                    style="width: 30px; height: 30px; font-size: 0.8rem; font-weight: bold;">
-                                    EC
-                                </div>
-                                <span class="text-xs text-text-muted font-weight-600">Ezequiel Campos</span>
-                            </div>
-                            <a href="seguranca-de-guardar-dados-na-nuvem.html"
-                                class="text-primary font-weight-600 text-sm hover-text-accent transition d-inline-flex align-items-center gap-1">Ler
-                                artigo <i class="fa-solid fa-arrow-right"></i></a>
-                        </div>
-                    </div>
+                <article class="blog-card reveal">
+                    <span class="blog-tag">Tecnologia</span>
+                    <h3>A segurança de guardar os dados na nuvem</h3>
+                    <p>Entenda por que a migração para a nuvem é o passo mais seguro para a integridade dos
+                        documentos corporativos e a proteção contra vazamentos de informações e ataques
+                        cibernéticos.</p>
+                    <a href="seguranca-de-guardar-dados-na-nuvem.html" class="btn-link-arrow">Ler artigo
+                        <span class="arrow">↗</span></a>
                 </article>
-
             </div>
         </div>
     </main>
 
-    <!-- Footer Padrão -->
-    <footer id="contato" class="footer bg-white border-top pt-5 pb-3">
-        <div class="container footer-grid grid grid-cols-1 md-grid-cols-3 gap-5 mb-5">
-            <div class="footer-brand">
-                <a href="index.html" class="logo d-inline-block mb-3">
-                    <img src="assets/logo-completa.png" alt="Guadalupe Sistemas" style="height: 145px; width: auto;">
-                </a>
-                <p class="text-text-muted mt-3 text-sm line-height-1-6">Tecnologia com propósito, parceria e confiança
-                    para o crescimento contínuo do seu negócio.</p>
-            </div>
+    <!-- ========== FOOTER (Dark) ========== -->
+    <footer id="contato" class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo footer-logo">
+                        <img src="assets/logo-simbolo.png" alt="Guadalupe Sistemas" class="logo-icon">
+                        <span class="logo-text">Guadalupe <strong>Sistemas</strong></span>
+                    </a>
+                    <p class="footer-tagline">IA, automação e sistemas sob medida com propósito, parceria e confiança
+                        para o crescimento contínuo do seu negócio.</p>
+                </div>
 
-            <div class="footer-links-col">
-                <h4 class="text-primary mb-3 font-weight-600">Navegação</h4>
-                <ul class="list-unstyled p-0 m-0 text-text-muted text-sm d-flex flex-column gap-2">
-                    <li><a href="index.html#inicio" class="hover-text-primary transition">Início</a></li>
-                    <li><a href="index.html#dores" class="hover-text-primary transition">Soluções</a></li>
-                    <li><a href="index.html#servicos" class="hover-text-primary transition">O que fazemos</a></li>
-                    <li><a href="blog.html" class="hover-text-primary transition">Blog</a></li>
-                </ul>
-            </div>
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html#inicio">Início</a></li>
+                        <li><a href="index.html#diagnostico">Diagnóstico de IA</a></li>
+                        <li><a href="index.html#servicos">O que fazemos</a></li>
+                        <li><a href="index.html#casos">Casos de Sucesso</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="index.html#formulario">Fale Conosco</a></li>
+                        <li><a href="politica-de-privacidade.html">Política de Privacidade</a></li>
+                    </ul>
+                </div>
 
-            <div class="footer-contact-col">
-                <h4 class="text-primary mb-3 font-weight-600">Fale Conosco</h4>
-                <div class="contact-info text-text-muted text-sm d-flex flex-column gap-3">
-                    <p class="m-0">Pronto para dar o próximo passo rumo ao futuro do seu negócio?</p>
-                    <a href="https://wa.me/5537998323232" target="_blank"
-                        class="btn btn-outline-primary py-2 px-3 text-sm d-inline-flex justify-content-center">Chamar no
-                        WhatsApp</a>
+                <div class="footer-col">
+                    <h4>Fale Conosco</h4>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <div>
+                            <span>Nosso WhatsApp:</span>
+                            <a href="https://wa.me/5537998323232" target="_blank">(37) 99832-3232</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-instagram"></i>
+                        <div>
+                            <span>Acompanhe:</span>
+                            <a href="https://instagram.com/guadalupesistemas" target="_blank">@guadalupesistemas</a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div
-            class="footer-bottom border-top pt-3 mt-4 text-center d-flex flex-column flex-md-row justify-content-between align-items-center container">
-            <div class="text-text-muted text-xs mb-2 mb-md-0">
-                <p class="m-0">&copy; 2026 Guadalupe Sistemas. Todos os direitos reservados.</p>
-            </div>
-            <div class="text-text-muted text-xs">
-                <p class="m-0">Desenvolvido com ❤️ pela <a href="index.html"
-                        class="font-weight-600 text-primary">Guadalupe Sistemas</a>.</p>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Guadalupe Sistemas. Todos os direitos reservados. Feito com cuidado.</p>
             </div>
         </div>
     </footer>
