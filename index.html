@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Diagnóstico de IA, agentes de WhatsApp, automação e sistemas sob medida para clínicas, consultórios e empresas de engenharia. Menos tarefa manual, mais resultado.">
+    <!-- SEO & Open Graph -->
+    <meta name="keywords"
+        content="automação com IA, agente de WhatsApp, agendamento para clínica, redução de no-show, sistema para engenharia, assistente de IA, software sob medida, automação de processos, inteligência artificial para empresas">
+    <meta property="og:title" content="Guadalupe Sistemas | IA, automação e sistemas para clínicas e engenharia">
+    <meta property="og:description"
+        content="Diagnóstico de IA, agentes de WhatsApp, automação e sistemas sob medida para clínicas, consultórios e empresas de engenharia.">
+    <meta property="og:url" content="https://guadalupesistemas.com.br/">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://guadalupesistemas.com.br/">
+    <link rel="icon" type="image/png" href="assets/logo-simbolo.png">
+    <title>Guadalupe Sistemas | IA, automação e sistemas para clínicas e engenharia</title>
+
+    <!-- Google tag (gtag.js) - Lazy Load para Performance -->
+    <script>
+        let gaLoaded = false;
+        function loadGA() {
+            if (gaLoaded) return;
+            gaLoaded = true;
+            const script = document.createElement('script');
+            script.src = "https://www.googletagmanager.com/gtag/js?id=G-QPZ3J2WTTM";
+            script.async = true;
+            document.head.appendChild(script);
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-QPZ3J2WTTM');
+            ['scroll', 'mousemove', 'touchstart', 'click'].forEach(e => window.removeEventListener(e, loadGA));
+        }
+        ['scroll', 'mousemove', 'touchstart', 'click'].forEach(e => window.addEventListener(e, loadGA, { once: true }));
+        setTimeout(loadGA, 5000);
+    </script>
+
+    <!-- Fonts: Sora (headings) + Inter (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Icons (Font Awesome - lazy) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
+</head>
+
+<body>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo" aria-label="Guadalupe Sistemas - Página Inicial">
+                <img src="assets/logo-simbolo.png" alt="Guadalupe Sistemas" class="logo-icon">
+                <span class="logo-text">Guadalupe <strong>Sistemas</strong></span>
+            </a>
+
+            <div class="nav-links" id="nav-links">
+                <a href="#inicio" class="active">Início</a>
+                <a href="#desafios">Soluções</a>
+                <a href="#diagnostico">Diagnóstico</a>
+                <a href="#servicos">O que fazemos</a>
+                <a href="#casos">Casos de Sucesso</a>
+                <a href="blog.html">Blog</a>
+                <a href="#contato">Contato</a>
+            </div>
+
+            <a href="#formulario" class="btn btn-ghost nav-cta">Fazer meu diagnóstico</a>
+
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menu de navegação">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- ========== HERO (Dark) ========== -->
+        <section id="inicio" class="hero section-dark">
+            <div class="hero-glow"></div>
+            <div class="pixel-texture"></div>
+
+            <div class="container hero-content">
+                <h1 class="hero-title">
+                    <span class="title-light">Inteligência artificial e sistemas sob medida</span><br>
+                    <span class="title-bold">para clínicas, engenharia e negócios que querem ganhar tempo</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Usamos IA e automação para tirar o trabalho repetitivo da frente da sua equipe e gerar resultado
+                    mensurável. Menos tarefas manuais, mais tempo para o que importa.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#formulario" class="btn btn-primary-white">Fazer meu diagnóstico de IA</a>
+                    <a href="#casos" class="btn-link-arrow">Ver casos de sucesso <span class="arrow">↗</span></a>
+                </div>
+                <p class="hero-microcopy">
+                    Mesmo que você não saiba exatamente do que precisa, a gente te ajuda a encontrar o melhor caminho.
+                </p>
+            </div>
+        </section>
+
+        <!-- ========== DESAFIOS (Light) ========== -->
+        <section id="desafios" class="section-light">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>
+                        <span class="title-light">Sua empresa enfrenta</span>
+                        <span class="title-bold">algum desses desafios?</span>
+                    </h2>
+                    <p class="section-subtitle">Muitos negócios perdem tempo e dinheiro todos os dias com problemas que
+                        a tecnologia certa resolve de forma simples.</p>
+                </div>
+
+                <!-- Grupo 1: Clínicas e Consultórios -->
+                <div class="challenges-group">
+                    <h3 class="challenges-group-title reveal">
+                        <i class="fa-solid fa-stethoscope"></i>
+                        Para clínicas e consultórios
+                    </h3>
+                    <div class="challenges-grid-3">
+                        <div class="challenge-card reveal">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-calendar-xmark"></i>
+                            </div>
+                            <h3>Faltas que viram prejuízo</h3>
+                            <p>Pacientes que não aparecem e remarcações de última hora gerando buracos na agenda e perda
+                                de faturamento todo mês.</p>
+                        </div>
+                        <div class="challenge-card reveal">
+                            <div class="card-icon">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <h3>Agenda feita na mão</h3>
+                            <p>Confirmações e remarcações uma a uma pelo WhatsApp, tomando horas da sua equipe todos os
+                                dias.</p>
+                        </div>
+                        <div class="challenge-card reveal">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-user-clock"></i>
+                            </div>
+                            <h3>Pacientes que somem</h3>
+                            <p>Pessoas que não voltam para o retorno ou o check-up, reduzindo a recorrência e o
+                                faturamento da clínica.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grupo 2: Engenharia e Arquitetura -->
+                <div class="challenges-group">
+                    <h3 class="challenges-group-title reveal">
+                        <i class="fa-solid fa-compass-drafting"></i>
+                        Para engenharia e arquitetura
+                    </h3>
+                    <div class="challenges-grid-3">
+                        <div class="challenge-card reveal">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-file-invoice"></i>
+                            </div>
+                            <h3>Propostas que demoram dias</h3>
+                            <p>Orçamentos e propostas técnicas que levam dias para sair, enquanto o cliente perde o
+                                interesse ou fecha com outro.</p>
+                        </div>
+                        <div class="challenge-card reveal">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-phone-slash"></i>
+                            </div>
+                            <h3>Leads que esfriam</h3>
+                            <p>Leads de projeto que chegam quentes, mas esfriam por falta de follow-up organizado e
+                                rápido.</p>
+                        </div>
+                        <div class="challenge-card reveal">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-folder-open"></i>
+                            </div>
+                            <h3>Informação perdida em arquivos</h3>
+                            <p>Horas perdidas procurando dados em normas técnicas, contratos e projetos antigos
+                                espalhados em pastas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Grupo 3: Dores universais -->
+                <div class="challenges-group">
+                    <h3 class="challenges-group-title reveal">
+                        <i class="fa-solid fa-building"></i>
+                        Para qualquer negócio
+                    </h3>
+                    <div class="challenges-grid-2">
+                        <div class="challenge-card reveal">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-comments"></i>
+                            </div>
+                            <h3>Atendimento desorganizado</h3>
+                            <p>Mensagens de clientes perdidas no WhatsApp e dificuldade em manter o histórico das
+                                conversas.</p>
+                        </div>
+                        <div class="challenge-card reveal">
+                            <div class="card-icon">
+                                <i class="fa-solid fa-table-cells"></i>
+                            </div>
+                            <h3>Planilhas fora de controle</h3>
+                            <p>Informações espalhadas em dezenas de planilhas pesadas, gerando erros e perda de dados
+                                valiosos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="challenges-cta reveal">
+                    <div class="cta-box">
+                        <h3>Nós podemos mudar essa realidade.</h3>
+                        <a href="#diagnostico" class="btn btn-outline">Conhecer o Diagnóstico de IA <span
+                                class="arrow">↗</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== DIAGNÓSTICO DE IA (Dark) ========== -->
+        <section id="diagnostico" class="section-dark diagnostico-section">
+            <div class="pixel-texture"></div>
+            <div class="container">
+                <div class="diagnostico-layout">
+                    <div class="diagnostico-text">
+                        <div class="section-header reveal" style="text-align: left; margin-bottom: 2rem; max-width: none;">
+                            <span class="section-tag">Ponto de partida</span>
+                            <h2>
+                                <span class="title-light">Antes de qualquer sistema,</span><br>
+                                <span class="title-bold">a gente mapeia o seu negócio</span>
+                            </h2>
+                        </div>
+                        <p class="reveal">No Diagnóstico de IA, olhamos seus processos, identificamos as 3 a 5
+                            automações que mais valem a pena e mostramos, em números, quanto você pode economizar ou
+                            faturar a mais.</p>
+                        <p class="reveal">Você sai com um relatório claro e um plano de ação, sem compromisso de fechar
+                            mais nada conosco.</p>
+
+                        <div class="diagnostico-price-box reveal">
+                            <span class="price-label">Investimento</span>
+                            <span class="price">A partir de R$ 2.500</span>
+                            <span class="price-note">O valor do diagnóstico abate no projeto se você seguir com a
+                                gente.</span>
+                        </div>
+
+                        <div class="diagnostico-cta reveal">
+                            <a href="#formulario" class="btn btn-primary-white">Quero meu diagnóstico</a>
+                            <a href="https://wa.me/5537998323232" target="_blank" class="btn-link-arrow"
+                                style="color: rgba(255,255,255,.8);">Ou fale com a equipe <span
+                                    class="arrow">↗</span></a>
+                        </div>
+                    </div>
+
+                    <div class="diagnostico-deliverables">
+                        <div class="diagnostico-item reveal">
+                            <div class="diagnostico-item-icon">
+                                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                            </div>
+                            <h4>Mapeamento de processos</h4>
+                            <p>Entendemos como sua operação funciona hoje, passo a passo.</p>
+                        </div>
+                        <div class="diagnostico-item reveal">
+                            <div class="diagnostico-item-icon">
+                                <i class="fa-solid fa-list-check"></i>
+                            </div>
+                            <h4>Prioridades de automação</h4>
+                            <p>Identificamos as 3 a 5 tarefas que mais valem a pena automatizar.</p>
+                        </div>
+                        <div class="diagnostico-item reveal">
+                            <div class="diagnostico-item-icon">
+                                <i class="fa-solid fa-chart-column"></i>
+                            </div>
+                            <h4>Estimativa de ROI</h4>
+                            <p>Mostramos quanto você pode economizar ou faturar a mais, em números.</p>
+                        </div>
+                        <div class="diagnostico-item reveal">
+                            <div class="diagnostico-item-icon">
+                                <i class="fa-solid fa-route"></i>
+                            </div>
+                            <h4>Roadmap de implementação</h4>
+                            <p>Um plano com etapas, prazos e investimento para cada automação.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== NOSSA ESSÊNCIA ========== -->
+        <section id="sobre" class="about-section">
+            <div class="container">
+                <div class="about-content reveal">
+                    <div class="about-card-dark">
+                        <div class="about-card-overlay"></div>
+                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=900&q=80"
+                            alt="Equipe Guadalupe Sistemas conversando com cliente" loading="lazy" class="about-image">
+                        <div class="about-card-content">
+                            <div class="about-logo-small">
+                                <img src="assets/logo-simbolo.png" alt="" width="40" height="40">
+                            </div>
+                            <h2>
+                                <span class="title-bold" style="color: #fff;">Muito mais que sistemas.</span><br>
+                                <span class="title-bold" style="color: #fff;">Construímos parcerias.</span>
+                            </h2>
+                            <p>A Guadalupe Sistemas acredita que a tecnologia não precisa ser fria, complexa ou
+                                distante. Nascemos com o propósito de criar soluções que as pessoas realmente consigam e
+                                queiram usar no dia a dia.</p>
+                            <p>Antes de escrevermos qualquer código, nós sentamos, ouvimos e entendemos a fundo como o
+                                seu negócio funciona. Nossa missão é facilitar as suas operações, eliminar tarefas chatas
+                                e criar um ambiente onde sua equipe foque no que importa.</p>
+                        </div>
+
+                        <div class="about-floating-card">
+                            <div class="floating-card-icon">
+                                <i class="fa-solid fa-handshake"></i>
+                            </div>
+                            <div>
+                                <strong>Compromisso</strong>
+                                <span>e Confiança</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== O QUE FAZEMOS: ESCADA DE SERVIÇOS (Light) ========== -->
+        <section id="servicos" class="section-light">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">O que fazemos</span>
+                    <h2>
+                        <span class="title-light">Nossa escada de serviços:</span>
+                        <span class="title-bold">do diagnóstico ao sistema completo</span>
+                    </h2>
+                </div>
+
+                <div class="services-grid services-grid--escada">
+                    <!-- 1. Diagnóstico de IA -->
+                    <div class="service-card reveal">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </div>
+                        <h3>Diagnóstico de IA</h3>
+                        <p>O ponto de partida. Mapeamos seus processos e entregamos um plano com ROI estimado para cada
+                            automação.</p>
+                        <ul class="service-benefits">
+                            <li><i class="fa-solid fa-check"></i> Relatório com prioridades claras</li>
+                            <li><i class="fa-solid fa-check"></i> ROI estimado para cada melhoria</li>
+                        </ul>
+                    </div>
+
+                    <!-- 2. Agentes de IA -->
+                    <div class="service-card reveal">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <h3>Agentes de IA</h3>
+                        <p>Atendimento que trabalha sozinho, 24 horas por dia, no WhatsApp e outros canais.</p>
+                        <ul class="service-benefits">
+                            <li><i class="fa-solid fa-check"></i> Agenda, confirma e remarca consultas</li>
+                            <li><i class="fa-solid fa-check"></i> Qualifica leads e faz follow-up</li>
+                        </ul>
+                        <div class="service-sector-examples">
+                            <strong>Saúde:</strong> reduz faltas e no-show.
+                            <strong>Engenharia:</strong> qualifica leads e agenda visitas.
+                        </div>
+                    </div>
+
+                    <!-- 3. Automação de Processos -->
+                    <div class="service-card reveal">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-gears"></i>
+                        </div>
+                        <h3>Automação de Processos</h3>
+                        <p>Tarefas repetitivas feitas pela tecnologia: lembretes, documentos, integrações e alimentação
+                            de CRM.</p>
+                        <ul class="service-benefits">
+                            <li><i class="fa-solid fa-check"></i> Lembretes e notificações automáticas</li>
+                            <li><i class="fa-solid fa-check"></i> Integrações entre sistemas</li>
+                        </ul>
+                    </div>
+
+                    <!-- 4. Assistente de Conhecimento -->
+                    <div class="service-card reveal">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h3>Assistente de Conhecimento</h3>
+                        <p>IA treinada sobre os documentos da sua empresa: responde perguntas com base nos seus dados
+                            internos.</p>
+                        <ul class="service-benefits">
+                            <li><i class="fa-solid fa-check"></i> Busca em normas e projetos antigos</li>
+                            <li><i class="fa-solid fa-check"></i> Respostas rápidas para a equipe</li>
+                        </ul>
+                        <div class="service-sector-examples">
+                            <strong>Engenharia:</strong> busca em normas ABNT e projetos.
+                            <strong>Saúde:</strong> protocolos e procedimentos.
+                        </div>
+                    </div>
+
+                    <!-- 5. Sites, Sistemas e Apps -->
+                    <div class="service-card reveal">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-code"></i>
+                        </div>
+                        <h3>Sites, Sistemas e Apps sob Medida</h3>
+                        <p>A base que a Guadalupe já domina, agora turbinada por IA. Do site institucional ao sistema
+                            completo de gestão.</p>
+                        <ul class="service-benefits">
+                            <li><i class="fa-solid fa-check"></i> Feitos sob medida para sua operação</li>
+                            <li><i class="fa-solid fa-check"></i> Integrados com IA e automação</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SEGMENTAÇÃO POR PÚBLICO (White) ========== -->
+        <section id="publicos" class="section-white audience-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Para quem é</span>
+                    <h2>
+                        <span class="title-light">Soluções pensadas</span>
+                        <span class="title-bold">para o seu setor</span>
+                    </h2>
+                </div>
+
+                <div class="audience-grid">
+                    <!-- Clínicas e Consultórios -->
+                    <div class="audience-card reveal">
+                        <div class="audience-card-icon">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+                        <h3>Para clínicas e consultórios</h3>
+                        <ul class="audience-benefits">
+                            <li>
+                                <i class="fa-solid fa-check-circle"></i>
+                                <span><strong>Menos faltas:</strong> confirmação automática por WhatsApp reduz no-show e
+                                    remarcações de última hora.</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check-circle"></i>
+                                <span><strong>Agenda organizada:</strong> agendamento, confirmação e remarcação feitos
+                                    pela IA, sem sobrecarregar a recepção.</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check-circle"></i>
+                                <span><strong>Pacientes voltando:</strong> lembretes inteligentes de retorno e check-up
+                                    que aumentam a recorrência.</span>
+                            </li>
+                        </ul>
+                        <a href="#formulario" class="btn btn-primary-violet">Quero para minha clínica</a>
+                    </div>
+
+                    <!-- Engenharia e Arquitetura -->
+                    <div class="audience-card reveal">
+                        <div class="audience-card-icon">
+                            <i class="fa-solid fa-compass-drafting"></i>
+                        </div>
+                        <h3>Para engenharia e arquitetura</h3>
+                        <ul class="audience-benefits">
+                            <li>
+                                <i class="fa-solid fa-check-circle"></i>
+                                <span><strong>Propostas mais rápidas:</strong> automação que agiliza a montagem de
+                                    orçamentos e propostas técnicas.</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check-circle"></i>
+                                <span><strong>Nenhum lead esquecido:</strong> follow-up automático que mantém o
+                                    relacionamento ativo até o fechamento.</span>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-check-circle"></i>
+                                <span><strong>Informação na ponta dos dedos:</strong> assistente de IA que busca em
+                                    normas, projetos e contratos em segundos.</span>
+                            </li>
+                        </ul>
+                        <a href="#formulario" class="btn btn-primary-violet">Quero para meu escritório</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== POR QUE ESCOLHER (Dark + Glass) ========== -->
+        <section id="por-que" class="section-dark why-section">
+            <div class="pixel-texture"></div>
+            <div class="container">
+                <div class="why-header">
+                    <div class="section-header reveal">
+                        <h2>
+                            <span class="title-light">Por que</span><br>
+                            <span class="title-bold">escolher a Guadalupe?</span>
+                        </h2>
+                    </div>
+                    <p class="why-intro reveal">Mais do que entregar tecnologia, nós construímos relações de confiança
+                        com cada cliente.</p>
+                </div>
+
+                <div class="glass-grid">
+                    <div class="glass-card reveal">
+                        <div class="glass-icon">
+                            <i class="fa-solid fa-handshake"></i>
+                        </div>
+                        <h3>Atendimento Humanizado</h3>
+                        <p>Falamos a sua língua, sem termos técnicos complicados. O foco é resolver o seu problema.</p>
+                    </div>
+
+                    <div class="glass-card reveal">
+                        <div class="glass-icon">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <h3>Empatia e Compreensão</h3>
+                        <p>Entendemos a dor do empresário brasileiro e criamos sistemas que realmente fazem sentido na
+                            rotina.</p>
+                    </div>
+
+                    <div class="glass-card reveal">
+                        <div class="glass-icon">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                        <h3>Parceria Estratégica</h3>
+                        <p>Não entregamos um código e vamos embora. Acompanhamos o seu crescimento de perto.</p>
+                    </div>
+
+                    <div class="glass-card reveal">
+                        <div class="glass-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3>Confiança e Segurança</h3>
+                        <p>Desenvolvemos com as tecnologias mais seguras do mercado para proteger os dados da sua
+                            empresa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== PASSO A PASSO (Light) ========== -->
+        <section class="section-white steps-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Passo a Passo</span>
+                    <h2>
+                        <span class="title-light">Como transformamos</span>
+                        <span class="title-bold">sua ideia em realidade</span>
+                    </h2>
+                </div>
+
+                <div class="steps-timeline">
+                    <div class="steps-line"></div>
+
+                    <div class="step-item reveal">
+                        <div class="step-number">1</div>
+                        <h3>Bate-papo</h3>
+                        <p>Conversamos para entender a sua dor real e os gargalos da sua empresa. Esse bate-papo pode
+                            evoluir para o nosso Diagnóstico de IA, onde mapeamos tudo com profundidade.</p>
+                    </div>
+
+                    <div class="step-item reveal">
+                        <div class="step-number">2</div>
+                        <h3>Planejamento</h3>
+                        <p>Desenhamos uma solução simples, sem custos ocultos e com prazos claros.</p>
+                    </div>
+
+                    <div class="step-item reveal">
+                        <div class="step-number">3</div>
+                        <h3>Construção</h3>
+                        <p>Nossa equipe cria o seu sistema mantendo você informado a cada etapa.</p>
+                    </div>
+
+                    <div class="step-item reveal">
+                        <div class="step-number">4</div>
+                        <h3>Acompanhamento</h3>
+                        <p>Implantamos e treinamos sua equipe, garantindo que tudo funcione perfeitamente.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CASOS DE SUCESSO (Light) ========== -->
+        <section id="casos" class="section-light">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Histórias de Sucesso</span>
+                    <h2>
+                        <span class="title-light">Casos reais</span>
+                        <span class="title-bold">de quem já ganhou tempo com a gente</span>
+                    </h2>
+                </div>
+
+                <div class="cases-grid">
+                    <!-- Case 1: Saúde (destaque) -->
+                    <div class="case-card reveal">
+                        <div class="case-badges">
+                            <span class="badge badge-highlight">−90% falhas de agendamento</span>
+                            <span class="badge">IA + Automação</span>
+                        </div>
+                        <span class="case-tag">Saúde &amp; Clínicas</span>
+                        <h3>Aplicativo para Médicos e Pacientes</h3>
+                        <div class="case-detail">
+                            <p><strong>O Problema:</strong> As escalas mudavam toda hora e geravam confusão nos plantões
+                                e nas consultas. A equipe perdia tempo reorganizando tudo manualmente.</p>
+                            <p><strong>O Resultado:</strong> Criamos um aplicativo que simplificou as substituições de
+                                horário e automatizou confirmações. A clínica reduziu em <strong>90% as falhas de
+                                    agendamento</strong>, liberando a equipe para focar no atendimento.</p>
+                        </div>
+                    </div>
+
+                    <!-- Case 2: Comercial -->
+                    <div class="case-card reveal">
+                        <div class="case-badges">
+                            <span class="badge">Atendimento centralizado</span>
+                            <span class="badge">Automação no WhatsApp</span>
+                        </div>
+                        <span class="case-tag">Comercial &amp; Vendas</span>
+                        <h3>Sistema de Atendimento Automatizado</h3>
+                        <div class="case-detail">
+                            <p><strong>O Problema:</strong> Clientes ficavam sem resposta e os vendedores não tinham
+                                controle de quem foi atendido.</p>
+                            <p><strong>O Resultado:</strong> O atendimento no WhatsApp foi centralizado e automatizado.
+                                Agora o dono da empresa sabe exatamente quantos clientes foram atendidos por dia,
+                                economizando tempo e aumentando as vendas.</p>
+                        </div>
+                    </div>
+
+                    <!-- Case 3: Indústria -->
+                    <div class="case-card reveal">
+                        <div class="case-badges">
+                            <span class="badge badge-highlight">5 min por dia</span>
+                            <span class="badge">Sistema sob medida</span>
+                        </div>
+                        <span class="case-tag">Indústria &amp; Comércio</span>
+                        <h3>Painel de Gestão Personalizado</h3>
+                        <div class="case-detail">
+                            <p><strong>O Problema:</strong> O fechamento do mês era uma dor de cabeça cheia de planilhas
+                                de Excel que não batiam os números.</p>
+                            <p><strong>O Resultado:</strong> Uma tela simples com os indicadores mais importantes. Em
+                                <strong>5 minutos por dia</strong>, o dono tem clareza total sobre o negócio, sem
+                                planilhas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== TECNOLOGIA & SEGURANÇA (Dark) ========== -->
+        <section class="section-dark tech-section">
+            <div class="pixel-texture"></div>
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>
+                        <span class="title-light">Qualidade e segurança</span>
+                        <span class="title-bold">por trás das telas</span>
+                    </h2>
+                    <p class="section-subtitle" style="color: rgba(255,255,255,.7);">Utilizamos tecnologias modernas,
+                        seguras e escaláveis para garantir estabilidade e crescimento contínuo, sem que você precise se
+                        preocupar com os detalhes técnicos.</p>
+                </div>
+
+                <div class="tech-grid">
+                    <div class="tech-pillar reveal">
+                        <div class="tech-pillar-icon">
+                            <i class="fa-solid fa-palette"></i>
+                        </div>
+                        <h3>Experiência do Usuário</h3>
+                        <p>Frontend</p>
+                        <div class="tech-icons-row">
+                            <i class="fa-brands fa-html5"></i>
+                            <i class="fa-brands fa-css3-alt"></i>
+                            <i class="fa-brands fa-js"></i>
+                            <i class="fa-brands fa-react"></i>
+                        </div>
+                    </div>
+
+                    <div class="tech-pillar reveal">
+                        <div class="tech-pillar-icon">
+                            <i class="fa-solid fa-server"></i>
+                        </div>
+                        <h3>Motor do Sistema</h3>
+                        <p>Backend</p>
+                        <div class="tech-icons-row">
+                            <i class="fa-brands fa-node-js"></i>
+                            <i class="fa-brands fa-python"></i>
+                            <i class="fa-brands fa-java"></i>
+                        </div>
+                    </div>
+
+                    <div class="tech-pillar reveal">
+                        <div class="tech-pillar-icon">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+                        <h3>Dados e Infraestrutura</h3>
+                        <p>Cloud &amp; Storage</p>
+                        <div class="tech-icons-row">
+                            <i class="fa-solid fa-database"></i>
+                            <i class="fa-solid fa-cloud"></i>
+                            <i class="fa-brands fa-aws"></i>
+                        </div>
+                    </div>
+
+                    <div class="tech-pillar reveal">
+                        <div class="tech-pillar-icon">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h3>Inovação e Inteligência</h3>
+                        <p>AI &amp; Mobile</p>
+                        <div class="tech-icons-row">
+                            <i class="fa-solid fa-brain"></i>
+                            <i class="fa-solid fa-robot"></i>
+                            <i class="fa-solid fa-mobile-screen"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== NÚMEROS (Dark + Glass Circles) ========== -->
+        <section class="section-dark numbers-section">
+            <div class="pixel-texture"></div>
+            <div class="diamond-pattern"></div>
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>
+                        <span class="title-light">Nossos</span>
+                        <span class="title-bold">Resultados</span>
+                    </h2>
+                </div>
+
+                <div class="numbers-grid">
+                    <div class="number-circle reveal">
+                        <div class="number-icon">
+                            <i class="fa-solid fa-arrow-down"></i>
+                        </div>
+                        <span class="counter-value" data-target="90" data-suffix="%">0</span>
+                        <span class="number-label">Redução em falhas de agendamento</span>
+                    </div>
+
+                    <div class="number-circle reveal">
+                        <div class="number-icon">
+                            <i class="fa-solid fa-clock"></i>
+                        </div>
+                        <span class="counter-value" data-target="5" data-suffix=" min/dia">0</span>
+                        <span class="number-label">Para ter clareza total da gestão</span>
+                    </div>
+
+                    <div class="number-circle reveal">
+                        <div class="number-icon">
+                            <i class="fa-solid fa-bullseye"></i>
+                        </div>
+                        <span class="counter-value" data-target="100" data-suffix="%">0</span>
+                        <span class="number-label">Atendimento centralizado e rastreável</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== DEPOIMENTOS (Light) ========== -->
+        <section class="section-white testimonials-section">
+            <div class="container">
+                <div class="section-header reveal">
+                    <h2>
+                        <span class="title-light">O que dizem</span>
+                        <span class="title-bold">nossos clientes</span>
+                    </h2>
+                </div>
+
+                <div class="testimonials-wrapper reveal">
+                    <div class="testimonial-nav">
+                        <button class="testimonial-nav-item active" data-index="0">01</button>
+                        <button class="testimonial-nav-item" data-index="1">02</button>
+                        <button class="testimonial-nav-item" data-index="2">03</button>
+                    </div>
+
+                    <div class="testimonial-slides">
+                        <!-- Slide 1 -->
+                        <div class="testimonial-slide active" data-index="0">
+                            <div class="testimonial-image">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                                    alt="Cliente satisfeito" loading="lazy">
+                            </div>
+                            <div class="testimonial-content">
+                                <div class="testimonial-quote-icon">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                </div>
+                                <p class="testimonial-text">"A Guadalupe entendeu exatamente o que precisávamos. O
+                                    sistema ficou simples de usar e transformou nosso atendimento. Agora tenho controle
+                                    total do meu negócio."</p>
+                                <div class="testimonial-author">
+                                    <strong>Cliente Satisfeito</strong>
+                                    <span>Empresário — Comercial</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="testimonial-slide" data-index="1">
+                            <div class="testimonial-image">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                                    alt="Cliente satisfeita" loading="lazy">
+                            </div>
+                            <div class="testimonial-content">
+                                <div class="testimonial-quote-icon">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                </div>
+                                <p class="testimonial-text">"Antes eu perdia horas em planilhas. Com o sistema da
+                                    Guadalupe, em 5 minutos por dia tenho tudo que preciso. Foi a melhor decisão que
+                                    tomei para minha empresa."</p>
+                                <div class="testimonial-author">
+                                    <strong>Cliente Satisfeita</strong>
+                                    <span>Gestora — Indústria</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="testimonial-slide" data-index="2">
+                            <div class="testimonial-image">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80"
+                                    alt="Cliente satisfeito" loading="lazy">
+                            </div>
+                            <div class="testimonial-content">
+                                <div class="testimonial-quote-icon">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                </div>
+                                <p class="testimonial-text">"O app resolveu o caos dos nossos plantões. Reduziu 90% dos
+                                    erros de agendamento. A equipe da Guadalupe nos acompanhou durante todo o processo,
+                                    foi uma parceria de verdade."</p>
+                                <div class="testimonial-author">
+                                    <strong>Cliente Satisfeito</strong>
+                                    <span>Coordenador — Saúde</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== FAQ (Light) ========== -->
+        <section class="section-light faq-section">
+            <div class="container">
+                <div class="faq-layout">
+                    <div class="faq-header reveal">
+                        <h2>
+                            <span class="title-light">Tudo o que</span><br>
+                            <span class="title-bold">você precisa saber</span>
+                        </h2>
+                    </div>
+
+                    <div class="faq-container reveal">
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Para quais tipos de empresa vocês trabalham?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Nosso foco principal são clínicas, consultórios (médicos, odontológicos,
+                                    veterinários) e empresas de engenharia e arquitetura. Mas também atendemos
+                                    contabilidades, indústrias, comércio e outros negócios técnicos que queiram usar IA e
+                                    automação para ganhar tempo.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>O que é o Diagnóstico de IA e por que é pago?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>O Diagnóstico de IA é um entregável de verdade: um relatório completo com mapeamento
+                                    dos seus processos, as 3 a 5 automações mais valiosas, estimativa de ROI e um
+                                    roadmap de implementação. Cobramos porque é um trabalho analítico profundo, feito sob
+                                    medida para o seu negócio. E se você seguir com a gente, o valor do diagnóstico
+                                    abate no projeto.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Vocês integram com WhatsApp e outras ferramentas que já uso?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Sim! Integramos com WhatsApp, planilhas, sistemas de pagamento, e diversas outras
+                                    ferramentas que você já utiliza no dia a dia. Nosso objetivo é facilitar, não
+                                    complicar.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Os dados da minha empresa e dos meus pacientes ficam seguros?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Sim. Seguimos as diretrizes da LGPD em todos os projetos. Na área da saúde, a IA
+                                    cuida apenas da parte administrativa (agenda, dúvidas frequentes, lembretes).
+                                    Qualquer decisão clínica é sempre do profissional de saúde. Seus dados ficam
+                                    protegidos em servidores seguros e criptografados.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>A IA vai substituir minha equipe?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Não. A IA tira da sua equipe o trabalho repetitivo e manual (confirmar agenda,
+                                    responder perguntas frequentes, buscar documentos) para sobrar tempo para o que
+                                    realmente importa: atender bem, vender mais e tomar decisões estratégicas.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Quanto tempo leva para desenvolver meu sistema?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Depende da complexidade do projeto, mas em geral entregamos soluções funcionais entre
+                                    4 a 12 semanas. No nosso bate-papo inicial, definimos prazos claros para cada
+                                    etapa.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Como começamos a trabalhar juntos?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Simples! Você pode começar pelo Diagnóstico de IA (o caminho mais completo) ou nos
+                                    chamar no WhatsApp para um bate-papo rápido e sem compromisso. A partir daí,
+                                    entendemos o seu cenário e propomos o melhor caminho.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Vocês dão suporte e manutenção depois de entregar?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Com certeza. Não entregamos e vamos embora. Oferecemos acompanhamento contínuo,
+                                    suporte técnico e manutenção para garantir que tudo funcione perfeitamente conforme
+                                    seu negócio cresce.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Vocês atendem clínicas e escritórios de engenharia?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Sim, esses são nossos dois públicos principais! Entendemos as dores específicas de
+                                    cada setor: no-show em clínicas, propostas lentas em engenharia, atendimento
+                                    desorganizado. Além deles, também trabalhamos com contabilidades, indústrias e outros
+                                    negócios técnicos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== FORMULÁRIO (Light) ========== -->
+        <section id="formulario" class="section-white form-section">
+            <div class="container">
+                <div class="form-layout">
+                    <div class="form-info reveal">
+                        <h2>
+                            <span class="title-light">Vamos</span>
+                            <span class="title-bold">conversar?</span>
+                        </h2>
+                        <p>Conte-nos como podemos ajudar você hoje. Mesmo que você não saiba o nome da solução que
+                            precisa, estamos aqui para escutar e indicar o caminho.</p>
+
+                        <div class="form-contact-card">
+                            <div class="contact-card-icon">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </div>
+                            <div>
+                                <span>Se preferir, chame direto:</span>
+                                <a href="https://wa.me/5537998323232" target="_blank"><strong>(37)
+                                        99832-3232</strong></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-wrapper reveal">
+                        <form id="quote-form" class="multi-step-form">
+                            <!-- Step Indicators -->
+                            <div class="form-steps-indicator">
+                                <div class="step-indicator active" data-step="1"><span>1</span></div>
+                                <div class="step-line active"></div>
+                                <div class="step-indicator" data-step="2"><span>2</span></div>
+                                <div class="step-line"></div>
+                                <div class="step-indicator" data-step="3"><span>3</span></div>
+                            </div>
+
+                            <!-- Step 1 -->
+                            <div class="form-step active" data-step="1">
+                                <label class="form-label">O que você acha que precisa no momento?</label>
+                                <div class="chips-group">
+                                    <label class="chip chip-full">
+                                        <input type="radio" name="solucao" value="Diagnóstico de IA" required>
+                                        <span>🔍 Diagnóstico de IA</span>
+                                    </label>
+                                    <label class="chip">
+                                        <input type="radio" name="solucao" value="Site Institucional">
+                                        <span>Site p/ Empresa</span>
+                                    </label>
+                                    <label class="chip">
+                                        <input type="radio" name="solucao" value="Sistema Web">
+                                        <span>Sistema de Gestão</span>
+                                    </label>
+                                    <label class="chip">
+                                        <input type="radio" name="solucao" value="Aplicativo">
+                                        <span>Aplicativo</span>
+                                    </label>
+                                    <label class="chip">
+                                        <input type="radio" name="solucao" value="Automação">
+                                        <span>Automação / WhatsApp</span>
+                                    </label>
+                                    <label class="chip chip-full">
+                                        <input type="radio" name="solucao" value="Ainda não tenho certeza">
+                                        <span>Ainda não tenho certeza, preciso de ajuda</span>
+                                    </label>
+                                </div>
+                                <button type="button" class="btn btn-primary-violet form-next">Continuar</button>
+                            </div>
+
+                            <!-- Step 2 -->
+                            <div class="form-step" data-step="2">
+                                <label class="form-label" for="objetivo">O que está dificultando sua operação
+                                    hoje?</label>
+                                <textarea id="objetivo" name="objetivo" rows="4" class="form-input"
+                                    placeholder="Ex: Minhas planilhas estão uma bagunça, perco muito tempo com tarefas repetitivas..."
+                                    required></textarea>
+                                <div class="form-nav-buttons">
+                                    <button type="button" class="btn btn-ghost-dark form-prev">Voltar</button>
+                                    <button type="button" class="btn btn-primary-violet form-next">Continuar</button>
+                                </div>
+                            </div>
+
+                            <!-- Step 3 -->
+                            <div class="form-step" data-step="3">
+                                <label class="form-label" for="contato_nome">Como podemos chamar você e qual seu
+                                    WhatsApp?</label>
+                                <input type="text" id="contato_nome" name="contato_nome" class="form-input"
+                                    placeholder="Seu nome completo e número com DDD" required>
+                                <div class="form-nav-buttons">
+                                    <button type="button" class="btn btn-ghost-dark form-prev">Voltar</button>
+                                    <button type="submit" class="btn btn-primary-violet">
+                                        Entender a melhor solução <i class="fa-brands fa-whatsapp"></i>
+                                    </button>
+                                </div>
+                                <p class="form-disclaimer">É uma conversa rápida e sem compromisso.</p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== BLOG (Light) ========== -->
+        <section id="blog" class="section-light">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Leitura Rápida</span>
+                    <h2>
+                        <span class="title-light">Dicas</span>
+                        <span class="title-bold">para melhorar o dia a dia da sua empresa</span>
+                    </h2>
+                </div>
+
+                <div class="blog-grid">
+                    <article class="blog-card reveal">
+                        <span class="blog-tag">Produtividade</span>
+                        <h3>Como a automação economiza dezenas de horas no mês</h3>
+                        <a href="#" class="btn-link-arrow">Ler artigo <span class="arrow">↗</span></a>
+                    </article>
+
+                    <article class="blog-card reveal">
+                        <span class="blog-tag">Gestão</span>
+                        <h3>Quando vale a pena investir em um sistema próprio para sua empresa?</h3>
+                        <a href="#" class="btn-link-arrow">Ler artigo <span class="arrow">↗</span></a>
+                    </article>
+
+                    <article class="blog-card reveal">
+                        <span class="blog-tag">Atendimento</span>
+                        <h3>O guia simples para organizar o atendimento via WhatsApp</h3>
+                        <a href="#" class="btn-link-arrow">Ler artigo <span class="arrow">↗</span></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CTA FINAL (Dark Banner) ========== -->
+        <section class="cta-final-section">
+            <div class="container">
+                <div class="cta-banner reveal">
+                    <div class="cta-banner-bg"></div>
+                    <div class="cta-banner-content">
+                        <h2>
+                            <span class="title-light">Pronto para usar IA</span><br>
+                            <span class="title-bold">a favor do seu negócio?</span>
+                        </h2>
+                        <p>A Guadalupe Sistemas está pronta para ouvir você, mapear suas oportunidades e ser a parceira
+                            tecnológica que sua empresa merece.</p>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                            <a href="#formulario" class="btn btn-primary-white">Fazer meu diagnóstico de IA</a>
+                            <a href="https://wa.me/5537998323232" target="_blank"
+                                class="btn btn-ghost">Conversar no WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== FOOTER (Dark) ========== -->
+    <footer id="contato" class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="logo footer-logo">
+                        <img src="assets/logo-simbolo.png" alt="Guadalupe Sistemas" class="logo-icon">
+                        <span class="logo-text">Guadalupe <strong>Sistemas</strong></span>
+                    </a>
+                    <p class="footer-tagline">IA, automação e sistemas sob medida com propósito, parceria e confiança
+                        para o crescimento contínuo do seu negócio.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#diagnostico">Diagnóstico de IA</a></li>
+                        <li><a href="#servicos">O que fazemos</a></li>
+                        <li><a href="#casos">Casos de Sucesso</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#formulario">Fale Conosco</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Fale Conosco</h4>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <div>
+                            <span>Nosso WhatsApp:</span>
+                            <a href="https://wa.me/5537998323232" target="_blank">(37) 99832-3232</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-instagram"></i>
+                        <div>
+                            <span>Acompanhe:</span>
+                            <a href="https://instagram.com/guadalupesistemas" target="_blank">@guadalupesistemas</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Guadalupe Sistemas. Todos os direitos reservados. Feito com cuidado.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
