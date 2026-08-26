@@ -103,6 +103,22 @@
                     "@type": "Answer",
                     "text": "Não necessariamente, mas isso depende de como o seu número está configurado hoje e de qual canal oficial será usado. É uma das primeiras coisas que verificamos, porque a migração precisa ser planejada para não interromper o atendimento nem perder o histórico de conversas."
                 }
+            },
+            {
+                "@type": "Question",
+                "name": "O agente de IA funciona só no WhatsApp?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "O WhatsApp é o canal onde a maioria dos projetos começa, porque é onde os clientes já estão. Mas o mesmo agente pode atender no chat do site, no Instagram e por e-mail, com a mesma base de conteúdo e o mesmo roteiro. O que define quais canais entram é onde a sua operação realmente recebe demanda, e isso é decidido no desenho do projeto, não depois."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Quantas conversas o agente atende ao mesmo tempo?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Não existe fila: o agente responde a várias conversas simultaneamente, o que é justamente a diferença em relação a uma equipe humana em horário de pico. O limite prático não está no atendimento automático e sim no que ele transfere — se muitas conversas caírem para humano ao mesmo tempo, a fila volta a existir. Por isso o desenho dos gatilhos de transferência importa tanto quanto o roteiro de resposta."
+                }
             }
         ]
     }
@@ -462,6 +478,65 @@
             </div>
         </section>
 
+        <!-- ========== VOCABULÁRIO ========== -->
+        <section class="section-dark">
+            <div class="pixel-texture"></div>
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Vocabulário</span>
+                    <h2>
+                        <span class="title-light">Assistente de IA, agente de IA</span><br>
+                        <span class="title-bold">e chatbot: a diferença</span>
+                    </h2>
+                    <p class="section-subtitle">Os três termos aparecem misturados em propostas comerciais, e eles não
+                        significam a mesma coisa. A diferença muda o preço e o resultado.</p>
+                </div>
+
+                <div class="glass-grid">
+                    <div class="glass-card reveal">
+                        <div class="glass-icon">
+                            <i class="fa-solid fa-list-ol"></i>
+                        </div>
+                        <h3>Chatbot de menu</h3>
+                        <p>"Digite 1 para orçamento, 2 para atendimento." Segue uma árvore fixa, não entende texto
+                            solto e trava quando a pergunta do cliente não está no menu. É o mais barato e o que mais
+                            gera reclamação.</p>
+                    </div>
+
+                    <div class="glass-card reveal">
+                        <div class="glass-icon">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                        <h3>Agente de IA</h3>
+                        <p>É o que construímos aqui. Entende o cliente escrevendo do jeito dele, consulta a agenda ou o
+                            CRM de verdade e <strong>executa ações</strong>: marca, confirma, registra, encaminha. Ele
+                            faz coisas, não só responde.</p>
+                    </div>
+
+                    <div class="glass-card reveal">
+                        <div class="glass-icon">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <h3>Assistente de IA empresarial</h3>
+                        <p>Olha para dentro, não para o cliente. Responde a partir dos documentos, normas e
+                            procedimentos da própria empresa, para a equipe consultar. É o
+                            <a href="/solucoes/assistente-de-conhecimento/" class="link-inline">assistente de
+                                conhecimento</a>.</p>
+                    </div>
+
+                    <div class="glass-card reveal">
+                        <div class="glass-icon">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <h3>E "automação de WhatsApp"?</h3>
+                        <p>É o guarda-chuva do canal: inclui a conversa, mas também o que vem depois dela — confirmação
+                            da véspera, follow-up, registro no CRM. Detalhada em
+                            <a href="/automacao-de-whatsapp/" class="link-inline">automação de WhatsApp</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- ========== O QUE ELE NÃO FAZ ========== -->
         <section class="section-light">
             <div class="container">
@@ -566,6 +641,39 @@
                                     histórico de conversas.</p>
                             </div>
                         </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>O agente de IA funciona só no WhatsApp?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    O WhatsApp é o canal onde a maioria dos projetos começa, porque é onde os
+                                    clientes já estão. Mas o mesmo agente pode atender no chat do site, no
+                                    Instagram e por e-mail, com a mesma base de conteúdo e o mesmo roteiro. O
+                                    que define quais canais entram é onde a sua operação realmente recebe
+                                    demanda, e isso é decidido no desenho do projeto, não depois.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Quantas conversas o agente atende ao mesmo tempo?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    Não existe fila: o agente responde a várias conversas simultaneamente, o
+                                    que é justamente a diferença em relação a uma equipe humana em horário de
+                                    pico. O limite prático não está no atendimento automático e sim no que ele
+                                    transfere — se muitas conversas caírem para humano ao mesmo tempo, a fila
+                                    volta a existir. Por isso o desenho dos gatilhos de transferência importa
+                                    tanto quanto o roteiro de resposta.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -624,6 +732,9 @@
                     </a>
                     <p class="footer-tagline">IA, automação e sistemas sob medida com propósito, parceria e confiança
                         para o crescimento contínuo do seu negócio.</p>
+                    <p class="footer-region">Atendemos a partir do <a
+                            href="/automacao-e-sistemas-em-minas-gerais/">Centro-Oeste de Minas Gerais</a>, de forma
+                        remota, para empresas de todo o Brasil.</p>
                 </div>
 
                 <div class="footer-col">
@@ -631,6 +742,7 @@
                     <ul>
                         <li><a href="/solucoes/agentes-de-ia/">Agentes de IA</a></li>
                         <li><a href="/solucoes/automacao-de-processos/">Automação de Processos</a></li>
+                        <li><a href="/automacao-de-whatsapp/">Automação de WhatsApp</a></li>
                         <li><a href="/solucoes/assistente-de-conhecimento/">Assistente de Conhecimento</a></li>
                         <li><a href="/solucoes/sistemas-sob-medida/">Sistemas Sob Medida</a></li>
                         <li><a href="/solucoes/aplicativos/">Aplicativos</a></li>
@@ -638,14 +750,24 @@
                 </div>
 
                 <div class="footer-col">
-                    <h4>Guadalupe</h4>
+                    <h4>Para o seu problema</h4>
                     <ul>
-                        <li><a href="/diagnostico-de-ia/">Diagnóstico de IA</a></li>
+                        <li><a href="/inteligencia-artificial-para-empresas/">IA para Empresas</a></li>
+                        <li><a href="/desenvolvimento-de-sistemas/">Desenvolvimento de Sistemas</a></li>
+                        <li><a href="/quanto-custa-um-sistema-personalizado/">Quanto custa um sistema?</a></li>
                         <li><a href="/para-clinicas/">Para Clínicas</a></li>
                         <li><a href="/para-engenharia/">Para Engenharia</a></li>
+                        <li><a href="/diagnostico-de-ia/">Diagnóstico de IA</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Guadalupe</h4>
+                    <ul>
                         <li><a href="/casos/">Casos Reais</a></li>
                         <li><a href="/sobre/">Sobre nós</a></li>
                         <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/automacao-e-sistemas-em-minas-gerais/">Onde atendemos</a></li>
                     </ul>
                 </div>
 

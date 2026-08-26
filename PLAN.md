@@ -142,6 +142,94 @@ Execução das Fases 1 e 2 da auditoria pública de 25/08/2026. O site saiu de 5
 - [x] `.vercelignore` excluindo `partials/`, `tools/` e `docs/` do publish
 
 ### Pendente de dados do cliente
-- [ ] Resolver os **41 marcadores `<!-- TODO -->`**, concentrados nas páginas de caso (porte, região, prazo, números antes/depois) e em `/seguranca-e-lgpd/` (8 confirmações técnicas: backup, criptografia, retenção, subprocessadores).
+- [ ] Resolver os marcadores `<!-- TODO -->`, concentrados nas páginas de caso (porte, região, prazo, números antes/depois) e em `/seguranca-e-lgpd/` (8 confirmações técnicas: backup, criptografia, retenção, subprocessadores).
 - [ ] Substituir os relatos por depoimentos nominais, com autorização de uso de imagem.
 - [ ] Criar imagem de capa própria para cada artigo — hoje todos usam a imagem de marca.
+
+---
+
+## ✅ Concluído: Fase 3 de SEO — Clusters, Categorias e SEO Local (Agosto/2026)
+
+Execução da segunda auditoria de SEO. O site saiu de 24 para **37 URLs**.
+
+### Home
+- [x] H1 trocado de promessa comercial ("Automação e IA para eliminar tarefas repetitivas") para definição de entidade: **"IA, automação e sistemas sob medida para empresas"**.
+- [x] Subtítulo nomeia a empresa e cobre as três categorias de busca.
+- [x] `title`, `og:title`, `twitter:title` e as três descriptions realinhados, incluindo "desenvolvimento de sistemas" e "inteligência artificial".
+- [x] `Organization` virou `ProfessionalService` com `areaServed` explícito.
+
+### Páginas-pilar criadas
+- [x] `/inteligencia-artificial-para-empresas/`
+- [x] `/desenvolvimento-de-sistemas/`
+- [x] `/automacao-de-whatsapp/`
+- [x] `/quanto-custa-um-sistema-personalizado/`
+- [x] `/automacao-e-sistemas-em-minas-gerais/`
+
+**Não foram criadas** as URLs de raiz sugeridas na auditoria (`/agentes-de-ia/`, `/automacao-de-processos/`, `/sistemas-sob-medida/`, `/aplicativos/`, `/solucoes-para-clinicas/`): já existem sob `/solucoes/*` e `/para-clinicas/`, e duplicá-las geraria canibalização. Ver decisão 11 em [`DECISIONS.md`](./DECISIONS.md).
+
+### Reforço semântico
+- [x] Um `<h2>` de cobertura de termo e duas perguntas de FAQ em cada uma das 5 páginas de solução e nas 2 verticais, com o `FAQPage` espelhado.
+- [x] `/solucoes/` ganhou o card de automação de WhatsApp e uma seção com as três páginas de categoria.
+
+### SEO local
+- [x] Região de atendimento no rodapé (`partials/footer.html`, propagado às 37 páginas) e em `/contato/`.
+- [x] `ProfessionalService` com `areaServed` na home, nas páginas de categoria e na página regional.
+
+### Evidência dos números
+- [x] Cada contador de `#resultados` linka o caso que o originou.
+- [x] Bloco "Como esse número foi medido" nas 3 páginas de caso, dizendo o que é verificável e deixando período e base de cálculo em `<!-- TODO -->`.
+
+### Conteúdo — 8 artigos novos
+- [x] Cluster Automação: `o-que-e-automacao-de-processos`, `processos-que-sua-empresa-pode-automatizar`, `como-calcular-roi-de-uma-automacao`, `automacao-substitui-funcionarios`
+- [x] Cluster IA: `como-usar-ia-na-sua-empresa`, `quanto-custa-implementar-ia-em-uma-empresa`
+- [x] Cluster Sistemas: `como-escolher-empresa-de-desenvolvimento-de-sistemas`, `como-transformar-planilha-em-sistema`
+
+O artigo "Sistema próprio ou software pronto?", previsto no plano original, foi **substituído** por "Como escolher uma empresa de desenvolvimento de sistemas": a comparação pronto × sob medida já é o miolo de `/blog/quando-investir-em-sistema-proprio/`, e publicar os dois criaria concorrência interna pela mesma busca.
+
+---
+
+## 📌 Fase 4: Cluster de Inteligência Artificial (Próxima)
+
+Títulos definidos, conteúdo a escrever. Todos linkam `/inteligencia-artificial-para-empresas/` no meio do texto e recebem link de volta pelo "Veja também" do pilar.
+
+- [ ] IA para atendimento: o que muda na prática
+- [ ] IA para vendas e follow-up
+- [ ] IA para clínicas: o que é permitido e o que não é
+- [ ] IA para engenharia: normas, propostas e acervo técnico
+- [ ] IA para análise de documentos
+- [ ] Como criar um agente de IA para a sua empresa
+- [ ] Assistente de IA empresarial: o que é e para que serve
+- [ ] IA generativa para empresas, sem hype
+- [ ] Automação com ChatGPT: até onde vai e onde para
+- [ ] IA para pequenas empresas: o que cabe no orçamento
+- [ ] Como treinar uma IA com os documentos da sua empresa
+- [ ] Os riscos de usar IA sem política interna
+
+## 📌 Fase 5: Cluster de Automação e Sistemas
+
+- [ ] Automação de processos: guia completo para empresas (consolidação do cluster)
+- [ ] Quanto custa automatizar uma empresa
+- [ ] Automação de WhatsApp vale a pena?
+- [ ] Automação comercial: do lead ao fechamento
+- [ ] Automação financeira: conciliação e fechamento
+- [ ] Automação de cobrança sem desgastar o cliente
+- [ ] Automação de documentos e assinaturas
+- [ ] Como desenvolver um sistema de gestão
+- [ ] Sistema personalizado para pequenas empresas
+- [ ] Sistema web personalizado: quando o navegador basta
+- [ ] Desenvolvimento de software empresarial: como funciona um projeto
+- [ ] Como substituir vários sistemas por um só
+
+## 📌 Fase 6: SEO Local por Cidade (Bloqueada por dados reais)
+
+Só executar quando houver **cliente real na cidade para citar** e conteúdo genuinamente diferente por página. Página "cidade + palavra-chave" praticamente igual às outras é conteúdo artificial e viola a regra 10 do `DECISIONS.md`.
+
+- [ ] Confirmar a cidade-sede da empresa (hoje `<!-- TODO -->` em `/sobre/`, `/contato/`, na home e na página regional — o JSON-LD `ProfessionalService` está sem `address`)
+- [ ] Criar o **Google Business Profile** e vincular ao site
+- [ ] Definir em quais cidades há atuação real: Itapecerica, Divinópolis, Formiga, Pará de Minas, Itaúna, Santo Antônio do Monte, Nova Serrana
+- [ ] Só então criar as páginas por cidade, cada uma com empresas atendidas, problemas típicos da região, projetos reais, FAQ e contato
+
+## 📌 Pendências de dados para a Fase 3
+
+- [ ] **Faixas de investimento por porte de projeto**, para `/quanto-custa-um-sistema-personalizado/`. Hoje a página publica só o valor confirmado do diagnóstico (a partir de R$ 2.500) e explica o método de orçamento, sem cifra de projeto.
+- [ ] **Metodologia dos números dos casos:** período comparado, base de cálculo e quem mediu, para os três blocos "Como esse número foi medido".

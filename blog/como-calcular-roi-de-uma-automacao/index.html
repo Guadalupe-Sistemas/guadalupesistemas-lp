@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="O passo a passo para calcular o retorno de uma automação: tempo economizado, custo real da hora, custo de implantar e de manter, e o prazo de payback.">
+    <!-- SEO & Open Graph -->
+    <meta name="keywords" content="roi de automação, retorno de investimento automação, vale a pena automatizar, custo de automação, payback automação">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Como calcular o ROI de uma automação | Guadalupe Sistemas">
+    <meta property="og:description" content="O passo a passo para calcular o retorno de uma automação: tempo economizado, custo real da hora, custo de implantar e de manter, e o prazo de payback.">
+    <meta property="og:url" content="https://guadalupesistemas.com.br/blog/como-calcular-roi-de-uma-automacao/">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Guadalupe Sistemas">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:image" content="https://guadalupesistemas.com.br/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="article:published_time" content="2026-08-26T00:00:00-03:00">
+    <meta property="article:author" content="Ezequiel Campos">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Como calcular o ROI de uma automação | Guadalupe Sistemas">
+    <meta name="twitter:description" content="O passo a passo para calcular o retorno de uma automação: tempo economizado, custo real da hora, custo de implantar e de manter, e o prazo de payback.">
+    <meta name="twitter:image" content="https://guadalupesistemas.com.br/assets/og-image.jpg">
+    <link rel="canonical" href="https://guadalupesistemas.com.br/blog/como-calcular-roi-de-uma-automacao/">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0C0A23">
+
+    <title>Como Calcular o ROI de uma Automação | Guadalupe</title>
+
+    <!-- Dados estruturados (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Como calcular o ROI de uma automação",
+        "description": "O passo a passo para calcular o retorno de uma automação: tempo economizado, custo real da hora, custo de implantar e de manter, e o prazo de payback.",
+        "image": "https://guadalupesistemas.com.br/assets/og-image.jpg",
+        "datePublished": "2026-08-26T00:00:00-03:00",
+        "dateModified": "2026-08-26T00:00:00-03:00",
+        "author": {
+            "@type": "Person",
+            "name": "Ezequiel Campos"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Guadalupe Sistemas",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://guadalupesistemas.com.br/assets/logo-completa.png"
+            }
+        },
+        "mainEntityOfPage": "https://guadalupesistemas.com.br/blog/como-calcular-roi-de-uma-automacao/"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://guadalupesistemas.com.br/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://guadalupesistemas.com.br/blog/" },
+            { "@type": "ListItem", "position": 3, "name": "Como calcular o ROI de uma automação", "item": "https://guadalupesistemas.com.br/blog/como-calcular-roi-de-uma-automacao/" }
+        ]
+    }
+    </script>
+
+    <!-- Consentimento + Google Analytics -->
+    <script src="/js/cookie-consent.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
+    <!-- Ícones (Font Awesome - lazy) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
+</head>
+
+<body>
+    <!-- gs:nav:start variant="solid" active="blog" -->
+    <nav class="navbar navbar-solid" id="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo" aria-label="Guadalupe Sistemas - Página Inicial">
+                <img src="/assets/logo-simbolo.png" alt="Guadalupe Sistemas" class="logo-icon" width="40" height="40">
+                <span class="logo-text">Guadalupe <strong>Sistemas</strong></span>
+            </a>
+
+            <div class="nav-links" id="nav-links">
+                <a href="/solucoes/" data-nav="solucoes">Soluções</a>
+                <a href="/para-clinicas/" data-nav="clinicas">Para Clínicas</a>
+                <a href="/para-engenharia/" data-nav="engenharia">Para Engenharia</a>
+                <a href="/diagnostico-de-ia/" data-nav="diagnostico">Diagnóstico</a>
+                <a href="/casos/" data-nav="casos">Casos</a>
+                <a href="/blog/" class="active" data-nav="blog">Blog</a>
+            </div>
+
+            <a href="/diagnostico-de-ia/" class="btn btn-ghost nav-cta" data-cta="diagnostico">Fazer meu diagnóstico</a>
+
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menu de navegação"
+                aria-expanded="false" aria-controls="nav-links">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    <!-- gs:nav:end -->
+
+    <!-- ========== ARTIGO HERO ========== -->
+    <header class="article-hero">
+        <div class="container">
+            <div class="article-container">
+                <nav class="breadcrumbs" aria-label="Trilha de navegação">
+                    <ol>
+                        <li><a href="/">Início</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><span aria-current="page">Como calcular o ROI de uma automação</span></li>
+                    </ol>
+                </nav>
+                <span class="blog-tag">Gestão</span>
+                <h1 class="article-title">Como calcular o ROI de uma automação</h1>
+                <p class="article-subtitle">A conta de guardanapo que separa a automação que se paga da que só dá trabalho — incluindo os três custos que quase todo mundo esquece de somar.</p>
+
+                <div class="article-meta">
+                    <div class="avatar-circle article-meta-avatar">EC</div>
+                    <div>
+                        <span class="article-author-name">Ezequiel Campos</span>
+                        <span class="article-post-date">Guadalupe Sistemas</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== CORPO DO ARTIGO ========== -->
+    <main class="article-main">
+        <div class="container">
+            <div class="article-container">
+
+                <div class="article-toc">
+                    <h4>Encontre neste artigo</h4>
+                    <ul>
+                        <li><a href="#por-que">Por que a conta importa mais do que parece</a></li>
+                        <li><a href="#ganho">Passo 1: quanto tempo a automação devolve</a></li>
+                        <li><a href="#hora">Passo 2: quanto vale essa hora de verdade</a></li>
+                        <li><a href="#custo">Passo 3: quanto custa colocar e manter no ar</a></li>
+                        <li><a href="#payback">Passo 4: em quanto tempo se paga</a></li>
+                        <li><a href="#invisivel">O ganho que não entra na planilha</a></li>
+                        <li><a href="#armadilhas">Três armadilhas ao fazer essa conta</a></li>
+                    </ul>
+                </div>
+
+                <div class="article-body">
+                    <h2 id="por-que">Por que a conta importa mais do que parece</h2>
+                    <p>Existe um motivo prático para fazer essa conta antes de contratar qualquer coisa, e ele não é convencer o financeiro: é evitar automatizar a tarefa errada.</p>
+                    <p>A intuição sobre onde o tempo está indo costuma estar errada. Todo mundo lembra da tarefa irritante que aconteceu na semana passada e ninguém lembra da tarefa de cinco minutos que acontece dezoito vezes por dia. Colocar os dois no papel, com número, muda a ordem de prioridade em quase toda empresa onde fizemos esse exercício.</p>
+                    <p>A boa notícia é que a conta não precisa ser sofisticada. Quatro passos, quinze minutos, papel e caneta.</p>
+
+                    <h2 id="ganho">Passo 1: quanto tempo a automação devolve</h2>
+                    <p>A fórmula é sempre a mesma: <strong>tempo de uma execução × quantas vezes acontece no mês</strong>.</p>
+                    <p>Duas recomendações para essa medição não sair torta. A primeira: cronometre em vez de estimar, pelo menos umas três vezes. Estimativa de memória erra sistematicamente para baixo, porque ninguém conta o tempo de abrir o sistema, achar o arquivo e voltar do que estava fazendo antes.</p>
+                    <p>A segunda: conte o processo inteiro, não só a parte visível. Confirmar uma consulta não é só mandar a mensagem — é abrir a agenda, localizar o paciente, digitar, esperar, anotar a resposta e remarcar quem não pode. Um exemplo de conta completa:</p>
+                    <ul>
+                        <li>Tempo por confirmação, medido: <strong>3 minutos</strong></li>
+                        <li>Confirmações por dia: <strong>40</strong></li>
+                        <li>Dias úteis no mês: <strong>22</strong></li>
+                        <li>3 × 40 × 22 = <strong>2.640 minutos, ou 44 horas por mês</strong></li>
+                    </ul>
+                    <p>Agora subtraia o que sobra depois de automatizar — porque nenhuma automação zera a tarefa. Sempre resta a exceção: quem pediu remarcação fora do padrão, quem respondeu algo que o roteiro não previu. Se metade da sua atenção continuar necessária, o ganho é metade. Um corte realista costuma ficar entre 60% e 80% do tempo original.</p>
+                    <blockquote>Estimativa que assume 100% de economia não é otimista: é errada. Toda automação deixa um resto humano, e é justamente esse resto que sustenta a qualidade.</blockquote>
+
+                    <h2 id="hora">Passo 2: quanto vale essa hora de verdade</h2>
+                    <p>Aqui quase todo mundo usa o salário e erra para baixo. O custo real de uma hora de trabalho inclui encargos, benefícios, equipamento, espaço e o tempo de quem coordena. Para uma conta de guardanapo, multiplicar o salário-hora por algo entre 1,4 e 1,8 chega mais perto da realidade do que o valor bruto.</p>
+                    <p>Mas existe uma pergunta anterior, e ela muda completamente o resultado: <strong>o que a empresa faz com o tempo devolvido?</strong> Existem três respostas possíveis, e elas não valem a mesma coisa:</p>
+                    <ul>
+                        <li><strong>A pessoa passa a fazer algo que gera receita.</strong> Atender mais clientes, vender mais, cobrar melhor. Aqui o valor da hora é a receita adicional, e costuma ser bem maior do que o custo do salário.</li>
+                        <li><strong>A empresa deixa de contratar.</strong> O crescimento é absorvido sem gente nova. O valor é o custo integral da contratação evitada.</li>
+                        <li><strong>Nada muda, a pessoa só fica menos sobrecarregada.</strong> Isso tem valor real — menos erro, menos rotatividade, menos hora extra — mas não aparece no caixa. Se esse for o caso, seja honesto na conta em vez de inflar o retorno.</li>
+                    </ul>
+
+                    <h2 id="custo">Passo 3: quanto custa colocar e manter no ar</h2>
+                    <p>O lado do custo tem duas partes, e a segunda é a esquecida. A primeira é o investimento único: levantamento, construção, integração, migração de dado e treinamento da equipe.</p>
+                    <p>A segunda é o custo recorrente, que continua acontecendo todo mês:</p>
+                    <ul>
+                        <li><strong>Hospedagem e infraestrutura</strong>, proporcional ao volume.</li>
+                        <li><strong>Licenças de ferramentas</strong> que a automação usa.</li>
+                        <li><strong>Uso de IA</strong>, quando existe, cobrado por volume processado.</li>
+                        <li><strong>Manutenção</strong>, porque sistema muda de layout e regra fiscal muda.</li>
+                        <li><strong>O tempo da sua equipe</strong> durante a implantação. Esse é o custo mais subestimado de todos: alguém da empresa precisa validar, testar e aprender, e essas horas saem de algum lugar.</li>
+                    </ul>
+                    <p>Os fatores que fazem esse valor variar estão detalhados em <a href="/quanto-custa-um-sistema-personalizado/">quanto custa um sistema personalizado</a> — a lógica é a mesma para automação.</p>
+
+                    <h2 id="payback">Passo 4: em quanto tempo se paga</h2>
+                    <p>Com os dois lados na mão, a conta fecha assim:</p>
+                    <ul>
+                        <li><strong>Ganho mensal</strong> = horas economizadas × valor da hora</li>
+                        <li><strong>Custo mensal</strong> = recorrência</li>
+                        <li><strong>Ganho líquido</strong> = ganho mensal − custo mensal</li>
+                        <li><strong>Payback</strong> = investimento único ÷ ganho líquido</li>
+                    </ul>
+                    <p>O resultado do payback é o número que interessa: quantos meses até a automação ter se pagado. Nossa régua prática é simples — abaixo de 12 meses, costuma valer a pena; entre 12 e 24, depende de quanto o processo é estável; acima de 24, provavelmente existe um candidato melhor na fila.</p>
+                    <p>Vale um alerta sobre estabilidade: automação de um processo que vai mudar em seis meses tem payback irrelevante, porque ela não vai durar o suficiente para se pagar. Antes de fechar a conta, pergunte se aquele processo continuará igual daqui a um ano.</p>
+
+                    <h2 id="invisivel">O ganho que não entra na planilha</h2>
+                    <p>Alguns efeitos são reais e difíceis de transformar em número. Não coloque na conta para inflar o resultado, mas leve em consideração no momento de decidir:</p>
+                    <ul>
+                        <li><strong>Erro que deixa de acontecer.</strong> Um único documento emitido errado, uma consulta perdida, um boleto não enviado — o custo de cada um é conhecido, mas a frequência raramente é medida.</li>
+                        <li><strong>Continuidade.</strong> A rotina não tira férias e não pede demissão. Processo que depende de uma pessoa específica é um risco que ninguém contabiliza até o dia em que ela sai.</li>
+                        <li><strong>Rastro.</strong> Saber o que foi feito, quando e por quem. Vira ouro na hora de resolver uma reclamação ou uma divergência.</li>
+                        <li><strong>Velocidade de resposta.</strong> Responder em minutos em vez de horas muda taxa de conversão de um jeito que só aparece no faturamento, não na planilha de tempo.</li>
+                    </ul>
+
+                    <h2 id="armadilhas">Três armadilhas ao fazer essa conta</h2>
+                    <h3>Contar a mesma hora duas vezes</h3>
+                    <p>Se três automações diferentes economizam tempo da mesma pessoa, a soma não pode passar da jornada dela. Parece óbvio, e é o erro mais comum em planilha de justificativa de projeto.</p>
+                    <h3>Ignorar a curva de adoção</h3>
+                    <p>Nas primeiras semanas a economia é menor do que a projetada, porque a equipe está aprendendo e conferindo tudo em paralelo. Considere um período de rampa em vez de assumir o ganho cheio desde o primeiro dia.</p>
+                    <h3>Automatizar processo que não deveria existir</h3>
+                    <p>Às vezes a resposta certa não é automatizar: é eliminar. Aquele relatório que ninguém lê, aquela aprovação que existe desde 2018 e nunca reprovou nada. Antes de automatizar qualquer coisa, vale perguntar por que ela é feita — a economia de deixar de fazer é sempre maior do que a de fazer mais rápido.</p>
+                    <p class="article-highlight">O melhor ROI de todos é o de um processo eliminado. O segundo melhor é o de um processo simplificado. Automatizar vem em terceiro.</p>
+                    <p>Se quiser ver essa conta aplicada a exemplos concretos, o artigo sobre <a href="/blog/automacao-economia-de-horas/">como a automação economiza dezenas de horas no mês</a> percorre alguns casos. E para escolher o candidato certo, a lista de <a href="/blog/processos-que-sua-empresa-pode-automatizar/">15 processos automatizáveis</a> serve de ponto de partida.</p>
+                </div>
+
+                <div class="cta-box stack-block">
+                    <h3>Quer essa conta feita com os números da sua operação?</h3>
+                    <p>O Diagnóstico de IA levanta quanto tempo cada rotina consome hoje, estima o retorno de automatizar cada uma e devolve as prioridades em ordem — antes de você investir em qualquer projeto maior.</p>
+                    <a href="/diagnostico-de-ia/" class="btn btn-primary-violet" data-cta="como-calcular-roi-de-uma-automacao-final">Fazer meu
+                        diagnóstico</a>
+                </div>
+
+                <div class="article-share">
+                    <span class="article-share-label">Compartilhe este artigo</span>
+                    <div class="article-share-buttons">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fguadalupesistemas.com.br%2Fblog%2Fcomo-calcular-roi-de-uma-automacao%2F" target="_blank"
+                            rel="noopener noreferrer" class="article-share-btn article-share-icon"
+                            aria-label="Compartilhar no Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fguadalupesistemas.com.br%2Fblog%2Fcomo-calcular-roi-de-uma-automacao%2F&amp;text=Como%20calcular%20o%20ROI%20de%20uma%20automa%C3%A7%C3%A3o" target="_blank"
+                            rel="noopener noreferrer" class="article-share-btn article-share-icon"
+                            aria-label="Compartilhar no X"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fguadalupesistemas.com.br%2Fblog%2Fcomo-calcular-roi-de-uma-automacao%2F" target="_blank"
+                            rel="noopener noreferrer" class="article-share-btn article-share-icon"
+                            aria-label="Compartilhar no LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://api.whatsapp.com/send?text=Como%20calcular%20o%20ROI%20de%20uma%20automa%C3%A7%C3%A3o%20https%3A%2F%2Fguadalupesistemas.com.br%2Fblog%2Fcomo-calcular-roi-de-uma-automacao%2F" target="_blank"
+                            rel="noopener noreferrer" class="article-share-btn article-share-icon"
+                            aria-label="Compartilhar no WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+                <div class="article-author-bio">
+                    <div class="avatar-circle article-bio-avatar">EC</div>
+                    <div>
+                        <span class="article-author-label">Sobre o Autor</span>
+                        <h3>Ezequiel Campos</h3>
+                        <p>Especialista em tecnologia e soluções integradas. Através da Guadalupe Sistemas, busco descomplicar a transformação digital das empresas, implementando sistemas seguros e altamente escaláveis. Acredito que a tecnologia deve ser acessível, intuitiva e pensada para gerar resultados concretos para o seu negócio.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- ========== POSTS RECOMENDADOS ========== -->
+    <section class="recommended-posts">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2><span class="title-light">Mais no</span> <span class="title-bold">nosso Blog</span></h2>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-card reveal">
+                    <span class="blog-tag">Automação</span>
+                    <h3>15 processos que a sua empresa provavelmente pode automatizar</h3>
+                    <p>Uma lista para percorrer área por área e marcar o que se repete na sua operação.</p>
+                    <a href="/blog/processos-que-sua-empresa-pode-automatizar/" class="btn-link-arrow">Ler artigo <span class="arrow">↗</span></a>
+                </article>
+                <article class="blog-card reveal">
+                    <span class="blog-tag">Produtividade</span>
+                    <h3>Como a automação economiza dezenas de horas no mês</h3>
+                    <p>A conta que quase ninguém faz e o roteiro para escolher qual tarefa automatizar primeiro.</p>
+                    <a href="/blog/automacao-economia-de-horas/" class="btn-link-arrow">Ler artigo <span class="arrow">↗</span></a>
+                </article>
+            </div>
+            <div class="recommended-posts-cta">
+                <a href="/blog/" class="btn btn-outline">Ver todos os artigos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- gs:footer:start -->
+    <footer id="contato" class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="/" class="logo footer-logo">
+                        <img src="/assets/logo-simbolo.png" alt="Guadalupe Sistemas" class="logo-icon" width="40"
+                            height="40">
+                        <span class="logo-text">Guadalupe <strong>Sistemas</strong></span>
+                    </a>
+                    <p class="footer-tagline">IA, automação e sistemas sob medida com propósito, parceria e confiança
+                        para o crescimento contínuo do seu negócio.</p>
+                    <p class="footer-region">Atendemos a partir do <a
+                            href="/automacao-e-sistemas-em-minas-gerais/">Centro-Oeste de Minas Gerais</a>, de forma
+                        remota, para empresas de todo o Brasil.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Soluções</h4>
+                    <ul>
+                        <li><a href="/solucoes/agentes-de-ia/">Agentes de IA</a></li>
+                        <li><a href="/solucoes/automacao-de-processos/">Automação de Processos</a></li>
+                        <li><a href="/automacao-de-whatsapp/">Automação de WhatsApp</a></li>
+                        <li><a href="/solucoes/assistente-de-conhecimento/">Assistente de Conhecimento</a></li>
+                        <li><a href="/solucoes/sistemas-sob-medida/">Sistemas Sob Medida</a></li>
+                        <li><a href="/solucoes/aplicativos/">Aplicativos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Para o seu problema</h4>
+                    <ul>
+                        <li><a href="/inteligencia-artificial-para-empresas/">IA para Empresas</a></li>
+                        <li><a href="/desenvolvimento-de-sistemas/">Desenvolvimento de Sistemas</a></li>
+                        <li><a href="/quanto-custa-um-sistema-personalizado/">Quanto custa um sistema?</a></li>
+                        <li><a href="/para-clinicas/">Para Clínicas</a></li>
+                        <li><a href="/para-engenharia/">Para Engenharia</a></li>
+                        <li><a href="/diagnostico-de-ia/">Diagnóstico de IA</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Guadalupe</h4>
+                    <ul>
+                        <li><a href="/casos/">Casos Reais</a></li>
+                        <li><a href="/sobre/">Sobre nós</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/automacao-e-sistemas-em-minas-gerais/">Onde atendemos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Fale Conosco</h4>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <div>
+                            <span>Nosso WhatsApp:</span>
+                            <a href="https://wa.me/5537998323232" target="_blank" rel="noopener noreferrer"
+                                data-wa-origin="footer">(37) 99832-3232</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-instagram"></i>
+                        <div>
+                            <span>Acompanhe:</span>
+                            <a href="https://instagram.com/guadalupesistemas" target="_blank"
+                                rel="noopener noreferrer">@guadalupesistemas</a>
+                        </div>
+                    </div>
+                    <ul class="footer-legal-links">
+                        <li><a href="/contato/">Fale com a equipe</a></li>
+                        <li><a href="/seguranca-e-lgpd/">Segurança e LGPD</a></li>
+                        <li><a href="/politica-de-privacidade/">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span data-current-year>2026</span> Guadalupe Sistemas. Todos os direitos reservados. Feito com
+                    cuidado.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- gs:footer:end -->
+
+    <script src="/js/analytics.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

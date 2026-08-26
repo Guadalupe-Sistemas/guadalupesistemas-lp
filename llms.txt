@@ -1,10 +1,18 @@
 # Guadalupe Sistemas
 
-> Criamos agentes de IA, automações e sistemas sob medida para clínicas, escritórios de engenharia e empresas que querem reduzir trabalho manual, acelerar o atendimento e ganhar controle da operação.
+> A Guadalupe Sistemas desenvolve soluções de inteligência artificial, automação de processos e sistemas personalizados para empresas que querem reduzir trabalho manual, organizar operações e crescer com tecnologia. Atende principalmente clínicas, escritórios de engenharia e empresas de serviços.
 
 A porta de entrada é o Diagnóstico de IA: mapeamos os processos, identificamos as 3 a 5 automações que mais valem a pena e estimamos o retorno de cada uma antes de qualquer decisão de investimento. O valor do diagnóstico é abatido do projeto caso o cliente siga adiante.
 
-Atendemos a partir do Centro-Oeste de Minas Gerais, em todo o Brasil, de forma remota.
+Atendemos a partir do Centro-Oeste de Minas Gerais (DDD 37), em todo o Brasil, de forma remota.
+
+## Categorias principais
+
+- [Inteligência Artificial para Empresas](https://guadalupesistemas.com.br/inteligencia-artificial-para-empresas/): o que a IA resolve dentro de uma operação — atendimento, leitura de documentos, produção de texto —, onde ela não é a resposta e por onde começar.
+- [Desenvolvimento de Sistemas](https://guadalupesistemas.com.br/desenvolvimento-de-sistemas/): software personalizado para empresas — painel de gestão, CRM próprio, portal do cliente, sistema de gestão sob medida, aplicativos e integrações.
+- [Automação de WhatsApp](https://guadalupesistemas.com.br/automacao-de-whatsapp/): primeira resposta imediata, agendamento e confirmação, qualificação, follow-up e atendimento centralizado no canal oficial.
+- [Quanto custa um sistema personalizado](https://guadalupesistemas.com.br/quanto-custa-um-sistema-personalizado/): os oito fatores que formam o preço, o que entra além do desenvolvimento e como é montado o orçamento.
+- [Automação e sistemas em Minas Gerais](https://guadalupesistemas.com.br/automacao-e-sistemas-em-minas-gerais/): atuação no Centro-Oeste mineiro e como funciona o atendimento remoto.
 
 ## Para quem atendemos
 
@@ -29,6 +37,25 @@ Atendemos a partir do Centro-Oeste de Minas Gerais, em todo o Brasil, de forma r
 - [Todos os casos](https://guadalupesistemas.com.br/casos/)
 
 ## Blog
+
+Cluster Automação:
+
+- [O que é automação de processos, na prática](https://guadalupesistemas.com.br/blog/o-que-e-automacao-de-processos/)
+- [15 processos que a sua empresa provavelmente pode automatizar](https://guadalupesistemas.com.br/blog/processos-que-sua-empresa-pode-automatizar/)
+- [Como calcular o ROI de uma automação](https://guadalupesistemas.com.br/blog/como-calcular-roi-de-uma-automacao/)
+- [Automação substitui funcionários?](https://guadalupesistemas.com.br/blog/automacao-substitui-funcionarios/)
+
+Cluster Inteligência Artificial:
+
+- [Como usar IA na sua empresa: por onde começar](https://guadalupesistemas.com.br/blog/como-usar-ia-na-sua-empresa/)
+- [Quanto custa implementar IA em uma empresa](https://guadalupesistemas.com.br/blog/quanto-custa-implementar-ia-em-uma-empresa/)
+
+Cluster Sistemas:
+
+- [Como escolher uma empresa de desenvolvimento de sistemas](https://guadalupesistemas.com.br/blog/como-escolher-empresa-de-desenvolvimento-de-sistemas/)
+- [Como transformar uma planilha em sistema](https://guadalupesistemas.com.br/blog/como-transformar-planilha-em-sistema/)
+
+Demais artigos:
 
 - [Como a automação economiza dezenas de horas no mês](https://guadalupesistemas.com.br/blog/automacao-economia-de-horas/)
 - [Quando vale a pena investir em um sistema próprio para sua empresa?](https://guadalupesistemas.com.br/blog/quando-investir-em-sistema-proprio/)

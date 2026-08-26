@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Agentes de IA, automação e sistemas sob medida para clínicas, escritórios de engenharia e empresas que querem reduzir trabalho manual. Comece pelo diagnóstico.">
+        content="Inteligência artificial, automação de processos e desenvolvimento de sistemas sob medida para empresas. Menos tarefa manual, mais resultado. Comece pelo diagnóstico.">
     <!-- SEO & Open Graph -->
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="IA e Automação para Empresas | Guadalupe Sistemas">
+    <meta property="og:title" content="IA, Automação e Sistemas sob Medida | Guadalupe Sistemas">
     <meta property="og:description"
-        content="Agentes de IA, automação e sistemas sob medida para clínicas, escritórios de engenharia e empresas que querem reduzir trabalho manual.">
+        content="Inteligência artificial, automação de processos e desenvolvimento de sistemas sob medida para empresas que querem reduzir trabalho manual.">
     <meta property="og:url" content="https://guadalupesistemas.com.br/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Guadalupe Sistemas">
@@ -20,9 +20,9 @@
     <meta property="og:image:height" content="630">
     <meta property="og:image:alt" content="Guadalupe Sistemas - IA, automação e sistemas sob medida">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="IA e Automação para Empresas | Guadalupe Sistemas">
+    <meta name="twitter:title" content="IA, Automação e Sistemas sob Medida | Guadalupe Sistemas">
     <meta name="twitter:description"
-        content="Agentes de IA, automação e sistemas sob medida para clínicas, escritórios de engenharia e empresas que querem reduzir trabalho manual.">
+        content="Inteligência artificial, automação de processos e desenvolvimento de sistemas sob medida para empresas que querem reduzir trabalho manual.">
     <meta name="twitter:image" content="https://guadalupesistemas.com.br/assets/og-image.jpg">
     <link rel="canonical" href="https://guadalupesistemas.com.br/">
 
@@ -34,19 +34,34 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#0C0A23">
 
-    <title>IA e Automação para Empresas | Guadalupe Sistemas</title>
+    <title>IA, Automação e Sistemas sob Medida | Guadalupe Sistemas</title>
 
     <!-- Dados estruturados (JSON-LD) -->
+    <!-- TODO: confirmar com o cliente — cidade-sede para incluir "address"/"addressLocality" neste bloco -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "Organization",
+        "@type": "ProfessionalService",
+        "@id": "https://guadalupesistemas.com.br/#organizacao",
         "name": "Guadalupe Sistemas",
         "url": "https://guadalupesistemas.com.br/",
         "logo": "https://guadalupesistemas.com.br/assets/logo-completa.png",
-        "description": "IA, automação e sistemas sob medida para clínicas, consultórios e empresas de engenharia.",
+        "image": "https://guadalupesistemas.com.br/assets/og-image.jpg",
+        "description": "Desenvolvimento de soluções de inteligência artificial, automação de processos e sistemas sob medida para empresas.",
         "telephone": "+55-37-99832-3232",
-        "areaServed": "BR",
+        "priceRange": "$$",
+        "areaServed": [
+            { "@type": "AdministrativeArea", "name": "Centro-Oeste de Minas Gerais" },
+            { "@type": "State", "name": "Minas Gerais" },
+            { "@type": "Country", "name": "Brasil" }
+        ],
+        "serviceType": [
+            "Inteligência artificial para empresas",
+            "Automação de processos",
+            "Automação de WhatsApp",
+            "Desenvolvimento de sistemas sob medida",
+            "Desenvolvimento de aplicativos"
+        ],
         "sameAs": [
             "https://instagram.com/guadalupesistemas"
         ]
@@ -173,12 +188,14 @@
 
             <div class="container hero-content">
                 <h1 class="hero-title">
-                    <span class="title-light">Automação e IA para eliminar</span><br>
-                    <span class="title-bold">tarefas repetitivas da sua empresa</span>
+                    <span class="title-light">IA, automação e sistemas</span><br>
+                    <span class="title-bold">sob medida para empresas</span>
                 </h1>
                 <p class="hero-subtitle">
-                    Criamos agentes de IA, automações e sistemas sob medida para clínicas, escritórios de engenharia e
-                    empresas que querem reduzir trabalho manual, acelerar o atendimento e ganhar controle da operação.
+                    A Guadalupe Sistemas desenvolve soluções de inteligência artificial, automação de processos e
+                    sistemas personalizados para empresas que querem reduzir trabalho manual, organizar operações e
+                    crescer com tecnologia. Atendemos principalmente clínicas, escritórios de engenharia e empresas de
+                    serviços.
                 </p>
                 <div class="hero-ctas">
                     <a href="/diagnostico-de-ia/" class="btn btn-primary-white" data-cta="home-hero">Fazer meu
@@ -673,6 +690,8 @@
                         </div>
                         <span class="counter-value" data-target="90" data-suffix="%">90%</span>
                         <span class="number-label">Redução em falhas de agendamento</span>
+                        <a href="/casos/app-agendamento-clinica/" class="number-source" data-cta="numero-clinica">Ver
+                            o caso</a>
                     </div>
 
                     <div class="number-circle reveal">
@@ -681,6 +700,8 @@
                         </div>
                         <span class="counter-value" data-target="5" data-suffix=" min/dia">5 min/dia</span>
                         <span class="number-label">Para ter clareza total da gestão</span>
+                        <a href="/casos/painel-gestao-industria/" class="number-source" data-cta="numero-industria">Ver
+                            o caso</a>
                     </div>
 
                     <div class="number-circle reveal">
@@ -689,6 +710,8 @@
                         </div>
                         <span class="counter-value" data-target="100" data-suffix="%">100%</span>
                         <span class="number-label">Atendimento centralizado e rastreável</span>
+                        <a href="/casos/atendimento-automatizado-whatsapp/" class="number-source"
+                            data-cta="numero-whatsapp">Ver o caso</a>
                     </div>
                 </div>
             </div>
@@ -1133,6 +1156,9 @@
                     </a>
                     <p class="footer-tagline">IA, automação e sistemas sob medida com propósito, parceria e confiança
                         para o crescimento contínuo do seu negócio.</p>
+                    <p class="footer-region">Atendemos a partir do <a
+                            href="/automacao-e-sistemas-em-minas-gerais/">Centro-Oeste de Minas Gerais</a>, de forma
+                        remota, para empresas de todo o Brasil.</p>
                 </div>
 
                 <div class="footer-col">
@@ -1140,6 +1166,7 @@
                     <ul>
                         <li><a href="/solucoes/agentes-de-ia/">Agentes de IA</a></li>
                         <li><a href="/solucoes/automacao-de-processos/">Automação de Processos</a></li>
+                        <li><a href="/automacao-de-whatsapp/">Automação de WhatsApp</a></li>
                         <li><a href="/solucoes/assistente-de-conhecimento/">Assistente de Conhecimento</a></li>
                         <li><a href="/solucoes/sistemas-sob-medida/">Sistemas Sob Medida</a></li>
                         <li><a href="/solucoes/aplicativos/">Aplicativos</a></li>
@@ -1147,14 +1174,24 @@
                 </div>
 
                 <div class="footer-col">
-                    <h4>Guadalupe</h4>
+                    <h4>Para o seu problema</h4>
                     <ul>
-                        <li><a href="/diagnostico-de-ia/">Diagnóstico de IA</a></li>
+                        <li><a href="/inteligencia-artificial-para-empresas/">IA para Empresas</a></li>
+                        <li><a href="/desenvolvimento-de-sistemas/">Desenvolvimento de Sistemas</a></li>
+                        <li><a href="/quanto-custa-um-sistema-personalizado/">Quanto custa um sistema?</a></li>
                         <li><a href="/para-clinicas/">Para Clínicas</a></li>
                         <li><a href="/para-engenharia/">Para Engenharia</a></li>
+                        <li><a href="/diagnostico-de-ia/">Diagnóstico de IA</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Guadalupe</h4>
+                    <ul>
                         <li><a href="/casos/">Casos Reais</a></li>
                         <li><a href="/sobre/">Sobre nós</a></li>
                         <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/automacao-e-sistemas-em-minas-gerais/">Onde atendemos</a></li>
                     </ul>
                 </div>
 

@@ -116,6 +116,22 @@
                     "@type": "Answer",
                     "text": "Trabalhamos com o princípio de coletar o mínimo necessário para a tarefa administrativa: nome, contato, horário e tipo de atendimento. Dados sensíveis de saúde não precisam circular pela automação de agenda e, por padrão, não circulam. Todo o projeto segue as diretrizes da LGPD, com acesso controlado, registro de quem consultou o quê e tratamento definido em contrato. Explicamos ponto a ponto como isso funciona na página Segurança e LGPD."
                 }
+            },
+            {
+                "@type": "Question",
+                "name": "Vocês desenvolvem sistema para clínica ou só automação?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "As duas coisas, e elas resolvem problemas diferentes. Automação para clínicas atua sobre o que já existe: confirma consulta, responde no WhatsApp, envia lembrete, preenche documento. Um sistema para clínicas entra quando falta base de dados própria — escala de profissionais, painel de ocupação, controle de repasse — e o software atual não entrega isso. Na maioria dos casos começamos pela automação, que custa menos e devolve tempo mais rápido, e o sistema vem depois se o gargalo continuar."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Serve para clínica pequena, com um ou dois profissionais?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Serve, e é onde o ganho costuma ser mais visível — porque em clínica pequena não há a quem delegar. O critério não é o número de profissionais e sim o volume de repetição: quantas confirmações por dia, quantas remarcações por semana, quantas ligações a recepção atende para responder a mesma pergunta. Uma agenda com 40 atendimentos por dia gera repetição suficiente independentemente do tamanho da equipe."
+                }
             }
         ]
     }
@@ -504,6 +520,66 @@
             </div>
         </section>
 
+        <!-- ========== ALÉM DO ATENDIMENTO ========== -->
+        <section class="section-dark">
+            <div class="pixel-texture"></div>
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Além do atendimento</span>
+                    <h2>
+                        <span class="title-light">Sistemas e automação para clínicas:</span><br>
+                        <span class="title-bold">o que mais dá para fazer</span>
+                    </h2>
+                    <p class="section-subtitle">Confirmação e agendamento são o começo. Quando a agenda para de ser o
+                        gargalo, estas são as frentes que aparecem em seguida.</p>
+                </div>
+
+                <div class="glass-grid">
+                    <div class="glass-card reveal">
+                        <div class="glass-icon">
+                            <i class="fa-solid fa-calendar-week"></i>
+                        </div>
+                        <h3>Escala e plantão</h3>
+                        <p>Montagem da escala de profissionais, troca de plantão com regra própria e substituição sem
+                            depender de grupo de WhatsApp. É exatamente o
+                            <a href="/casos/app-agendamento-clinica/" class="link-inline"
+                                data-cta="clinicas-glass-caso">caso do app de agendamento</a>.</p>
+                    </div>
+
+                    <div class="glass-card reveal">
+                        <div class="glass-icon">
+                            <i class="fa-solid fa-file-medical"></i>
+                        </div>
+                        <h3>Documentos e termos</h3>
+                        <p>Termo de consentimento, orientação de preparo de exame, atestado e recibo preenchidos a
+                            partir do cadastro e enviados sozinhos, em vez de copiados de um arquivo antigo.</p>
+                    </div>
+
+                    <div class="glass-card reveal">
+                        <div class="glass-icon">
+                            <i class="fa-solid fa-chart-pie"></i>
+                        </div>
+                        <h3>Painel da clínica</h3>
+                        <p>Faltas, ocupação da agenda, retorno de pacientes, convênio versus particular. Indicadores em
+                            uma tela só, sem fechar planilha no fim do mês. Um
+                            <a href="/desenvolvimento-de-sistemas/" class="link-inline">sistema sob medida</a> resolve
+                            quando o software da clínica não entrega isso.</p>
+                    </div>
+
+                    <div class="glass-card reveal">
+                        <div class="glass-icon">
+                            <i class="fa-solid fa-money-check-dollar"></i>
+                        </div>
+                        <h3>Faturamento e repasse</h3>
+                        <p>Conferência de repasse de convênio, cálculo de comissão de profissional e alerta de glosa.
+                            Trabalho conferido linha a linha que a
+                            <a href="/solucoes/automacao-de-processos/" class="link-inline">automação de processos</a>
+                            assume.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- ========== FAQ ========== -->
         <section id="faq" class="section-light faq-section">
             <div class="container">
@@ -590,6 +666,41 @@
                                     isso funciona na página <a href="/seguranca-e-lgpd/">Segurança e LGPD</a>.</p>
                             </div>
                         </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Vocês desenvolvem sistema para clínica ou só automação?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    As duas coisas, e elas resolvem problemas diferentes. Automação para
+                                    clínicas atua sobre o que já existe: confirma consulta, responde no
+                                    WhatsApp, envia lembrete, preenche documento. Um sistema para clínicas
+                                    entra quando falta base de dados própria — escala de profissionais, painel
+                                    de ocupação, controle de repasse — e o software atual não entrega isso. Na
+                                    maioria dos casos começamos pela automação, que custa menos e devolve
+                                    tempo mais rápido, e o sistema vem depois se o gargalo continuar.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Serve para clínica pequena, com um ou dois profissionais?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    Serve, e é onde o ganho costuma ser mais visível — porque em clínica
+                                    pequena não há a quem delegar. O critério não é o número de profissionais
+                                    e sim o volume de repetição: quantas confirmações por dia, quantas
+                                    remarcações por semana, quantas ligações a recepção atende para responder
+                                    a mesma pergunta. Uma agenda com 40 atendimentos por dia gera repetição
+                                    suficiente independentemente do tamanho da equipe.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -651,6 +762,9 @@
                     </a>
                     <p class="footer-tagline">IA, automação e sistemas sob medida com propósito, parceria e confiança
                         para o crescimento contínuo do seu negócio.</p>
+                    <p class="footer-region">Atendemos a partir do <a
+                            href="/automacao-e-sistemas-em-minas-gerais/">Centro-Oeste de Minas Gerais</a>, de forma
+                        remota, para empresas de todo o Brasil.</p>
                 </div>
 
                 <div class="footer-col">
@@ -658,6 +772,7 @@
                     <ul>
                         <li><a href="/solucoes/agentes-de-ia/">Agentes de IA</a></li>
                         <li><a href="/solucoes/automacao-de-processos/">Automação de Processos</a></li>
+                        <li><a href="/automacao-de-whatsapp/">Automação de WhatsApp</a></li>
                         <li><a href="/solucoes/assistente-de-conhecimento/">Assistente de Conhecimento</a></li>
                         <li><a href="/solucoes/sistemas-sob-medida/">Sistemas Sob Medida</a></li>
                         <li><a href="/solucoes/aplicativos/">Aplicativos</a></li>
@@ -665,14 +780,24 @@
                 </div>
 
                 <div class="footer-col">
-                    <h4>Guadalupe</h4>
+                    <h4>Para o seu problema</h4>
                     <ul>
-                        <li><a href="/diagnostico-de-ia/">Diagnóstico de IA</a></li>
+                        <li><a href="/inteligencia-artificial-para-empresas/">IA para Empresas</a></li>
+                        <li><a href="/desenvolvimento-de-sistemas/">Desenvolvimento de Sistemas</a></li>
+                        <li><a href="/quanto-custa-um-sistema-personalizado/">Quanto custa um sistema?</a></li>
                         <li><a href="/para-clinicas/">Para Clínicas</a></li>
                         <li><a href="/para-engenharia/">Para Engenharia</a></li>
+                        <li><a href="/diagnostico-de-ia/">Diagnóstico de IA</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Guadalupe</h4>
+                    <ul>
                         <li><a href="/casos/">Casos Reais</a></li>
                         <li><a href="/sobre/">Sobre nós</a></li>
                         <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/automacao-e-sistemas-em-minas-gerais/">Onde atendemos</a></li>
                     </ul>
                 </div>
 

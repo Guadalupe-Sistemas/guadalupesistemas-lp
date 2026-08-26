@@ -2,7 +2,7 @@
 
 <img src="assets/logo-completa.png" alt="Guadalupe Sistemas" width="320">
 
-### IA, automação e sistemas sob medida para clínicas, consultórios e empresas de engenharia
+### IA, automação e sistemas sob medida para empresas
 
 [![Site](https://img.shields.io/badge/site-guadalupesistemas.com.br-1e3a8a?style=for-the-badge)](https://guadalupesistemas.com.br/)
 [![Deploy](https://img.shields.io/badge/deploy-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/)
@@ -14,7 +14,7 @@
 
 ## 📌 Sobre
 
-Landing page institucional da **Guadalupe Sistemas**, empresa de tecnologia especializada em **diagnóstico de IA, agentes de WhatsApp, automação de processos e sistemas sob medida**, com foco em clínicas, consultórios e empresas de engenharia — menos tarefa manual, mais resultado.
+Site institucional da **Guadalupe Sistemas**, empresa de tecnologia especializada em **inteligência artificial, automação de processos e desenvolvimento de sistemas sob medida**, atendendo principalmente clínicas, escritórios de engenharia e empresas de serviços a partir do Centro-Oeste de Minas Gerais — menos tarefa manual, mais resultado.
 
 🔗 **Site em Produção:** [guadalupesistemas.com.br](https://guadalupesistemas.com.br/)  
 📲 **WhatsApp Comercial:** [+55 37 99832-3232](https://wa.me/5537998323232)
@@ -28,7 +28,7 @@ Este repositório adota uma documentação modular projetada tanto para desenvol
 | Documento | Descrição e Finalidade |
 | :--- | :--- |
 | 🤖 [**`AGENTS.md`**](./AGENTS.md) | **Diretrizes para IA e Desenvolvedores:** Regras de ouro, protocolo de sincronização de docs, padrões de código (HTML/CSS/JS), tom de voz da marca, glossário terminológico, segurança e checklist pré-entrega. |
-| 📐 [**`SPEC.md`**](./SPEC.md) | **Especificação Técnica e de Produto:** Inventário de rotas, detalhamento das 16 seções do `index.html`, tokens do Design System v2, especificação dos scripts (`js/script.js` e `js/cookie-consent.js`), metadados SEO e template padrão para blog. |
+| 📐 [**`SPEC.md`**](./SPEC.md) | **Especificação Técnica e de Produto:** Inventário de rotas, detalhamento das 13 seções do `index.html`, tokens do Design System v2, especificação dos scripts (`js/script.js` e `js/cookie-consent.js`), metadados SEO e template padrão para blog. |
 | 🏛 [**`DECISIONS.md`**](./DECISIONS.md) | **Registro de Decisões Técnicas:** Narrativa por tópicos justificando escolhas de engenharia e produto (Zero-Build vs. Frameworks, Funil via WhatsApp, conformidade LGPD, animações nativas). |
 | 🗺 [**`PLAN.md`**](./PLAN.md) | **Roadmap de Evolução:** Backlog priorizado com fases de curto, médio e longo prazo (testes E2E com Playwright, persistência de leads via Webhooks/Serverless, CMS Headless para o blog). |
 | 🔍 [**`llms.txt`**](./llms.txt) | **Contexto Sintético para IA:** Resumo executivo para consumo rápido por crawlers e assistentes de IA sobre os serviços e canais da Guadalupe Sistemas. |
@@ -42,6 +42,14 @@ Este repositório adota uma documentação modular projetada tanto para desenvol
 ```
 guadalupesistemas-lp/
 ├── index.html                          # Home (13 seções)
+│
+│   # Páginas-pilar (categoria e fundo de funil)
+├── inteligencia-artificial-para-empresas/
+├── desenvolvimento-de-sistemas/
+├── automacao-de-whatsapp/
+├── quanto-custa-um-sistema-personalizado/
+├── automacao-e-sistemas-em-minas-gerais/   # SEO local
+│
 ├── solucoes/                           # Hub + 5 páginas de solução
 │   ├── agentes-de-ia/
 │   ├── automacao-de-processos/
@@ -56,7 +64,7 @@ guadalupesistemas-lp/
 ├── contato/                            # Formulário completo
 ├── seguranca-e-lgpd/                   # Tratamento de dados
 ├── politica-de-privacidade/            # Conformidade LGPD
-├── blog/                               # Índice + 5 artigos
+├── blog/                               # Índice + 13 artigos em 3 clusters
 │
 ├── css/styles.css                      # Design System v2 (Violet/Elevate), 28 seções
 ├── js/

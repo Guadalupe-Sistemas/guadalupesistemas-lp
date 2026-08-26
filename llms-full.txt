@@ -1,12 +1,13 @@
 # Guadalupe Sistemas — Documentação Completa (llms-full.txt)
 
-> **IA, automação e sistemas sob medida para clínicas, consultórios e empresas de engenharia.**  
-> A Guadalupe Sistemas mapeia processos operacionais, identifica onde a inteligência artificial gera o maior retorno sobre investimento (ROI) e entrega soluções completas — desde agentes de atendimento no WhatsApp até sistemas de gestão sob medida — com foco em eliminar tarefas manuais repetitivas e aumentar o faturamento do negócio.
+> **IA, automação e sistemas sob medida para empresas.**
+> A Guadalupe Sistemas desenvolve soluções de inteligência artificial, automação de processos e sistemas personalizados para empresas que querem reduzir trabalho manual, organizar operações e crescer com tecnologia. Mapeia processos operacionais, identifica onde a IA gera o maior retorno sobre investimento (ROI) e entrega soluções completas — de agentes de atendimento no WhatsApp a sistemas de gestão sob medida. Atende principalmente clínicas, escritórios de engenharia e empresas de serviços.
 
 - **Website Oficial:** https://guadalupesistemas.com.br/
 - **WhatsApp Comercial:** +55 37 99832-3232 (https://wa.me/5537998323232)
 - **Instagram:** https://instagram.com/guadalupesistemas
-- **Localização:** Brasil
+- **Localização:** Centro-Oeste de Minas Gerais (DDD 37), com atendimento remoto para todo o Brasil.
+  Página dedicada: https://guadalupesistemas.com.br/automacao-e-sistemas-em-minas-gerais/
 
 ---
 
@@ -92,6 +93,8 @@ A atuação é pautada por três princípios:
 
 Apenas resultados medidos em projetos entregues. Nomes de clientes não são divulgados sem autorização.
 
+**Sobre a origem dos números:** cada indicador abaixo vem da apuração do próprio cliente, não de uma medição criada para o site. O período comparado e a base de cálculo de cada um ainda não foram publicados — quando forem, aparecem no bloco "Como esse número foi medido" da página do caso. Até lá, os valores devem ser lidos como relato do cliente, não como estudo controlado.
+
 - **Aplicativo de agendamento para clínica** — https://guadalupesistemas.com.br/casos/app-agendamento-clinica/
   - *Desafio:* escalas mudavam com frequência e geravam confusão em plantões e consultas; a equipe reorganizava tudo manualmente.
   - *Solução:* aplicativo que simplificou substituições de horário e automatizou confirmações.
@@ -132,6 +135,38 @@ Apenas resultados medidos em projetos entregues. Nomes de clientes não são div
 
 Índice: https://guadalupesistemas.com.br/blog/
 
+### O que é automação de processos, na prática
+https://guadalupesistemas.com.br/blog/o-que-e-automacao-de-processos/
+- **Resumo:** definição sem jargão (software executando tarefa administrativa que segue sempre a mesma regra), as três partes de qualquer automação — gatilho, regras, ações —, o filtro de quatro perguntas para saber se um processo é automatizável, os quatro tipos que mais aparecem (rotina de calendário, transporte de dado entre sistemas, geração de documento, conferência e alerta) e os quatro limites: não organiza processo indefinido, não corrige dado errado na origem, não substitui julgamento e não é "ligar e esquecer".
+
+### 15 processos que a sua empresa provavelmente pode automatizar
+https://guadalupesistemas.com.br/blog/processos-que-sua-empresa-pode-automatizar/
+- **Resumo:** lista por área — atendimento e agenda (primeira resposta fora do horário, confirmação de agendamento, perguntas frequentes), comercial (cadastro de lead, follow-up de orçamento, geração de proposta, distribuição de contatos), financeiro (lembrete antes do vencimento, régua de cobrança, conciliação, relatório de fechamento), documentos (emissão a partir do cadastro, envio para assinatura, extração de dados) e operação (alertas de prazo e exceção). Fecha com o critério frequência × tempo para escolher o primeiro.
+
+### Como calcular o ROI de uma automação
+https://guadalupesistemas.com.br/blog/como-calcular-roi-de-uma-automacao/
+- **Resumo:** quatro passos — medir o tempo devolvido (tempo por execução × frequência, descontando o resto humano de 20% a 40%), definir o valor real da hora conforme o que a empresa faz com o tempo liberado, somar custo único e recorrente (incluindo o tempo da própria equipe na implantação) e calcular o payback. Inclui o ganho que não entra na planilha e três armadilhas: contar a mesma hora duas vezes, ignorar a curva de adoção e automatizar processo que deveria ser eliminado.
+
+### Automação substitui funcionários?
+https://guadalupesistemas.com.br/blog/automacao-substitui-funcionarios/
+- **Resumo:** automação substitui tarefas, não pessoas — mas o que a empresa faz com o tempo liberado é decisão de gestão. O que ela assume (digitação dupla, conferência linha a linha, lembretes, resposta repetida, documento a partir de modelo), o que não consegue assumir (exceção, negociação, cliente insatisfeito, julgamento profissional, relacionamento), os três caminhos possíveis para o tempo liberado, como conduzir a conversa com a equipe e os sinais de que a promessa do fornecedor está exagerada.
+
+### Como usar IA na sua empresa: por onde começar
+https://guadalupesistemas.com.br/blog/como-usar-ia-na-sua-empresa/
+- **Resumo:** o erro de escolher a ferramenta antes do problema, três perguntas de triagem (frequência, existência de resposta certa, possibilidade de verificar o erro), os candidatos que costumam funcionar (atendimento repetitivo, busca em documento, leitura de arquivo com formato variável, rascunho de texto, classificação), como desenhar um primeiro projeto pequeno e quatro erros caros. Explica a diferença entre usar ChatGPT e ter IA integrada ao processo.
+
+### Quanto custa implementar IA em uma empresa
+https://guadalupesistemas.com.br/blog/quanto-custa-implementar-ia-em-uma-empresa/
+- **Resumo:** por que o custo de IA tem duas partes — construção e uso por volume. O que forma o custo de construção (quantidade de fluxos, integrações, estado da base de conteúdo, exigência de verificação), o que faz o custo mensal variar (interações, tamanho do contexto, escolha do modelo, custo do canal oficial), o que mais entra na recorrência (incluindo revisão do roteiro) e quatro perguntas para comparar propostas.
+
+### Como escolher uma empresa de desenvolvimento de sistemas
+https://guadalupesistemas.com.br/blog/como-escolher-empresa-de-desenvolvimento-de-sistemas/
+- **Resumo:** nove perguntas antes de contratar — escopo incluído e excluído, tratamento de pedido novo, quando se vê algo funcionando, propriedade do sistema, exportação de dados, documentação para outra equipe assumir, custo de manutenção e atendimento em emergência. Inclui cinco sinais de alerta (preço fechado sem entender o processo, prazo curto demais, nenhuma pergunta sobre exceções, conversa só sobre tecnologia, fornecedor que nunca diz não) e a comparação entre estrutura grande e pequena.
+
+### Como transformar uma planilha em sistema
+https://guadalupesistemas.com.br/blog/como-transformar-planilha-em-sistema/
+- **Resumo:** os sete sinais de que a planilha chegou ao limite, o erro de pedir "um sistema igual à minha planilha" e o erro oposto de redesenhar tudo, a separação entre cadastro, movimento e visão, as três decisões possíveis sobre dados antigos (migrar tudo, só o período recente ou só os cadastros) e a transição em três fases — paralelo, planilha como consulta, planilha arquivada. Termina defendendo o que continua fazendo sentido na planilha.
+
 ### Como a automação economiza dezenas de horas no mês
 https://guadalupesistemas.com.br/blog/automacao-economia-de-horas/
 - **Resumo:** mostra como calcular o custo real de uma tarefa repetitiva (tempo × frequência × dias úteis), quais tarefas valem automação primeiro — comunicação recorrente, transporte de dados entre sistemas, geração de documentos e follow-up — e quais não valem: o que exige julgamento, o que acontece raramente, o que ainda muda toda hora e o contato que constrói relação.
@@ -155,6 +190,13 @@ https://guadalupesistemas.com.br/blog/seguranca-de-guardar-dados-na-nuvem/
 ---
 
 ## 🗺️ Mapa Completo de Páginas
+
+**Categorias (páginas-pilar)**
+- Inteligência Artificial para Empresas: https://guadalupesistemas.com.br/inteligencia-artificial-para-empresas/
+- Desenvolvimento de Sistemas: https://guadalupesistemas.com.br/desenvolvimento-de-sistemas/
+- Automação de WhatsApp: https://guadalupesistemas.com.br/automacao-de-whatsapp/
+- Quanto custa um sistema personalizado: https://guadalupesistemas.com.br/quanto-custa-um-sistema-personalizado/
+- Automação e sistemas em Minas Gerais: https://guadalupesistemas.com.br/automacao-e-sistemas-em-minas-gerais/
 
 **Comerciais**
 - Home: https://guadalupesistemas.com.br/
