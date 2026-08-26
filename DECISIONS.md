@@ -167,3 +167,28 @@ Estabelecida a regra de **nunca publicar prova social não verificável**.
 - Os contadores passaram a trazer o valor final no HTML (`90%`), com o JavaScript animando de zero até ele — progressive enhancement em vez de dependência de script.
 
 Publicar depoimento nominal exige nome real, cargo, empresa, texto aprovado e autorização de uso de imagem por escrito.
+
+---
+
+## 🧭 11. Cobertura Semântica sem Canibalização (Agosto/2026)
+
+### Contexto
+Uma segunda auditoria de SEO, posterior à reestruturação da decisão 7, apontou três lacunas: o H1 da home vendia um benefício ("Automação e IA para eliminar tarefas repetitivas") sem deixar inequívoco **o que a empresa é**; não havia URL para as buscas de categoria ("inteligência artificial para empresas", "desenvolvimento de sistemas", "quanto custa desenvolver um sistema"); e a presença geográfica era só implícita, mencionada em duas frases perdidas apesar de a operação ser toda do DDD 37.
+
+A auditoria propunha, junto com isso, criar cerca de vinte páginas na raiz — entre elas `/agentes-de-ia/`, `/automacao-de-processos/`, `/sistemas-sob-medida/`, `/aplicativos/` e `/solucoes-para-clinicas/`.
+
+### Alternativas Consideradas
+1. **Criar todas as URLs propostas.** Aumentaria a superfície indexada de imediato, mas quatro delas seriam quase idênticas a páginas criadas semanas antes sob `/solucoes/*`, e uma a `/para-clinicas/`. Duas URLs disputando o mesmo termo dividem sinal, e o Google escolhe uma — normalmente não a que o site preferia.
+2. **Promover `/solucoes/*` para a raiz**, com 301 das antigas. URLs mais curtas, mas jogaria fora o histórico de URLs publicadas há poucas semanas e dissolveria o hub `/solucoes/`.
+3. **Reforçar o que existe e criar página nova só onde a intenção é distinta.** Zero duplicata, zero redirecionamento novo.
+
+### Decisão & Racional
+Adotada a **opção 3**. O site foi de 24 para 37 URLs, sem nenhuma competindo com outra.
+
+- **Página nova só para intenção sem dono.** Foram criadas cinco: `/inteligencia-artificial-para-empresas/` e `/desenvolvimento-de-sistemas/` cobrem a categoria (o guarda-chuva), enquanto `/solucoes/agentes-de-ia/` e `/solucoes/sistemas-sob-medida/` continuam cobrindo a oferta. `/automacao-de-whatsapp/` cobre o caso de uso pelo canal, distinto da tecnologia. `/quanto-custa-um-sistema-personalizado/` não tinha equivalente e é a maior intenção de compra do site. `/automacao-e-sistemas-em-minas-gerais/` cobre a busca geográfica.
+- **O que já existia foi reforçado, não duplicado.** Cada página de solução e as duas verticais ganharam um `<h2>` que cobre os sinônimos usados no mercado ("automação empresarial", "software personalizado", "sistemas para clínicas") e duas perguntas de FAQ, com o `FAQPage` espelhado.
+- **O H1 da home passou a definir a entidade** — "IA, automação e sistemas sob medida para empresas" — em vez de prometer um benefício. Não por acúmulo de palavra-chave: por ser a frase que responde "o que essa empresa faz?" para o leitor e para o buscador ao mesmo tempo. O subtítulo nomeia a Guadalupe e mantém a qualificação de público.
+- **Uma página geográfica, não dez.** A regra 10 vale para geografia: página "cidade + palavra-chave" praticamente igual às outras é conteúdo artificial. Foi criada uma página regional com conteúdo genuíno (contexto econômico do Centro-Oeste mineiro, tipos de projeto, como funciona o atendimento remoto, incluindo suas desvantagens), e as cidades aparecem dentro do texto como área atendida. Páginas por cidade ficam bloqueadas até haver cliente real da cidade para citar — registrado como Fase 6 no [`PLAN.md`](./PLAN.md).
+- **`Organization` virou `ProfessionalService`** com `areaServed` explícito. `address` e `addressLocality` continuam ausentes porque a cidade-sede ainda é pendência do cliente: melhor não declarar do que declarar errado.
+- **Três clusters de conteúdo, com links nos dois sentidos.** Oito artigos novos, cada um linkando o pilar no meio do texto e recebendo link de volta pelo "Veja também". As páginas que falam de preço linkam entre si em vez de repetir conteúdo — o mesmo cuidado com canibalização aplicado dentro do blog. Foi por isso que o artigo previsto "Sistema próprio ou software pronto?" foi trocado por "Como escolher uma empresa de desenvolvimento de sistemas": a comparação já era o miolo de um artigo publicado.
+- **Nenhuma faixa de preço de projeto foi publicada.** A página de custo explica os oito fatores que formam o valor e o método de orçamento, e só publica a única cifra verificável — o diagnóstico a partir de R$ 2.500. Faixa por porte de projeto ficou em `<!-- TODO -->`. Pela mesma regra, os blocos "Como esse número foi medido" nas páginas de caso dizem o que é verificável hoje e deixam período e base de cálculo pendentes, em vez de inventar uma metodologia plausível.

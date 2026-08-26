@@ -21,6 +21,11 @@ O site usa **URLs em pasta** (`/para-clinicas/` → `para-clinicas/index.html`).
 | Arquivo | Rota | Finalidade |
 | :--- | :--- | :--- |
 | `index.html` | `/` | Home: hero, seletor de cenário, desafios, soluções, casos, diagnóstico, método, resultados, relatos, FAQ, formulário |
+| `inteligencia-artificial-para-empresas/index.html` | `/inteligencia-artificial-para-empresas/` | Pilar da categoria IA: o que resolve, onde não é a resposta, por onde começar |
+| `desenvolvimento-de-sistemas/index.html` | `/desenvolvimento-de-sistemas/` | Pilar da categoria sistemas: o que construímos, como, quando não vale |
+| `automacao-de-whatsapp/index.html` | `/automacao-de-whatsapp/` | Pilar do caso de uso por canal: o que dá e o que não dá para automatizar |
+| `quanto-custa-um-sistema-personalizado/index.html` | `/quanto-custa-um-sistema-personalizado/` | Fundo de funil: os 8 fatores de preço, custo total e método de orçamento |
+| `automacao-e-sistemas-em-minas-gerais/index.html` | `/automacao-e-sistemas-em-minas-gerais/` | SEO local: contexto da região, tipos de projeto, atendimento remoto |
 | `diagnostico-de-ia/index.html` | `/diagnostico-de-ia/` | Oferta de entrada, a partir de R$ 2.500, com método, entregáveis e FAQ |
 | `para-clinicas/index.html` | `/para-clinicas/` | Vertical saúde: no-show, confirmação, agendamento, retorno de pacientes |
 | `para-engenharia/index.html` | `/para-engenharia/` | Vertical engenharia: propostas, orçamentos, documentos, normas, CRM |
@@ -49,13 +54,32 @@ O site usa **URLs em pasta** (`/para-clinicas/` → `para-clinicas/index.html`).
 | `seguranca-e-lgpd/index.html` | `/seguranca-e-lgpd/` | Tratamento de dados, acesso, retenção, dados de saúde |
 | `politica-de-privacidade/index.html` | `/politica-de-privacidade/` | Política de privacidade |
 | `blog/index.html` | `/blog/` | Índice dos artigos |
+| `blog/o-que-e-automacao-de-processos/index.html` | `/blog/o-que-e-automacao-de-processos/` | Artigo — cluster Automação |
+| `blog/processos-que-sua-empresa-pode-automatizar/index.html` | `/blog/processos-que-sua-empresa-pode-automatizar/` | Artigo — cluster Automação |
+| `blog/como-calcular-roi-de-uma-automacao/index.html` | `/blog/como-calcular-roi-de-uma-automacao/` | Artigo — cluster Automação |
+| `blog/automacao-substitui-funcionarios/index.html` | `/blog/automacao-substitui-funcionarios/` | Artigo — cluster Automação |
+| `blog/como-usar-ia-na-sua-empresa/index.html` | `/blog/como-usar-ia-na-sua-empresa/` | Artigo — cluster IA |
+| `blog/quanto-custa-implementar-ia-em-uma-empresa/index.html` | `/blog/quanto-custa-implementar-ia-em-uma-empresa/` | Artigo — cluster IA |
+| `blog/como-escolher-empresa-de-desenvolvimento-de-sistemas/index.html` | `/blog/como-escolher-empresa-de-desenvolvimento-de-sistemas/` | Artigo — cluster Sistemas |
+| `blog/como-transformar-planilha-em-sistema/index.html` | `/blog/como-transformar-planilha-em-sistema/` | Artigo — cluster Sistemas |
 | `blog/automacao-economia-de-horas/index.html` | `/blog/automacao-economia-de-horas/` | Artigo — Produtividade |
 | `blog/quando-investir-em-sistema-proprio/index.html` | `/blog/quando-investir-em-sistema-proprio/` | Artigo — Gestão |
 | `blog/organizar-atendimento-whatsapp/index.html` | `/blog/organizar-atendimento-whatsapp/` | Artigo — Atendimento |
 | `blog/7-motivos-para-colocar-seus-dados-na-nuvem/index.html` | `/blog/7-motivos-.../` | Artigo — Tecnologia e Segurança |
 | `blog/seguranca-de-guardar-dados-na-nuvem/index.html` | `/blog/seguranca-.../` | Artigo — Tecnologia e Segurança |
 
-**Total: 24 páginas indexáveis.** `sitemap.xml` é gerado a partir da árvore de arquivos por `node tools/build-sitemap.mjs`.
+**Total: 37 páginas indexáveis.** `sitemap.xml` é gerado a partir da árvore de arquivos por `node tools/build-sitemap.mjs`.
+
+### Malha de links dos clusters
+
+Cada artigo linka a página-pilar correspondente no meio do texto, e cada pilar linka de volta pelo bloco "Veja também". As três páginas de preço — `/quanto-custa-um-sistema-personalizado/`, `/blog/quanto-custa-implementar-ia-em-uma-empresa/` e o trecho de custo em `/blog/quando-investir-em-sistema-proprio/` — **linkam entre si em vez de repetir conteúdo**, para não competirem pela mesma busca.
+
+| Cluster | Pilar | Artigos de apoio |
+| :--- | :--- | :--- |
+| Automação | `/solucoes/automacao-de-processos/` | `o-que-e-automacao-de-processos`, `processos-que-sua-empresa-pode-automatizar`, `como-calcular-roi-de-uma-automacao`, `automacao-substitui-funcionarios`, `automacao-economia-de-horas` |
+| IA | `/inteligencia-artificial-para-empresas/` | `como-usar-ia-na-sua-empresa`, `quanto-custa-implementar-ia-em-uma-empresa` |
+| Sistemas | `/desenvolvimento-de-sistemas/` e `/quanto-custa-um-sistema-personalizado/` | `como-escolher-empresa-de-desenvolvimento-de-sistemas`, `como-transformar-planilha-em-sistema`, `quando-investir-em-sistema-proprio` |
+| WhatsApp | `/automacao-de-whatsapp/` | `organizar-atendimento-whatsapp` |
 
 ### Arquivos que NÃO são publicados
 
@@ -69,14 +93,14 @@ A home foi reorganizada para ordem de decisão: o visitante se identifica, recon
 
 | # | `id` | Seção | Papel |
 | :-- | :--- | :--- | :--- |
-| 1 | `#inicio` | Hero | Promessa concreta + CTA "Fazer meu diagnóstico" |
+| 1 | `#inicio` | Hero | H1 de entidade — "IA, automação e sistemas sob medida para empresas" — + CTA "Fazer meu diagnóstico" |
 | 2 | `#cenarios` | Escolha seu cenário | 3 cards → `/para-clinicas/`, `/para-engenharia/`, `/solucoes/` |
 | 3 | `#desafios` | Desafios | 8 dores em 3 grupos (clínicas, engenharia, geral) |
 | 4 | `#servicos` | Escada de serviços | 5 cards, cada um linkando para sua página em `/solucoes/` |
 | 5 | `#casos` | Casos reais | 3 cards, cada um linkando para `/casos/<slug>/` |
 | 6 | `#diagnostico` | Diagnóstico de IA | Oferta de entrada, a partir de R$ 2.500 |
 | 7 | `#como-funciona` | Método em 4 passos | Bate-papo → Planejamento → Construção → Acompanhamento |
-| 8 | `#resultados` | Números | Contadores 90% / 5 min-dia / 100% |
+| 8 | `#resultados` | Números | Contadores 90% / 5 min-dia / 100%, cada um com link `.number-source` para o caso que o originou |
 | 9 | `#relatos` | Relatos por segmento | Carrossel sem nome ou foto fabricados |
 | 10 | `#por-que` | Por que a Guadalupe | 4 diferenciais concretos |
 | 11 | `#faq` | FAQ | Accordion de 5 objeções, espelhado no JSON-LD `FAQPage` |
@@ -90,6 +114,8 @@ Mais o CTA final (`.cta-final-section`), o nav e o footer.
 - Toda `<section class="section-dark">` precisa de `<div class="pixel-texture"></div>` como primeiro filho, e do `.container` interno em `position: relative; z-index: 1`.
 - Contadores só animam dentro de uma `<section class="numbers-section">` — o observador é `document.querySelector(".numbers-section")` e falha em silêncio, imprimindo o valor estático.
 - O valor final do contador fica no HTML (`>90%<`), não `0`. O JS anima de 0 até ele. Sem isso, crawlers e prévias de link leem zero.
+- Todo número de resultado precisa levar à sua origem: na home pelo link `.number-source`, na página de caso pelo bloco "Como esse número foi medido". Enquanto a metodologia não for confirmada pelo cliente, o texto visível diz só o que é verificável e a pendência fica em `<!-- TODO -->`.
+- Toda `.section-dark` que usa `.steps-timeline` depende das regras `.section-dark .step-number` e `.section-dark .step-item h3` — sem elas o anel branco do número e o título ficam ilegíveis sobre o navy.
 
 ### Seções que saíram da home
 
@@ -204,16 +230,16 @@ Node puro, sem dependências, **fora do deploy**. Rodar antes de todo commit:
 ## 🔍 6. Metadados, SEO e Arquivos Auxiliares
 
 - **`robots.txt`:** libera indexação geral, bloqueia `/partials/`, `/tools/` e `/docs/`, e aponta o sitemap.
-- **`sitemap.xml`:** 24 URLs, gerado por `tools/build-sitemap.mjs`. Prioridade derivada do tipo de página.
+- **`sitemap.xml`:** 37 URLs, gerado por `tools/build-sitemap.mjs`. Prioridade derivada do tipo de página.
 - **`vercel.json`:** 301 das 4 URLs `.html` antigas para as novas em pasta, `trailingSlash: true`, headers de segurança e cache longo para `/assets/`, `/css/` e `/js/`.
 - **`.vercelignore`:** remove `partials/`, `tools/`, `docs/` e `README.md` do publish.
 - **`llms.txt` / `llms-full.txt`:** contexto para agentes de IA.
 - **`site.webmanifest`:** metadados PWA (`theme_color: #0C0A23`).
-- **JSON-LD (51 blocos, todos validados):**
+- **JSON-LD (81 blocos, todos com JSON válido):**
 
 | Tipo | Onde |
 | :--- | :--- |
-| `Organization`, `WebSite` | Home |
+| `ProfessionalService`, `WebSite` | Home (`ProfessionalService` também na página regional; substituiu `Organization` para declarar `areaServed`) |
 | `BreadcrumbList` | Todas as páginas internas |
 | `Service` | Páginas de solução e verticais |
 | `Article` | Artigos do blog e páginas de caso |
