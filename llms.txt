@@ -1,24 +1,50 @@
 # Guadalupe Sistemas
 
-> IA, automação e sistemas sob medida para clínicas, consultórios e empresas de engenharia. A Guadalupe Sistemas mapeia processos, identifica onde a IA gera mais retorno e entrega desde agentes de WhatsApp até sistemas completos de gestão, com foco em reduzir tarefas manuais e aumentar o resultado do negócio.
+> Criamos agentes de IA, automações e sistemas sob medida para clínicas, escritórios de engenharia e empresas que querem reduzir trabalho manual, acelerar o atendimento e ganhar controle da operação.
 
-A empresa atua principalmente com dois públicos: clínicas e consultórios (médicos, odontológicos, veterinários) e empresas de engenharia e arquitetura — mas também atende contabilidades, indústrias, comércio e outros negócios técnicos.
+A porta de entrada é o Diagnóstico de IA: mapeamos os processos, identificamos as 3 a 5 automações que mais valem a pena e estimamos o retorno de cada uma antes de qualquer decisão de investimento. O valor do diagnóstico é abatido do projeto caso o cliente siga adiante.
 
-## Serviços
+Atendemos a partir do Centro-Oeste de Minas Gerais, em todo o Brasil, de forma remota.
 
-- [Diagnóstico de IA](https://guadalupesistemas.com.br/#diagnostico): mapeamento de processos, priorização das automações de maior ROI e roadmap de implementação. A partir de R$ 2.500, valor abatido no projeto caso o cliente siga com a Guadalupe.
-- [Agentes de IA](https://guadalupesistemas.com.br/#servicos): atendimento automatizado 24h via WhatsApp e outros canais — agenda, confirma e remarca consultas, qualifica leads e faz follow-up.
-- [Automação de Processos](https://guadalupesistemas.com.br/#servicos): lembretes, geração de documentos, integrações entre sistemas e alimentação de CRM.
-- [Assistente de Conhecimento](https://guadalupesistemas.com.br/#servicos): IA treinada sobre os documentos da empresa (normas técnicas, projetos, protocolos) para respostas rápidas à equipe.
-- [Sites, Sistemas e Apps sob Medida](https://guadalupesistemas.com.br/#servicos): sites institucionais, sistemas de gestão e aplicativos personalizados, integrados a IA e automação.
+## Para quem atendemos
 
-## Páginas
+- [Para Clínicas e Consultórios](https://guadalupesistemas.com.br/para-clinicas/): confirmação de consultas, redução de no-show, agendamento, remarcação, retorno de pacientes e atendimento por WhatsApp. A IA cuida apenas da camada administrativa — decisões clínicas são sempre do profissional de saúde.
+- [Para Engenharia e Arquitetura](https://guadalupesistemas.com.br/para-engenharia/): automação de propostas e orçamentos, follow-up comercial, organização de documentos de projeto, consulta a normas técnicas e integração com CRM.
 
-- [Página inicial](https://guadalupesistemas.com.br/): apresentação da empresa, desafios por segmento, escada de serviços, casos de sucesso, depoimentos e formulário de contato.
-- [Blog](https://guadalupesistemas.com.br/blog.html): artigos sobre automação, nuvem e segurança de dados para empresas.
-- [Política de Privacidade](https://guadalupesistemas.com.br/politica-de-privacidade.html): tratamento de dados pessoais conforme a LGPD.
+## Soluções
+
+- [Diagnóstico de IA](https://guadalupesistemas.com.br/diagnostico-de-ia/): mapeamento de processos, prioridades de automação, estimativa de ROI e roadmap. A partir de R$ 2.500.
+- [Agentes de IA](https://guadalupesistemas.com.br/solucoes/agentes-de-ia/): um agente que atende o WhatsApp, responde dúvidas, qualifica o cliente e encaminha oportunidades para a equipe.
+- [Automação de Processos](https://guadalupesistemas.com.br/solucoes/automacao-de-processos/): lembretes, documentos, integrações entre sistemas e alimentação de CRM.
+- [Assistente de Conhecimento](https://guadalupesistemas.com.br/solucoes/assistente-de-conhecimento/): IA que responde com base nos documentos, normas e procedimentos da própria empresa.
+- [Sistemas Sob Medida](https://guadalupesistemas.com.br/solucoes/sistemas-sob-medida/): painel de gestão, CRM próprio, portal do cliente e sistemas internos.
+- [Aplicativos](https://guadalupesistemas.com.br/solucoes/aplicativos/): apps para cliente final e para equipe de campo, web e celular.
+- [Todas as soluções](https://guadalupesistemas.com.br/solucoes/)
+
+## Casos reais
+
+- [App de agendamento para clínica](https://guadalupesistemas.com.br/casos/app-agendamento-clinica/): redução de 90% nas falhas de agendamento.
+- [Atendimento automatizado no WhatsApp](https://guadalupesistemas.com.br/casos/atendimento-automatizado-whatsapp/): atendimento centralizado e rastreável.
+- [Painel de gestão para indústria](https://guadalupesistemas.com.br/casos/painel-gestao-industria/): acompanhamento da gestão em cerca de 5 minutos por dia.
+- [Todos os casos](https://guadalupesistemas.com.br/casos/)
+
+## Blog
+
+- [Como a automação economiza dezenas de horas no mês](https://guadalupesistemas.com.br/blog/automacao-economia-de-horas/)
+- [Quando vale a pena investir em um sistema próprio para sua empresa?](https://guadalupesistemas.com.br/blog/quando-investir-em-sistema-proprio/)
+- [O guia simples para organizar o atendimento via WhatsApp](https://guadalupesistemas.com.br/blog/organizar-atendimento-whatsapp/)
+- [7 motivos para colocar seus dados na nuvem](https://guadalupesistemas.com.br/blog/7-motivos-para-colocar-seus-dados-na-nuvem/)
+- [A segurança de guardar os dados na nuvem](https://guadalupesistemas.com.br/blog/seguranca-de-guardar-dados-na-nuvem/)
+- [Índice do blog](https://guadalupesistemas.com.br/blog/)
+
+## Institucional
+
+- [Sobre a Guadalupe](https://guadalupesistemas.com.br/sobre/)
+- [Segurança e LGPD](https://guadalupesistemas.com.br/seguranca-e-lgpd/)
+- [Contato](https://guadalupesistemas.com.br/contato/)
+- [Política de Privacidade](https://guadalupesistemas.com.br/politica-de-privacidade/)
 
 ## Contato
 
-- WhatsApp: +55 37 99832-3232 (https://wa.me/5537998323232)
-- Instagram: https://instagram.com/guadalupesistemas
+- WhatsApp: +55 37 99832-3232
+- Instagram: [@guadalupesistemas](https://instagram.com/guadalupesistemas)

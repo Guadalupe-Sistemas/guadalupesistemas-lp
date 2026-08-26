@@ -1,0 +1,8 @@
+# Arquivos de desenvolvimento — não devem ser publicados.
+# partials/ contém fragmentos de HTML sem <head>: publicados, virariam páginas
+# rasas e indexáveis. tools/ e docs/ são de uso local apenas.
+
+partials/
+tools/
+docs/
+README.md

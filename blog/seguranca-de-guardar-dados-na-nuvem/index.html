@@ -13,12 +13,12 @@
     <meta property="og:title" content="A segurança de guardar os dados na nuvem | Guadalupe Sistemas">
     <meta property="og:description"
         content="Descubra as principais ameaças de manter arquivos locais e como a nuvem blinda sua empresa.">
-    <meta property="og:url" content="https://guadalupesistemas.com.br/seguranca-de-guardar-dados-na-nuvem.html">
+    <meta property="og:url" content="https://guadalupesistemas.com.br/blog/seguranca-de-guardar-dados-na-nuvem/">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Guadalupe Sistemas">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:image"
-        content="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630&q=80">
+        content="https://guadalupesistemas.com.br/assets/og-image.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="article:published_time" content="2026-08-24T00:00:00-03:00">
@@ -28,8 +28,8 @@
     <meta name="twitter:description"
         content="Descubra as principais ameaças de manter arquivos locais e como a nuvem blinda sua empresa.">
     <meta name="twitter:image"
-        content="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630&q=80">
-    <link rel="canonical" href="https://guadalupesistemas.com.br/seguranca-de-guardar-dados-na-nuvem.html">
+        content="https://guadalupesistemas.com.br/assets/og-image.jpg">
+    <link rel="canonical" href="https://guadalupesistemas.com.br/blog/seguranca-de-guardar-dados-na-nuvem/">
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -48,7 +48,7 @@
         "@type": "Article",
         "headline": "A segurança de guardar os dados na nuvem",
         "description": "Descubra as principais ameaças de manter arquivos locais e como a nuvem blinda sua empresa.",
-        "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&h=630&q=80",
+        "image": "https://guadalupesistemas.com.br/assets/og-image.jpg",
         "datePublished": "2026-08-24T00:00:00-03:00",
         "dateModified": "2026-08-24T00:00:00-03:00",
         "author": {
@@ -63,18 +63,18 @@
                 "url": "https://guadalupesistemas.com.br/assets/logo-completa.png"
             }
         },
-        "mainEntityOfPage": "https://guadalupesistemas.com.br/seguranca-de-guardar-dados-na-nuvem.html"
+        "mainEntityOfPage": "https://guadalupesistemas.com.br/blog/seguranca-de-guardar-dados-na-nuvem/"
     }
     </script>
 
     <!-- Google tag (gtag.js) via banner de consentimento de cookies -->
-    <script src="js/cookie-consent.js" defer></script>
+    <script src="/js/cookie-consent.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@300;400;600;700&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
     <!-- Ícones (Font Awesome - lazy) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         media="print" onload="this.media='all'">
@@ -84,31 +84,32 @@
 </head>
 
 <body>
-    <!-- ========== NAVBAR ========== -->
+    <!-- gs:nav:start variant="solid" active="blog" -->
     <nav class="navbar navbar-solid" id="navbar">
         <div class="container nav-container">
-            <a href="index.html" class="logo" aria-label="Guadalupe Sistemas - Página Inicial">
-                <img src="assets/logo-simbolo.png" alt="Guadalupe Sistemas" class="logo-icon">
+            <a href="/" class="logo" aria-label="Guadalupe Sistemas - Página Inicial">
+                <img src="/assets/logo-simbolo.png" alt="Guadalupe Sistemas" class="logo-icon" width="40" height="40">
                 <span class="logo-text">Guadalupe <strong>Sistemas</strong></span>
             </a>
 
             <div class="nav-links" id="nav-links">
-                <a href="index.html#inicio">Início</a>
-                <a href="index.html#desafios">Soluções</a>
-                <a href="index.html#servicos">O que fazemos</a>
-                <a href="index.html#casos">Casos de Sucesso</a>
-                <a href="blog.html" class="active">Blog</a>
-                <a href="index.html#contato">Contato</a>
+                <a href="/solucoes/" data-nav="solucoes">Soluções</a>
+                <a href="/para-clinicas/" data-nav="clinicas">Para Clínicas</a>
+                <a href="/para-engenharia/" data-nav="engenharia">Para Engenharia</a>
+                <a href="/diagnostico-de-ia/" data-nav="diagnostico">Diagnóstico</a>
+                <a href="/casos/" data-nav="casos">Casos</a>
+                <a href="/blog/" class="active" data-nav="blog">Blog</a>
             </div>
 
-            <a href="https://wa.me/5537998323232" target="_blank" class="btn btn-ghost nav-cta">Falar com a
-                equipe</a>
+            <a href="/diagnostico-de-ia/" class="btn btn-ghost nav-cta" data-cta="diagnostico">Fazer meu diagnóstico</a>
 
-            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menu de navegação">
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menu de navegação"
+                aria-expanded="false" aria-controls="nav-links">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
     </nav>
+    <!-- gs:nav:end -->
 
     <!-- ========== ARTIGO HERO ========== -->
     <header class="article-hero">
@@ -132,10 +133,7 @@
 
     <div class="container">
         <div class="article-container">
-            <figure class="article-featured-image">
-                <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
-                    alt="Conceito de armazenamento de dados em nuvem digital">
-            </figure>
+            <!-- TODO: criar imagem de capa própria para este artigo (1200x630) -->
         </div>
     </div>
 
@@ -210,13 +208,13 @@
                 <div class="article-share">
                     <span class="article-share-label">Compartilhe este artigo</span>
                     <div class="article-share-buttons">
-                        <a href="#" class="article-share-btn article-share-icon" aria-label="Compartilhar no Facebook"><i
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fguadalupesistemas.com.br%2Fblog%2Fseguranca-de-guardar-dados-na-nuvem%2F" target="_blank" rel="noopener noreferrer" class="article-share-btn article-share-icon" aria-label="Compartilhar no Facebook"><i
                                 class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="article-share-btn article-share-icon" aria-label="Compartilhar no X"><i
+                        <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fguadalupesistemas.com.br%2Fblog%2Fseguranca-de-guardar-dados-na-nuvem%2F&amp;text=A%20seguran%C3%A7a%20de%20guardar%20os%20dados%20na%20nuvem" target="_blank" rel="noopener noreferrer" class="article-share-btn article-share-icon" aria-label="Compartilhar no X"><i
                                 class="fa-brands fa-x-twitter"></i></a>
-                        <a href="#" class="article-share-btn article-share-icon" aria-label="Compartilhar no LinkedIn"><i
+                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fguadalupesistemas.com.br%2Fblog%2Fseguranca-de-guardar-dados-na-nuvem%2F" target="_blank" rel="noopener noreferrer" class="article-share-btn article-share-icon" aria-label="Compartilhar no LinkedIn"><i
                                 class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#" class="article-share-btn article-share-icon" aria-label="Compartilhar no WhatsApp"><i
+                        <a href="https://api.whatsapp.com/send?text=A%20seguran%C3%A7a%20de%20guardar%20os%20dados%20na%20nuvem%20https%3A%2F%2Fguadalupesistemas.com.br%2Fblog%2Fseguranca-de-guardar-dados-na-nuvem%2F" target="_blank" rel="noopener noreferrer" class="article-share-btn article-share-icon" aria-label="Compartilhar no WhatsApp"><i
                                 class="fa-brands fa-whatsapp"></i></a>
                     </div>
                 </div>
@@ -249,23 +247,24 @@
                     <h3>7 motivos para colocar seus dados na nuvem</h3>
                     <p>No nosso último artigo te contamos sobre a segurança de guardar os dados na nuvem. Neste
                         artigo vamos te falar sobre 7 motivos para colocar seus dados na nuvem.</p>
-                    <a href="7-motivos-para-colocar-seus-dados-na-nuvem.html" class="btn-link-arrow">Ler artigo
+                    <a href="/blog/7-motivos-para-colocar-seus-dados-na-nuvem/" class="btn-link-arrow">Ler artigo
                         <span class="arrow">↗</span></a>
                 </article>
             </div>
             <div class="recommended-posts-cta">
-                <a href="blog.html" class="btn btn-outline">Ver todos os artigos</a>
+                <a href="/blog/" class="btn btn-outline">Ver todos os artigos</a>
             </div>
         </div>
     </section>
 
-    <!-- ========== FOOTER (Dark) ========== -->
+    <!-- gs:footer:start -->
     <footer id="contato" class="footer">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <a href="index.html" class="logo footer-logo">
-                        <img src="assets/logo-simbolo.png" alt="Guadalupe Sistemas" class="logo-icon">
+                    <a href="/" class="logo footer-logo">
+                        <img src="/assets/logo-simbolo.png" alt="Guadalupe Sistemas" class="logo-icon" width="40"
+                            height="40">
                         <span class="logo-text">Guadalupe <strong>Sistemas</strong></span>
                     </a>
                     <p class="footer-tagline">IA, automação e sistemas sob medida com propósito, parceria e confiança
@@ -273,15 +272,25 @@
                 </div>
 
                 <div class="footer-col">
-                    <h4>Links Rápidos</h4>
+                    <h4>Soluções</h4>
                     <ul>
-                        <li><a href="index.html#inicio">Início</a></li>
-                        <li><a href="index.html#diagnostico">Diagnóstico de IA</a></li>
-                        <li><a href="index.html#servicos">O que fazemos</a></li>
-                        <li><a href="index.html#casos">Casos de Sucesso</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="index.html#formulario">Fale Conosco</a></li>
-                        <li><a href="politica-de-privacidade.html">Política de Privacidade</a></li>
+                        <li><a href="/solucoes/agentes-de-ia/">Agentes de IA</a></li>
+                        <li><a href="/solucoes/automacao-de-processos/">Automação de Processos</a></li>
+                        <li><a href="/solucoes/assistente-de-conhecimento/">Assistente de Conhecimento</a></li>
+                        <li><a href="/solucoes/sistemas-sob-medida/">Sistemas Sob Medida</a></li>
+                        <li><a href="/solucoes/aplicativos/">Aplicativos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Guadalupe</h4>
+                    <ul>
+                        <li><a href="/diagnostico-de-ia/">Diagnóstico de IA</a></li>
+                        <li><a href="/para-clinicas/">Para Clínicas</a></li>
+                        <li><a href="/para-engenharia/">Para Engenharia</a></li>
+                        <li><a href="/casos/">Casos Reais</a></li>
+                        <li><a href="/sobre/">Sobre nós</a></li>
+                        <li><a href="/blog/">Blog</a></li>
                     </ul>
                 </div>
 
@@ -291,26 +300,36 @@
                         <i class="fa-brands fa-whatsapp"></i>
                         <div>
                             <span>Nosso WhatsApp:</span>
-                            <a href="https://wa.me/5537998323232" target="_blank">(37) 99832-3232</a>
+                            <a href="https://wa.me/5537998323232" target="_blank" rel="noopener noreferrer"
+                                data-wa-origin="footer">(37) 99832-3232</a>
                         </div>
                     </div>
                     <div class="footer-contact-item">
                         <i class="fa-brands fa-instagram"></i>
                         <div>
                             <span>Acompanhe:</span>
-                            <a href="https://instagram.com/guadalupesistemas" target="_blank">@guadalupesistemas</a>
+                            <a href="https://instagram.com/guadalupesistemas" target="_blank"
+                                rel="noopener noreferrer">@guadalupesistemas</a>
                         </div>
                     </div>
+                    <ul class="footer-legal-links">
+                        <li><a href="/contato/">Fale com a equipe</a></li>
+                        <li><a href="/seguranca-e-lgpd/">Segurança e LGPD</a></li>
+                        <li><a href="/politica-de-privacidade/">Política de Privacidade</a></li>
+                    </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Guadalupe Sistemas. Todos os direitos reservados. Feito com cuidado.</p>
+                <p>&copy; <span data-current-year>2026</span> Guadalupe Sistemas. Todos os direitos reservados. Feito com
+                    cuidado.</p>
             </div>
         </div>
     </footer>
+    <!-- gs:footer:end -->
 
-    <script src="js/script.js"></script>
+    <script src="/js/analytics.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>

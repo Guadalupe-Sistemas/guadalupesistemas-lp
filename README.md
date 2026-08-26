@@ -1,82 +1,129 @@
 <div align="center">
+  <img src="assets/logo-completa.png" alt="Guadalupe Sistemas" width="320">
 
-<img src="assets/logo-completa.png" alt="Guadalupe Sistemas" width="320">
+  <p><strong>IA, automação e sistemas sob medida para clínicas, engenharia e empresas de serviços.</strong></p>
 
-### IA, automação e sistemas sob medida para clínicas, consultórios e empresas de engenharia
-
-[![Site](https://img.shields.io/badge/site-guadalupesistemas.com.br-1e3a8a?style=for-the-badge)](https://guadalupesistemas.com.br/)
-[![Deploy](https://img.shields.io/badge/deploy-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/)
-[![Stack](https://img.shields.io/badge/stack-HTML%20%7C%20CSS%20%7C%20JS-f7df1e?style=for-the-badge)](#-stack)
-
+  <p>
+    <a href="https://guadalupesistemas.com.br"><img src="https://img.shields.io/badge/site-guadalupesistemas.com.br-6B4EE8" alt="Site"></a>
+    <img src="https://img.shields.io/badge/deploy-Vercel-000000" alt="Vercel">
+    <img src="https://img.shields.io/badge/stack-HTML%20%C2%B7%20CSS%20%C2%B7%20JS-informational" alt="Stack">
+  </p>
 </div>
 
 ---
 
 ## 📌 Sobre
 
-Landing page institucional da **Guadalupe Sistemas**, empresa especializada em **diagnóstico de IA, agentes de WhatsApp, automação de processos e sistemas sob medida**, com foco em clínicas, consultórios e empresas de engenharia — menos tarefa manual, mais resultado.
+Site institucional e de aquisição da Guadalupe Sistemas. **100% estático**: sem
+build step, sem dependência de Node em produção. A Vercel serve os arquivos
+exatamente como estão no repositório.
 
-O site apresenta a "escada de serviços" da empresa, cases reais, depoimentos de clientes e conteúdo de blog sobre automação e segurança de dados.
+Node é usado apenas por ferramentas de desenvolvimento (`tools/`), que rodam na
+sua máquina antes do commit e nunca no deploy.
 
-🔗 **Produção:** [guadalupesistemas.com.br](https://guadalupesistemas.com.br/)
-
-## 🗂 Estrutura do projeto
+## 🗂 Estrutura
 
 ```
-guadalupesistemas/
-├── index.html                                     # Landing page principal
-├── blog.html                                       # Índice do blog
-├── 7-motivos-para-colocar-seus-dados-na-nuvem.html  # Artigo do blog
-├── seguranca-de-guardar-dados-na-nuvem.html         # Artigo do blog
-├── css/
-│   └── styles.css                                  # Estilos do site
+.
+├── index.html                      home
+├── solucoes/                       hub + 5 páginas de solução
+│   ├── agentes-de-ia/
+│   ├── automacao-de-processos/
+│   ├── assistente-de-conhecimento/
+│   ├── sistemas-sob-medida/
+│   └── aplicativos/
+├── para-clinicas/                  vertical saúde
+├── para-engenharia/                vertical engenharia e arquitetura
+├── diagnostico-de-ia/              oferta de entrada
+├── casos/                          hub + 3 casos
+├── sobre/  contato/  seguranca-e-lgpd/  politica-de-privacidade/
+├── blog/                           índice + 5 artigos
+│
+├── css/styles.css                  design system completo (28 seções)
 ├── js/
-│   └── script.js                                    # Interações e lógica de front-end
-├── assets/
-│   ├── logo-completa.png
-│   └── logo-simbolo.png
-├── robots.txt
-└── sitemap.xml
+│   ├── script.js                   interações da página
+│   ├── analytics.js                camada de eventos (dataLayer + GA4)
+│   └── cookie-consent.js           banner LGPD + Consent Mode v2
+├── assets/                         logos e imagem de compartilhamento
+│
+├── partials/                       ← FONTE ÚNICA de nav e footer
+│   ├── nav.html
+│   ├── footer.html
+│   └── page-template.html          molde para páginas novas
+├── tools/                          ferramentas de desenvolvimento (Node)
+├── docs/analytics.md               como a medição funciona
+│
+├── vercel.json                     301 das URLs antigas, headers, cache
+├── .vercelignore                   tira partials/ tools/ docs/ do deploy
+├── sitemap.xml  robots.txt  llms.txt  site.webmanifest
 ```
 
-## 🛠 Stack
+## ⚠️ Antes de editar nav ou footer
 
-- **HTML5** semântico, com SEO on-page (meta tags, Open Graph, canonical, sitemap e robots.txt)
-- **CSS3** puro, sem frameworks
-- **JavaScript** vanilla
-- **Google Tag (gtag.js)** carregado sob demanda (*lazy load*) para não impactar performance
-- **Vercel** para hospedagem e deploy
+**Não edite o `<nav>` ou o `<footer>` dentro das páginas.** Eles são gerados a
+partir de `partials/` e qualquer alteração direta é sobrescrita.
 
-Site 100% estático — sem build step, sem dependências de Node/npm.
+```bash
+# 1. edite partials/nav.html ou partials/footer.html
+# 2. propague para as 24 páginas
+node tools/sync-layout.mjs
+```
+
+Cada página delimita os blocos assim:
+
+```html
+<!-- gs:nav:start variant="solid" active="solucoes" -->
+   ...gerado...
+<!-- gs:nav:end -->
+```
+
+`variant="solid"` deixa a navbar opaca (todas as páginas menos a home).
+`active="..."` acende o item do menu.
+
+## ✅ Verificadores
+
+Rode os três antes de qualquer commit:
+
+```bash
+node tools/check-links.mjs       # todo href interno resolve para um arquivo real
+node tools/check-seo.mjs         # title, description e canonical presentes e únicos
+node tools/sync-layout.mjs --check   # nav/footer em sincronia
+node tools/build-sitemap.mjs     # regenera sitemap.xml a partir da árvore
+```
+
+`check-links.mjs` existe por um motivo específico: em agosto de 2026 os três
+cards de artigos da home apontavam para `href="#"` e o clique não fazia nada.
+O script falha se isso voltar a acontecer.
 
 ## 🚀 Rodando localmente
 
-Por ser um site estático, basta servir os arquivos da raiz do projeto. Algumas opções:
+Como as páginas usam caminhos absolutos (`/css/styles.css`), é preciso um
+servidor — abrir o arquivo direto no navegador não funciona.
 
 ```bash
-# Com o Live Server do VS Code
-# clique com o botão direito em index.html > "Open with Live Server"
-
-# Ou com Python
 python -m http.server 5500
-
-# Ou com Node (npx)
+# ou
 npx serve .
 ```
 
-Depois acesse `http://localhost:5500` (ou a porta indicada pela ferramenta escolhida).
+Depois acesse <http://localhost:5500>.
 
-## ☁️ Deploy
+## 🛠 Stack
 
-O deploy é feito via [Vercel](https://vercel.com/), com deploy automático a partir da branch principal.
+HTML5 semântico, CSS3 puro (sem framework) e JavaScript sem dependências.
+Fontes Sora e Inter via Google Fonts; ícones do Font Awesome 6 com carregamento
+adiado. Deploy automático na Vercel a partir da branch `main`.
 
-## 🔎 SEO
+## 🔎 SEO e medição
 
-- Meta tags de título, descrição e palavras-chave otimizadas
-- Open Graph configurado para compartilhamento em redes sociais
-- `sitemap.xml` e `robots.txt` na raiz para indexação
-- URL canônica definida em todas as páginas
+- `title`, `meta description` e `canonical` próprios em cada uma das 24 páginas
+- JSON-LD: `Organization`, `WebSite`, `BreadcrumbList`, `Service`, `Article`,
+  `FAQPage`, `Blog`, `AboutPage`, `ContactPage`
+- `sitemap.xml` gerado a partir da árvore de arquivos
+- `llms.txt` para mecanismos de resposta baseados em IA
+- GA4 com Consent Mode v2 e camada de eventos própria — ver
+  [`docs/analytics.md`](docs/analytics.md)
 
 ## 📄 Licença
 
-Todos os direitos reservados © Guadalupe Sistemas.
+Projeto proprietário da Guadalupe Sistemas.

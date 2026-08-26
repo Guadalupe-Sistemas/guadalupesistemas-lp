@@ -10,7 +10,7 @@
     <meta property="og:title" content="Política de Privacidade | Guadalupe Sistemas">
     <meta property="og:description"
         content="Como a Guadalupe Sistemas coleta e trata dados pessoais no site, em conformidade com a LGPD.">
-    <meta property="og:url" content="https://guadalupesistemas.com.br/politica-de-privacidade.html">
+    <meta property="og:url" content="https://guadalupesistemas.com.br/politica-de-privacidade/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Guadalupe Sistemas">
     <meta property="og:locale" content="pt_BR">
@@ -22,7 +22,7 @@
     <meta name="twitter:description"
         content="Como a Guadalupe Sistemas coleta e trata dados pessoais no site, em conformidade com a LGPD.">
     <meta name="twitter:image" content="https://guadalupesistemas.com.br/assets/og-image.jpg">
-    <link rel="canonical" href="https://guadalupesistemas.com.br/politica-de-privacidade.html">
+    <link rel="canonical" href="https://guadalupesistemas.com.br/politica-de-privacidade/">
 
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -34,8 +34,20 @@
 
     <title>Política de Privacidade | Guadalupe Sistemas</title>
 
+    <!-- Dados estruturados (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://guadalupesistemas.com.br/" },
+            { "@type": "ListItem", "position": 2, "name": "Política de Privacidade", "item": "https://guadalupesistemas.com.br/politica-de-privacidade/" }
+        ]
+    }
+    </script>
+
     <!-- Google tag (gtag.js) via banner de consentimento de cookies -->
-    <script src="js/cookie-consent.js" defer></script>
+    <script src="/js/cookie-consent.js" defer></script>
 
     <!-- Fonts: Sora (headings) + Inter (body) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,7 +57,7 @@
         rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
 
     <!-- Icons (Font Awesome - lazy) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -57,31 +69,32 @@
 
 <body>
 
-    <!-- ========== NAVBAR ========== -->
+    <!-- gs:nav:start variant="solid" -->
     <nav class="navbar navbar-solid" id="navbar">
         <div class="container nav-container">
-            <a href="index.html" class="logo" aria-label="Guadalupe Sistemas - Página Inicial">
-                <img src="assets/logo-simbolo.png" alt="Guadalupe Sistemas" class="logo-icon">
+            <a href="/" class="logo" aria-label="Guadalupe Sistemas - Página Inicial">
+                <img src="/assets/logo-simbolo.png" alt="Guadalupe Sistemas" class="logo-icon" width="40" height="40">
                 <span class="logo-text">Guadalupe <strong>Sistemas</strong></span>
             </a>
 
             <div class="nav-links" id="nav-links">
-                <a href="index.html#inicio">Início</a>
-                <a href="index.html#desafios">Soluções</a>
-                <a href="index.html#diagnostico">Diagnóstico</a>
-                <a href="index.html#servicos">O que fazemos</a>
-                <a href="index.html#casos">Casos de Sucesso</a>
-                <a href="blog.html">Blog</a>
-                <a href="index.html#contato">Contato</a>
+                <a href="/solucoes/" data-nav="solucoes">Soluções</a>
+                <a href="/para-clinicas/" data-nav="clinicas">Para Clínicas</a>
+                <a href="/para-engenharia/" data-nav="engenharia">Para Engenharia</a>
+                <a href="/diagnostico-de-ia/" data-nav="diagnostico">Diagnóstico</a>
+                <a href="/casos/" data-nav="casos">Casos</a>
+                <a href="/blog/" data-nav="blog">Blog</a>
             </div>
 
-            <a href="index.html#formulario" class="btn btn-ghost nav-cta">Fazer meu diagnóstico</a>
+            <a href="/diagnostico-de-ia/" class="btn btn-ghost nav-cta" data-cta="diagnostico">Fazer meu diagnóstico</a>
 
-            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menu de navegação">
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menu de navegação"
+                aria-expanded="false" aria-controls="nav-links">
                 <i class="fa-solid fa-bars"></i>
             </button>
         </div>
     </nav>
+    <!-- gs:nav:end -->
 
     <main>
         <section class="section-white" style="padding-top: 9rem;">
@@ -150,7 +163,7 @@
                         <p>Você pode, a qualquer momento, solicitar confirmação de tratamento, acesso, correção,
                             anonimização, portabilidade ou eliminação dos seus dados, bem como revogar o
                             consentimento dado. Para exercer qualquer um desses direitos, entre em contato pelo
-                            WhatsApp <a href="https://wa.me/5537998323232" target="_blank">(37) 99832-3232</a>.</p>
+                            WhatsApp <a href="https://wa.me/5537998323232" target="_blank" rel="noopener noreferrer" data-wa-origin="politica-de-privacidade">(37) 99832-3232</a>.</p>
 
                         <h2>8. Retenção e segurança</h2>
                         <p>Como o formulário de contato não armazena dados em servidor próprio, não retemos esses
@@ -167,13 +180,14 @@
         </section>
     </main>
 
-    <!-- ========== FOOTER (Dark) ========== -->
+    <!-- gs:footer:start -->
     <footer id="contato" class="footer">
         <div class="container">
             <div class="footer-top">
                 <div class="footer-brand">
-                    <a href="index.html" class="logo footer-logo">
-                        <img src="assets/logo-simbolo.png" alt="Guadalupe Sistemas" class="logo-icon">
+                    <a href="/" class="logo footer-logo">
+                        <img src="/assets/logo-simbolo.png" alt="Guadalupe Sistemas" class="logo-icon" width="40"
+                            height="40">
                         <span class="logo-text">Guadalupe <strong>Sistemas</strong></span>
                     </a>
                     <p class="footer-tagline">IA, automação e sistemas sob medida com propósito, parceria e confiança
@@ -181,15 +195,25 @@
                 </div>
 
                 <div class="footer-col">
-                    <h4>Links Rápidos</h4>
+                    <h4>Soluções</h4>
                     <ul>
-                        <li><a href="index.html#inicio">Início</a></li>
-                        <li><a href="index.html#diagnostico">Diagnóstico de IA</a></li>
-                        <li><a href="index.html#servicos">O que fazemos</a></li>
-                        <li><a href="index.html#casos">Casos de Sucesso</a></li>
-                        <li><a href="blog.html">Blog</a></li>
-                        <li><a href="index.html#formulario">Fale Conosco</a></li>
-                        <li><a href="politica-de-privacidade.html">Política de Privacidade</a></li>
+                        <li><a href="/solucoes/agentes-de-ia/">Agentes de IA</a></li>
+                        <li><a href="/solucoes/automacao-de-processos/">Automação de Processos</a></li>
+                        <li><a href="/solucoes/assistente-de-conhecimento/">Assistente de Conhecimento</a></li>
+                        <li><a href="/solucoes/sistemas-sob-medida/">Sistemas Sob Medida</a></li>
+                        <li><a href="/solucoes/aplicativos/">Aplicativos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Guadalupe</h4>
+                    <ul>
+                        <li><a href="/diagnostico-de-ia/">Diagnóstico de IA</a></li>
+                        <li><a href="/para-clinicas/">Para Clínicas</a></li>
+                        <li><a href="/para-engenharia/">Para Engenharia</a></li>
+                        <li><a href="/casos/">Casos Reais</a></li>
+                        <li><a href="/sobre/">Sobre nós</a></li>
+                        <li><a href="/blog/">Blog</a></li>
                     </ul>
                 </div>
 
@@ -199,26 +223,36 @@
                         <i class="fa-brands fa-whatsapp"></i>
                         <div>
                             <span>Nosso WhatsApp:</span>
-                            <a href="https://wa.me/5537998323232" target="_blank">(37) 99832-3232</a>
+                            <a href="https://wa.me/5537998323232" target="_blank" rel="noopener noreferrer"
+                                data-wa-origin="footer">(37) 99832-3232</a>
                         </div>
                     </div>
                     <div class="footer-contact-item">
                         <i class="fa-brands fa-instagram"></i>
                         <div>
                             <span>Acompanhe:</span>
-                            <a href="https://instagram.com/guadalupesistemas" target="_blank">@guadalupesistemas</a>
+                            <a href="https://instagram.com/guadalupesistemas" target="_blank"
+                                rel="noopener noreferrer">@guadalupesistemas</a>
                         </div>
                     </div>
+                    <ul class="footer-legal-links">
+                        <li><a href="/contato/">Fale com a equipe</a></li>
+                        <li><a href="/seguranca-e-lgpd/">Segurança e LGPD</a></li>
+                        <li><a href="/politica-de-privacidade/">Política de Privacidade</a></li>
+                    </ul>
                 </div>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2026 Guadalupe Sistemas. Todos os direitos reservados. Feito com cuidado.</p>
+                <p>&copy; <span data-current-year>2026</span> Guadalupe Sistemas. Todos os direitos reservados. Feito com
+                    cuidado.</p>
             </div>
         </div>
     </footer>
+    <!-- gs:footer:end -->
 
-    <script src="js/script.js"></script>
+    <script src="/js/analytics.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>

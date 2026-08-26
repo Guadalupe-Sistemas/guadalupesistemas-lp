@@ -37,4 +37,9 @@ Allow: /
 User-agent: *
 Allow: /
 
+# Arquivos de desenvolvimento (também excluídos do deploy via .vercelignore)
+Disallow: /partials/
+Disallow: /tools/
+Disallow: /docs/
+
 Sitemap: https://guadalupesistemas.com.br/sitemap.xml
