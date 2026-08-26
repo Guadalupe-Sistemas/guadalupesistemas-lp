@@ -14,69 +14,96 @@
 
 ## 📌 Sobre
 
-Landing page institucional da **Guadalupe Sistemas**, empresa especializada em **diagnóstico de IA, agentes de WhatsApp, automação de processos e sistemas sob medida**, com foco em clínicas, consultórios e empresas de engenharia — menos tarefa manual, mais resultado.
+Landing page institucional da **Guadalupe Sistemas**, empresa de tecnologia especializada em **diagnóstico de IA, agentes de WhatsApp, automação de processos e sistemas sob medida**, com foco em clínicas, consultórios e empresas de engenharia — menos tarefa manual, mais resultado.
 
-O site apresenta a "escada de serviços" da empresa, cases reais, depoimentos de clientes e conteúdo de blog sobre automação e segurança de dados.
+🔗 **Site em Produção:** [guadalupesistemas.com.br](https://guadalupesistemas.com.br/)  
+📲 **WhatsApp Comercial:** [+55 37 99832-3232](https://wa.me/5537998323232)
 
-🔗 **Produção:** [guadalupesistemas.com.br](https://guadalupesistemas.com.br/)
+---
 
-## 🗂 Estrutura do projeto
+## 📚 Documentação do Projeto
+
+Este repositório adota uma documentação modular projetada tanto para desenvolvedores humanos quanto para agentes de Inteligência Artificial:
+
+| Documento | Descrição e Finalidade |
+| :--- | :--- |
+| 🤖 [**`AGENTS.md`**](./AGENTS.md) | **Diretrizes para IA e Desenvolvedores:** Regras de ouro, protocolo de sincronização de docs, padrões de código (HTML/CSS/JS), tom de voz da marca, glossário terminológico, segurança e checklist pré-entrega. |
+| 📐 [**`SPEC.md`**](./SPEC.md) | **Especificação Técnica e de Produto:** Inventário de rotas, detalhamento das 16 seções do `index.html`, tokens do Design System v2, especificação dos scripts (`js/script.js` e `js/cookie-consent.js`), metadados SEO e template padrão para blog. |
+| 🏛 [**`DECISIONS.md`**](./DECISIONS.md) | **Registro de Decisões Técnicas:** Narrativa por tópicos justificando escolhas de engenharia e produto (Zero-Build vs. Frameworks, Funil via WhatsApp, conformidade LGPD, animações nativas). |
+| 🗺 [**`PLAN.md`**](./PLAN.md) | **Roadmap de Evolução:** Backlog priorizado com fases de curto, médio e longo prazo (testes E2E com Playwright, persistência de leads via Webhooks/Serverless, CMS Headless para o blog). |
+| 🔍 [**`llms.txt`**](./llms.txt) | **Contexto Sintético para IA:** Resumo executivo para consumo rápido por crawlers e assistentes de IA sobre os serviços e canais da Guadalupe Sistemas. |
+| 📖 [**`llms-full.txt`**](./llms-full.txt) | **Base de Conhecimento Completa para IA:** Conteúdo integral do site em Markdown puro (serviços, metodologias, cases, FAQs e artigos do blog). |
+
+---
+
+## 🗂 Estrutura do Projeto
 
 ```
-guadalupesistemas/
-├── index.html                                     # Landing page principal
-├── blog.html                                       # Índice do blog
+guadalupesistemas-lp/
+├── index.html                                     # Landing page principal (16 seções)
+├── blog.html                                       # Índice de artigos do blog
 ├── 7-motivos-para-colocar-seus-dados-na-nuvem.html  # Artigo do blog
 ├── seguranca-de-guardar-dados-na-nuvem.html         # Artigo do blog
+├── politica-de-privacidade.html                   # Página de conformidade LGPD
 ├── css/
-│   └── styles.css                                  # Estilos do site
+│   └── styles.css                                  # Design System v2 (Violet/Elevate)
 ├── js/
-│   └── script.js                                    # Interações e lógica de front-end
+│   ├── script.js                                   # Lógica interativa, animações e formulário
+│   └── cookie-consent.js                           # Banner LGPD e lazy loading do GA4
 ├── assets/
-│   ├── logo-completa.png
-│   └── logo-simbolo.png
-├── robots.txt
-└── sitemap.xml
+│   ├── logo-completa.png                           # Logo horizontal principal
+│   ├── logo-simbolo.png                            # Símbolo da marca
+│   └── og-image.jpg                                # Imagem de compartilhamento social (OG)
+├── AGENTS.md                                       # Diretrizes para agentes de IA e devs
+├── SPEC.md                                         # Especificação técnica e funcional
+├── DECISIONS.md                                    # Registro narrativo de decisões
+├── PLAN.md                                         # Roadmap técnico e backlog futuro
+├── llms.txt                                        # Resumo executivo para IA/crawlers
+├── llms-full.txt                                   # Conhecimento completo para IA em Markdown
+├── robots.txt                                      # Regras de indexação para buscadores
+├── sitemap.xml                                     # Mapa de URLs do site
+└── site.webmanifest                                # Manifesto PWA e favicons
 ```
 
-## 🛠 Stack
+---
 
-- **HTML5** semântico, com SEO on-page (meta tags, Open Graph, canonical, sitemap e robots.txt)
-- **CSS3** puro, sem frameworks
-- **JavaScript** vanilla
-- **Google Tag (gtag.js)** carregado sob demanda (*lazy load*) para não impactar performance
-- **Vercel** para hospedagem e deploy
+## 🛠 Stack Tecnológico
 
-Site 100% estático — sem build step, sem dependências de Node/npm.
+- **HTML5 Semântico:** Estrutura acessível com metadados Open Graph e schemas JSON-LD (`Organization`, `FAQPage`).
+- **CSS3 Puro:** Design System nativo em variáveis CSS, sem dependência de Tailwind ou Bootstrap.
+- **JavaScript Vanilla:** Sem frameworks pesados; uso de APIs modernas (`IntersectionObserver`, `requestAnimationFrame`, `localStorage`).
+- **Privacidade & Métricas:** Banner LGPD com carregamento sob demanda do Google Analytics 4 (`gtag.js` com IP anonimizado).
+- **Hospedagem & Deploy:** [Vercel](https://vercel.com/) com deploy contínuo na branch principal.
 
-## 🚀 Rodando localmente
+> **Arquitetura 100% Estática (Zero-Build):** Sem etapas de compilação ou dependências de runtime Node.js/npm.
 
-Por ser um site estático, basta servir os arquivos da raiz do projeto. Algumas opções:
+---
+
+## 🚀 Rodando Localmente
+
+Por ser um projeto puramente estático, basta servir os arquivos a partir da raiz:
 
 ```bash
-# Com o Live Server do VS Code
-# clique com o botão direito em index.html > "Open with Live Server"
+# Opção 1: Com VS Code Live Server
+# Clique com o botão direito em index.html > "Open with Live Server"
 
-# Ou com Python
-python -m http.server 5500
+# Opção 2: Com Python 3
+python3 -m http.server 5500
 
-# Ou com Node (npx)
+# Opção 3: Com Node (npx)
 npx serve .
 ```
 
-Depois acesse `http://localhost:5500` (ou a porta indicada pela ferramenta escolhida).
+Acesse no navegador: `http://localhost:5500` (ou a porta indicada no terminal).
+
+---
 
 ## ☁️ Deploy
 
-O deploy é feito via [Vercel](https://vercel.com/), com deploy automático a partir da branch principal.
+O deploy é gerenciado automaticamente pela **Vercel** conectado ao repositório GitHub. Qualquer push na branch principal atualiza imediatamente o ambiente de produção.
 
-## 🔎 SEO
-
-- Meta tags de título, descrição e palavras-chave otimizadas
-- Open Graph configurado para compartilhamento em redes sociais
-- `sitemap.xml` e `robots.txt` na raiz para indexação
-- URL canônica definida em todas as páginas
+---
 
 ## 📄 Licença
 
-Todos os direitos reservados © Guadalupe Sistemas.
+Todos os direitos reservados © **Guadalupe Sistemas**.
