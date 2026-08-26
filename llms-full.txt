@@ -88,16 +88,24 @@ A atuação é pautada por três princípios:
 
 ---
 
-## 📊 Casos de Sucesso Comprovados
+## 📊 Casos Reais
 
-- **CliniMed (Clínica Multidisciplinar):**
-  - *Desafio:* Taxa de no-show superior a 28% e equipe de recepção sobrecarregada com mensagens manuais de confirmação.
-  - *Solução:* Agente de confirmação inteligente via WhatsApp integrado ao software de prontuário.
-  - *Resultado:* Redução de 58% nas faltas e recuperação de aproximadamente R$ 14.000 mensais em horários que antes ficavam ociosos.
-- **EngTech Soluções (Consultoria de Engenharia):**
-  - *Desafio:* Demora de até 4 horas para elaboração de cada proposta técnica comercial com base em normas e tabelas de preços.
-  - *Solução:* Automação inteligente geradora de propostas com preenchimento dinâmico e integração ao CRM.
-  - *Resultado:* Tempo de emissão de propostas reduzido para 15 minutos, gerando aumento de 35% na taxa de fechamento por resposta rápida.
+Apenas resultados medidos em projetos entregues. Nomes de clientes não são divulgados sem autorização.
+
+- **Aplicativo de agendamento para clínica** — https://guadalupesistemas.com.br/casos/app-agendamento-clinica/
+  - *Desafio:* escalas mudavam com frequência e geravam confusão em plantões e consultas; a equipe reorganizava tudo manualmente.
+  - *Solução:* aplicativo que simplificou substituições de horário e automatizou confirmações.
+  - *Resultado:* redução de 90% nas falhas de agendamento.
+
+- **Atendimento automatizado no WhatsApp** — https://guadalupesistemas.com.br/casos/atendimento-automatizado-whatsapp/
+  - *Desafio:* clientes ficavam sem resposta e os vendedores não tinham controle de quem havia sido atendido.
+  - *Solução:* centralização e automação do atendimento no WhatsApp.
+  - *Resultado:* atendimento centralizado e rastreável, com visibilidade diária do volume atendido.
+
+- **Painel de gestão para indústria** — https://guadalupesistemas.com.br/casos/painel-gestao-industria/
+  - *Desafio:* o fechamento do mês dependia de planilhas de Excel cujos números não batiam.
+  - *Solução:* painel com os indicadores essenciais em uma única tela.
+  - *Resultado:* acompanhamento da gestão em cerca de 5 minutos por dia, sem planilhas.
 
 ---
 
@@ -122,11 +130,52 @@ A atuação é pautada por três princípios:
 
 ## 📚 Conteúdos Educativos do Blog
 
-### 1. 7 motivos para colocar seus dados na nuvem
-- **Resumo:** Analisa os riscos de servidores físicos locais (falha de hardware, furtos, incêndios, falta de backup) e as vantagens da nuvem: escalabilidade automática, acesso remoto seguro, backups redundantes, segurança corporativa e conformidade com a LGPD.
+Índice: https://guadalupesistemas.com.br/blog/
 
-### 2. Segurança de guardar dados na nuvem
-- **Resumo:** Aborda aspectos técnicos da segurança em nuvem: criptografia em repouso e em trânsito (AES-256, TLS), autenticação multifator (MFA), controle de acessos por função (RBAC) e proteção contra ransomware.
+### Como a automação economiza dezenas de horas no mês
+https://guadalupesistemas.com.br/blog/automacao-economia-de-horas/
+- **Resumo:** mostra como calcular o custo real de uma tarefa repetitiva (tempo × frequência × dias úteis), quais tarefas valem automação primeiro — comunicação recorrente, transporte de dados entre sistemas, geração de documentos e follow-up — e quais não valem: o que exige julgamento, o que acontece raramente, o que ainda muda toda hora e o contato que constrói relação.
+
+### Quando vale a pena investir em um sistema próprio para sua empresa?
+https://guadalupesistemas.com.br/blog/quando-investir-em-sistema-proprio/
+- **Resumo:** os sinais de que a planilha chegou ao limite, a diferença real entre software pronto (a empresa se adapta a ele) e sistema sob medida (ele se adapta à empresa), quando cada um ganha, como calcular em quantos meses o investimento se paga, e o caminho intermediário de manter o software pronto e construir sob medida só o que ele não resolve.
+
+### O guia simples para organizar o atendimento via WhatsApp
+https://guadalupesistemas.com.br/blog/organizar-atendimento-whatsapp/
+- **Resumo:** cinco passos em ordem de esforço — número institucional único no WhatsApp Business, mapeamento das perguntas que se repetem, definição de quem responde o quê e em quanto tempo, automação do que é repetição pura, e medição. Inclui os limites da automação e três erros comuns de quem está começando.
+
+### 7 motivos para colocar seus dados na nuvem
+https://guadalupesistemas.com.br/blog/7-motivos-para-colocar-seus-dados-na-nuvem/
+- **Resumo:** riscos de manter arquivos apenas em máquinas locais (falha de hardware, furto, incêndio, ausência de backup) e os ganhos práticos da nuvem: acesso remoto, escalabilidade, backups redundantes e menos manutenção.
+
+### A segurança de guardar os dados na nuvem
+https://guadalupesistemas.com.br/blog/seguranca-de-guardar-dados-na-nuvem/
+- **Resumo:** por que a migração para a nuvem tende a ser mais segura para a integridade de documentos corporativos e a proteção contra vazamentos do que a infraestrutura local típica de uma empresa pequena.
+
+---
+
+## 🗺️ Mapa Completo de Páginas
+
+**Comerciais**
+- Home: https://guadalupesistemas.com.br/
+- Diagnóstico de IA: https://guadalupesistemas.com.br/diagnostico-de-ia/
+- Para Clínicas: https://guadalupesistemas.com.br/para-clinicas/
+- Para Engenharia: https://guadalupesistemas.com.br/para-engenharia/
+- Soluções: https://guadalupesistemas.com.br/solucoes/
+- Agentes de IA: https://guadalupesistemas.com.br/solucoes/agentes-de-ia/
+- Automação de Processos: https://guadalupesistemas.com.br/solucoes/automacao-de-processos/
+- Assistente de Conhecimento: https://guadalupesistemas.com.br/solucoes/assistente-de-conhecimento/
+- Sistemas Sob Medida: https://guadalupesistemas.com.br/solucoes/sistemas-sob-medida/
+- Aplicativos: https://guadalupesistemas.com.br/solucoes/aplicativos/
+
+**Prova social**
+- Casos: https://guadalupesistemas.com.br/casos/
+
+**Institucionais**
+- Sobre: https://guadalupesistemas.com.br/sobre/
+- Contato: https://guadalupesistemas.com.br/contato/
+- Segurança e LGPD: https://guadalupesistemas.com.br/seguranca-e-lgpd/
+- Política de Privacidade: https://guadalupesistemas.com.br/politica-de-privacidade/
 
 ---
 
@@ -143,5 +192,6 @@ A atuação é pautada por três princípios:
 ## 📞 Como Entrar em Contato
 
 - **WhatsApp Direto:** https://wa.me/5537998323232
-- **Formulário de Diagnóstico:** https://guadalupesistemas.com.br/#formulario
+- **Diagnóstico de IA:** https://guadalupesistemas.com.br/diagnostico-de-ia/
+- **Formulário completo:** https://guadalupesistemas.com.br/contato/
 - **Instagram:** https://instagram.com/guadalupesistemas

@@ -90,3 +90,80 @@ Toda a camada de interatividade em [`js/script.js`](file:///home/munraitoo13/Pro
 - **`IntersectionObserver`:** Usado para observar a entrada de elementos no viewport e aplicar a classe `.revealed`, com cálculo de `transitionDelay` progressivo (*stagger*) para elementos filhos em grids.
 - **`requestAnimationFrame`:** Utilizado para animação suave dos contadores numéricos na seção de métricas com curva de desaceleração *ease-out quad*.
 - **Carrossel Nativo:** Transições de slides gerenciadas puramente por classes CSS `.active` e temporizador `setInterval` com pausa automática sob `:hover`.
+
+---
+
+## 🧱 7. Arquitetura Multi-Página por Nicho (Agosto/2026)
+
+### Contexto
+Uma auditoria pública de 25/08/2026 concluiu que o site funcionava como apresentação institucional, não como máquina de aquisição. Toda a proposta vivia em uma única URL, competindo com o mercado inteiro por termos genéricos como "IA para empresas". Quem busca "automação para clínica médica" tem intenção diferente de quem busca "IA para escritório de engenharia", mas ambos caíam no mesmo discurso.
+
+### Alternativas Consideradas
+1. **Manter a página única e otimizar o texto:** barato, mas o Google só consegue ranquear uma URL para um conjunto de termos. Impossível ter título, descrição e conteúdo próprios por nicho.
+2. **Landing pages isoladas para campanha paga:** resolveria o tráfego pago, mas não constrói autoridade orgânica nem aproveita links internos.
+3. **Arquitetura multi-página por nicho e por solução:** cada intenção de busca ganha sua URL, com título, descrição e conteúdo próprios.
+
+### Decisão & Racional
+Adotada a **arquitetura multi-página**, de 5 para 24 URLs, organizada em verticais (`/para-clinicas/`, `/para-engenharia/`), soluções (`/solucoes/*`), prova (`/casos/*`) e conteúdo (`/blog/*`).
+
+- **Autoridade em termos específicos:** a aposta é em "automação de WhatsApp para clínicas" e "assistente de IA para normas técnicas", não em "inteligência artificial".
+- **Caminho de conversão explícito:** artigo → página comercial → diagnóstico → WhatsApp. Cada artigo linka a solução correspondente no meio do texto.
+- **URLs em pasta** (`/para-clinicas/`, não `/para-clinicas.html`): legíveis, estáveis e sem depender de configuração de servidor. As 4 URLs `.html` antigas ganharam 301 em `vercel.json`.
+
+---
+
+## 🧩 8. Fonte Única de Nav e Footer sem Build Step
+
+### Contexto
+A regra Zero-Build (decisão 1) implica HTML literal em cada arquivo. Com 5 páginas isso já havia degradado: os artigos tinham 6 links de menu e CTA de WhatsApp enquanto a política tinha 7 links e CTA de diagnóstico — o menu já não era o mesmo em todo o site. Com 24 páginas, manter à mão é garantia de divergência e de link quebrado.
+
+### Alternativas Consideradas
+1. **Continuar copiando à mão:** zero ferramenta nova, mas mudar um item de menu vira 24 edições manuais.
+2. **Injetar nav e footer via JavaScript em runtime:** fonte única e sem build, porém os links do rodapé deixariam de existir no HTML servido — enfraquecendo exatamente a malha de links internos que a arquitetura nova quer construir.
+3. **Adotar um gerador de site estático:** resolveria, mas contraria frontalmente a decisão 1.
+4. **HTML literal + sincronização por script local:** o HTML publicado continua completo; a duplicação passa a ser gerada, não digitada.
+
+### Decisão & Racional
+Adotada a **opção 4**. `partials/nav.html` e `partials/footer.html` são a fonte única, propagada por `node tools/sync-layout.mjs` para blocos delimitados por `<!-- gs:nav:start -->` e `<!-- gs:footer:start -->`.
+
+- **A regra Zero-Build permanece intacta:** os scripts em `tools/` são Node puro, sem `package.json` e sem dependências. Rodam na máquina do desenvolvedor, nunca no deploy — `.vercelignore` os remove do publish. A Vercel continua servindo arquivos estáticos exatamente como estão no repositório.
+- **SEO preservado:** o HTML entregue ao crawler continua com nav e footer completos.
+- **Verificação junto:** a mesma base sustenta `check-links`, `check-seo`, `check-quality` e `build-sitemap`.
+
+---
+
+## 📊 9. Camada de Eventos e Consent Mode v2
+
+### Contexto
+O GA4 (`G-QPZ3J2WTTM`) já estava instalado, mas media apenas pageview. Não havia como saber qual página gera lead, onde o visitante abandona o formulário, ou de onde vem quem chama no WhatsApp — só volume de tráfego. Além disso, o carregamento adiado em 5 segundos descartava a visita de quem saía rápido, subnotificando o próprio pageview.
+
+### Alternativas Consideradas
+1. **Instalar o GTM e configurar tudo pela interface:** flexível, mas adiciona um container de terceiros no caminho crítico e transfere a lógica para fora do repositório.
+2. **Chamar `gtag('event', ...)` espalhado pelo HTML:** simples, porém espalha regra de negócio por 24 arquivos.
+3. **Uma camada própria que alimenta `dataLayer` e `gtag`:** centralizada, versionada e compatível com GTM quando ele existir.
+
+### Decisão & Racional
+Criado `js/analytics.js`, que publica `window.GS` e envia cada evento para os dois destinos.
+
+- **Consent Mode v2** é declarado com tudo negado antes de qualquer tag, mantendo conformidade sem perder a modelagem de conversão do Google.
+- **O atraso de 5s foi removido** para quem já consentiu.
+- **`GTM_ID` fica vazio por padrão:** o site funciona só com GA4; preencher a constante ativa o container sem tocar em mais nada.
+- **Nomes de eventos seguem o padrão do GA4** (`generate_lead`, `form_start`) em vez dos nomes propostos no `PLAN.md` (`lead_converted_whatsapp`, `form_step_1_selected`). `generate_lead` é evento recomendado pelo GA4 e já vem com relatórios prontos; nomes personalizados exigiriam configuração manual sem ganho.
+- **Origem do lead:** todo link `wa.me` é assinado com a página de origem, e os UTM da sessão ficam em `sessionStorage` — sem isso, quem chega por anúncio e só depois chama no WhatsApp aparece como tráfego direto.
+
+---
+
+## 🧾 10. Prova Social Verificável
+
+### Contexto
+A auditoria apontou como o defeito mais grave a prova social fabricada: três depoimentos assinados por "Cliente Satisfeito" com retratos de banco de imagem, uma foto de stock apresentada como a equipe, e contadores que exibiam `0` para qualquer leitura sem JavaScript. Para uma empresa que vende software e trata dados de clínicas, isso corrói exatamente a confiança que o site tenta construir.
+
+### Decisão & Racional
+Estabelecida a regra de **nunca publicar prova social não verificável**.
+
+- Nome, cargo, empresa e foto de depoimento foram removidos. Restou o relato do resultado, atribuído apenas ao segmento.
+- Nenhuma foto de banco de imagem representa pessoas ou equipe da Guadalupe.
+- Onde falta dado real, o texto visível é honesto ("volume não medido pela clínica") e a pendência fica em comentário HTML `<!-- TODO: confirmar com o cliente — ... -->`, jamais visível ao visitante. `tools/check-quality.mjs` participa dessa disciplina verificando que o `FAQPage` estruturado corresponda palavra por palavra à FAQ exibida.
+- Os contadores passaram a trazer o valor final no HTML (`90%`), com o JavaScript animando de zero até ele — progressive enhancement em vez de dependência de script.
+
+Publicar depoimento nominal exige nome real, cargo, empresa, texto aprovado e autorização de uso de imagem por escrito.

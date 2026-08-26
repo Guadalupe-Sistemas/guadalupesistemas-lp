@@ -23,30 +23,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.querySelector(".navbar");
 
   if (menuToggle && navLinks) {
-    menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-      navbar.classList.toggle("menu-open");
+    // Estado centralizado para o aria-expanded não sair de sincronia com as
+    // classes — leitores de tela precisam saber se o menu está aberto.
+    const setMenuState = (open) => {
+      navLinks.classList.toggle("active", open);
+      navbar.classList.toggle("menu-open", open);
+      menuToggle.setAttribute("aria-expanded", String(open));
 
       // Swap hamburger ↔ close icon
       const icon = menuToggle.querySelector("i");
       if (icon) {
-        icon.classList.toggle("fa-bars");
-        icon.classList.toggle("fa-xmark");
+        icon.classList.toggle("fa-bars", !open);
+        icon.classList.toggle("fa-xmark", open);
       }
+    };
+
+    menuToggle.addEventListener("click", () => {
+      setMenuState(!navLinks.classList.contains("active"));
     });
 
     // Close menu when a nav link is clicked
     navLinks.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-        navbar.classList.remove("menu-open");
-
-        const icon = menuToggle.querySelector("i");
-        if (icon) {
-          icon.classList.remove("fa-xmark");
-          icon.classList.add("fa-bars");
-        }
-      });
+      link.addEventListener("click", () => setMenuState(false));
     });
   }
 
@@ -66,34 +64,35 @@ document.addEventListener("DOMContentLoaded", () => {
   handleNavbarScroll(); // run once on load
 
   /* ==========================================================
-     3. ACTIVE NAV LINK ON SCROLL
+     3. ACTIVE NAV LINK (por caminho da URL)
      ========================================================== */
-  const sections = document.querySelectorAll("section[id]");
+  // O site deixou de ser uma única página: o menu aponta para URLs reais, não
+  // para âncoras. O scroll-spy anterior apagava a classe .active de todos os
+  // links a cada rolagem, o que zerava o estado que tools/sync-layout.mjs já
+  // grava no HTML servido. Aqui só cobrimos as páginas filhas — em
+  // /solucoes/agentes-de-ia/ o item "Soluções" continua aceso.
+  const currentPath = window.location.pathname;
 
-  function highlightNavLink() {
-    const scrollPos = window.scrollY + 120; // offset for fixed navbar
+  if (!document.querySelector(".nav-links a.active")) {
+    let bestMatch = null;
 
-    sections.forEach((section) => {
-      const top = section.offsetTop;
-      const height = section.offsetHeight;
-      const id = section.getAttribute("id");
-
-      if (scrollPos >= top && scrollPos < top + height) {
-        // Remove active from all nav links
-        document
-          .querySelectorAll(".nav-links a")
-          .forEach((a) => a.classList.remove("active"));
-        // Add active to matching link
-        const activeLink = document.querySelector(
-          `.nav-links a[href*="${id}"]`
-        );
-        if (activeLink) activeLink.classList.add("active");
+    document.querySelectorAll('.nav-links a[href^="/"]').forEach((link) => {
+      const href = link.getAttribute("href");
+      if (href === "/" || currentPath.indexOf(href) !== 0) return;
+      if (!bestMatch || href.length > bestMatch.getAttribute("href").length) {
+        bestMatch = link;
       }
     });
+
+    if (bestMatch) bestMatch.classList.add("active");
   }
 
-  window.addEventListener("scroll", highlightNavLink, { passive: true });
-  highlightNavLink();
+  /* ==========================================================
+     3b. ANO DO RODAPÉ
+     ========================================================== */
+  document.querySelectorAll("[data-current-year]").forEach((el) => {
+    el.textContent = String(new Date().getFullYear());
+  });
 
   /* ==========================================================
      4. SMOOTH SCROLL (with fixed-navbar offset)
@@ -128,33 +127,51 @@ document.addEventListener("DOMContentLoaded", () => {
   /**
    * Builds a WhatsApp URL from the form data and opens it.
    * Used by both the simple form and the multi-step form.
+   *
+   * A montagem final da URL fica em js/analytics.js (window.GS.waUrl), que
+   * aplica encodeURIComponent e anexa a origem do lead. A versão anterior
+   * concatenava "%0A" literal direto na query string sem codificar o resto:
+   * um "&", "#" ou "+" digitado pelo visitante truncava a mensagem no meio.
    */
   function sendToWhatsApp(formEl) {
+    const readValue = (selector) => {
+      const el = formEl.querySelector(selector);
+      return el ? el.value.trim() : "";
+    };
+
     const solucaoRadio = formEl.querySelector('input[name="solucao"]:checked');
     const solucao = solucaoRadio ? solucaoRadio.value : "Não informado";
+    const objetivo = readValue('[name="objetivo"]');
+    const nome = readValue('[name="nome"]');
+    const numero = readValue('[name="contato"]');
 
-    const objetivoEl = formEl.querySelector('[name="objetivo"]');
-    const objetivo = objetivoEl ? objetivoEl.value.trim() : "";
+    const lines = [
+      "*Olá, Equipe Guadalupe Sistemas!* 👋",
+      "",
+      "Gostaria de conversar sobre como vocês podem ajudar o meu negócio.",
+      "",
+      `*Meu nome:* ${nome || "Não informado"}`,
+      `*Meu número:* ${numero || "Não informado"}`,
+      `*Solução que imagino precisar:* ${solucao}`
+    ];
 
-    const nomeEl = formEl.querySelector('[name="nome"]');
-    const nome = nomeEl ? nomeEl.value.trim() : "";
-
-    const numeroEl = formEl.querySelector('[name="contato"]');
-    const numero = numeroEl ? numeroEl.value.trim() : "";
-
-    let message = `*Olá, Equipe Guadalupe Sistemas!* 👋%0A%0A`;
-    message += `Gostaria de conversar sobre como vocês podem ajudar o meu negócio.%0A%0A`;
-    message += `*Meu nome:* ${nome || "Não informado"}%0A`;
-    message += `*Meu número:* ${numero || "Não informado"}%0A`;
-    message += `*Solução que imagino precisar:* ${solucao}%0A`;
     if (objetivo) {
-      message += `*O que está dificultando minha operação hoje:* ${objetivo}%0A%0A`;
+      lines.push(`*O que está dificultando minha operação hoje:* ${objetivo}`);
     }
-    message += `Aguardarei o retorno de vocês para entendermos o melhor caminho. Obrigado!`;
 
-    const phone = "5537998323232";
-    const waUrl = `https://wa.me/${phone}?text=${message}`;
-    window.open(waUrl, "_blank");
+    lines.push(
+      "",
+      "Aguardarei o retorno de vocês para entendermos o melhor caminho. Obrigado!"
+    );
+
+    const message = lines.join("\n");
+    const origin = formEl.getAttribute("data-form-origin") || "formulario";
+
+    const url = window.GS
+      ? window.GS.waUrl(origin, message)
+      : `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
+
+    window.open(url, "_blank", "noopener");
   }
 
   // Bind simple (non-multi-step) contact forms
@@ -213,7 +230,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Apply stagger to known grid containers
   document
     .querySelectorAll(
-      ".services-grid, .challenges-grid, .challenges-grid-3, .challenges-grid-2, .cases-grid, .tech-pillars, .blog-grid, .diagnostico-deliverables, .audience-grid"
+      ".services-grid, .challenges-grid, .challenges-grid-3, .challenges-grid-2, .cases-grid, .tech-grid, .blog-grid, .diagnostico-deliverables, .audience-grid, .scenario-grid"
     )
     .forEach(applyStagger);
 
@@ -336,8 +353,11 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!activePanel) return true;
 
     // Check required inputs, textareas, and at least one checked radio group
+    // Radios ficam de fora daqui: input.value devolve o atributo value mesmo
+    // quando nenhum está marcado, então eles sempre passariam. O grupo inteiro
+    // é validado logo abaixo.
     const requiredInputs = activePanel.querySelectorAll(
-      "input[required], textarea[required], select[required]"
+      'input[required]:not([type="radio"]):not([type="checkbox"]), textarea[required], select[required]'
     );
     let valid = true;
 
@@ -366,10 +386,12 @@ document.addEventListener("DOMContentLoaded", () => {
       );
       if (!checked) {
         valid = false;
-        // Highlight radio group container
+        // Highlight radio group container. O markup usa .chips-group/.chip —
+        // as classes .radio-group/.form-group buscadas antes não existem no
+        // CSS, então o erro de seleção nunca chegava a aparecer.
         const container = activePanel
           .querySelector(`input[name="${name}"]`)
-          ?.closest(".radio-group, .form-group");
+          ?.closest(".chips-group, .form-group");
         if (container) {
           container.classList.add("input-error");
           // Remove after any radio in the group is selected

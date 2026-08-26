@@ -76,11 +76,24 @@ Atualmente, se o usuário preencher o formulário mas fechar o navegador antes d
   - **Resultado:** Retenção de 100% dos contatos gerados no site, permitindo follow-up ativo mesmo se o lead desistir do WhatsApp.
 
 ### 2.2. Métricas Avançadas de Conversão no GA4
-- [ ] Disparar eventos customizados de funil:
-  - `form_step_1_selected` (solução escolhida)
-  - `form_step_2_filled` (dor descrita)
-  - `lead_converted_whatsapp` (redirecionamento com sucesso)
+- [x] **Camada de eventos implementada** em `js/analytics.js` (agosto/2026). Os nomes adotados seguem o padrão recomendado do GA4 em vez dos propostos originalmente aqui — `generate_lead` já vem com relatórios prontos, enquanto um nome personalizado exigiria configuração manual sem ganho. Ver decisão 9 em [`DECISIONS.md`](./DECISIONS.md).
+
+  | Proposto neste plano | Implementado |
+  | :--- | :--- |
+  | `form_step_1_selected` | `form_step_1` |
+  | `form_step_2_filled` | `form_step_2` |
+  | `lead_converted_whatsapp` | `generate_lead` |
+
+  Além desses: `scroll_90`, `click_whatsapp`, `click_diagnostico`, `click_case`, `blog_article_view`, `form_start`.
+- [x] **Consent Mode v2** declarado antes de qualquer tag do Google.
+- [x] **Origem do lead no WhatsApp:** todo link `wa.me` assinado com a página de origem; UTM da sessão persistidos.
+- [ ] **Registrar `page_group` como dimensão personalizada** no painel do GA4 — sem isso a dimensão não aparece nos relatórios.
+- [ ] **Marcar `generate_lead` e `click_whatsapp` como eventos-chave** no GA4.
+- [ ] **Criar o container do GTM** e preencher `GTM_ID` em `js/cookie-consent.js` (hoje vazio; o site funciona só com GA4).
+- [ ] **Verificar o domínio no Google Search Console** e enviar o `sitemap.xml`.
 - [ ] Criar funil de conversão personalizado no painel do Google Analytics 4.
+
+> Passo a passo completo em [`docs/analytics.md`](./docs/analytics.md).
 
 ---
 
@@ -88,6 +101,8 @@ Atualmente, se o usuário preencher o formulário mas fechar o navegador antes d
 
 ### 3.1. Gestão Dinâmica de Conteúdo para o Blog
 Conforme a frequência de publicação de artigos sobre IA, segurança e automação aumentar, a criação manual de arquivos HTML (`7-motivos...html`, `seguranca...html`) pode se tornar repetitiva.
+
+> **Atualização de agosto/2026:** a fricção prevista aqui foi parcialmente resolvida sem CMS. Artigos agora seguem `blog/<slug>/index.html` a partir de um template documentado (seção 7 do [`SPEC.md`](./SPEC.md)), com `partials/` cuidando de nav e footer e `tools/build-sitemap.mjs` gerando o sitemap. A avaliação de CMS continua válida caso a frequência de publicação aumente muito, mas deixou de ser urgente.
 
 - [ ] **Avaliação de Opções de CMS:**
   - **Opção A (Git-based / Zero Backend):** Decap CMS (antigo Netlify CMS) ou TinaCMS salvando arquivos Markdown diretamente no repositório GitHub.
@@ -98,3 +113,35 @@ Conforme a frequência de publicação de artigos sobre IA, segurança e automa�
 - [ ] Se houver demanda para atender clientes fora do Brasil (ex.: América Latina ou EUA):
   - Estruturação de rotas de idioma (`/en/`, `/es/`).
   - Ajuste de tags `hreflang` e sitemaps multilíngues.
+
+---
+
+## ✅ Concluído: Reestruturação de Arquitetura e SEO (Agosto/2026)
+
+Execução das Fases 1 e 2 da auditoria pública de 25/08/2026. O site saiu de 5 para 24 URLs.
+
+### Correções críticas
+- [x] Os 3 cards de artigos da home apontavam para `href="#"` e o clique era inerte — `js/script.js` faz early-return em `'#'`. Hoje levam a artigos reais.
+- [x] Contadores exibiam `0` para qualquer leitura sem JavaScript. O valor final passou para o HTML.
+- [x] Depoimentos assinados por "Cliente Satisfeito" com fotos de banco de imagem foram despersonalizados. Nenhuma foto de stock representa pessoas da empresa.
+- [x] CTAs padronizados e todos os links internos convertidos para caminhos absolutos.
+- [x] `title`, `meta description` e `canonical` próprios e únicos nas 24 páginas.
+
+### Páginas criadas
+- [x] Verticais `/para-clinicas/` e `/para-engenharia/`
+- [x] `/diagnostico-de-ia/`
+- [x] `/solucoes/` e as 5 páginas de solução
+- [x] `/casos/` e os 3 casos detalhados
+- [x] `/sobre/`, `/contato/`, `/seguranca-e-lgpd/`
+- [x] Blog migrado para URLs em pasta, com 3 artigos novos
+
+### Infraestrutura
+- [x] `partials/` como fonte única de nav e footer, com `tools/sync-layout.mjs`
+- [x] Verificadores `check-links`, `check-seo`, `check-quality` e `build-sitemap`
+- [x] `vercel.json` com 301 das URLs antigas, headers de segurança e cache
+- [x] `.vercelignore` excluindo `partials/`, `tools/` e `docs/` do publish
+
+### Pendente de dados do cliente
+- [ ] Resolver os **41 marcadores `<!-- TODO -->`**, concentrados nas páginas de caso (porte, região, prazo, números antes/depois) e em `/seguranca-e-lgpd/` (8 confirmações técnicas: backup, criptografia, retenção, subprocessadores).
+- [ ] Substituir os relatos por depoimentos nominais, com autorização de uso de imagem.
+- [ ] Criar imagem de capa própria para cada artigo — hoje todos usam a imagem de marca.

@@ -1,0 +1,33 @@
+<!--
+  FONTE ÚNICA DA NAVEGAÇÃO.
+  Não edite o <nav> dentro das páginas — edite este arquivo e rode:
+      node tools/sync-layout.mjs
+
+  Tokens processados pelo sync:
+    {{NAV_EXTRA_CLASS}}  → vem de variant="..." no marcador gs:nav:start
+    data-nav="x"         → recebe class="active" quando active="x" no marcador
+-->
+<nav class="navbar{{NAV_EXTRA_CLASS}}" id="navbar">
+    <div class="container nav-container">
+        <a href="/" class="logo" aria-label="Guadalupe Sistemas - Página Inicial">
+            <img src="/assets/logo-simbolo.png" alt="Guadalupe Sistemas" class="logo-icon" width="40" height="40">
+            <span class="logo-text">Guadalupe <strong>Sistemas</strong></span>
+        </a>
+
+        <div class="nav-links" id="nav-links">
+            <a href="/solucoes/" data-nav="solucoes">Soluções</a>
+            <a href="/para-clinicas/" data-nav="clinicas">Para Clínicas</a>
+            <a href="/para-engenharia/" data-nav="engenharia">Para Engenharia</a>
+            <a href="/diagnostico-de-ia/" data-nav="diagnostico">Diagnóstico</a>
+            <a href="/casos/" data-nav="casos">Casos</a>
+            <a href="/blog/" data-nav="blog">Blog</a>
+        </div>
+
+        <a href="/diagnostico-de-ia/" class="btn btn-ghost nav-cta" data-cta="diagnostico">Fazer meu diagnóstico</a>
+
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menu de navegação"
+            aria-expanded="false" aria-controls="nav-links">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </div>
+</nav>

@@ -14,64 +14,87 @@ Este documento descreve a especificação técnica, estrutural e funcional compl
 
 ## 🗺️ 2. Inventário de Páginas e Rotas
 
-| Arquivo | Rota / URL | Descrição e Finalidade |
+O site usa **URLs em pasta** (`/para-clinicas/` → `para-clinicas/index.html`). As URLs `.html` antigas têm redirecionamento 301 configurado em `vercel.json`.
+
+### Comerciais
+
+| Arquivo | Rota | Finalidade |
 | :--- | :--- | :--- |
-| `index.html` | `/` | Landing page principal com toda a escada de valor, casos e formulário de conversão |
-| `blog.html` | `/blog.html` | Índice de artigos do blog institucional |
-| `7-motivos-para-colocar-seus-dados-na-nuvem.html` | `/7-motivos-...` | Artigo focado em segurança, economia e infraestrutura de nuvem |
-| `seguranca-de-guardar-dados-na-nuvem.html` | `/seguranca-...` | Artigo focado em conformidade LGPD, criptografia e proteção de dados |
-| `politica-de-privacidade.html` | `/politica-...` | Termos e política de privacidade conforme as diretrizes da LGPD |
+| `index.html` | `/` | Home: hero, seletor de cenário, desafios, soluções, casos, diagnóstico, método, resultados, relatos, FAQ, formulário |
+| `diagnostico-de-ia/index.html` | `/diagnostico-de-ia/` | Oferta de entrada, a partir de R$ 2.500, com método, entregáveis e FAQ |
+| `para-clinicas/index.html` | `/para-clinicas/` | Vertical saúde: no-show, confirmação, agendamento, retorno de pacientes |
+| `para-engenharia/index.html` | `/para-engenharia/` | Vertical engenharia: propostas, orçamentos, documentos, normas, CRM |
+| `solucoes/index.html` | `/solucoes/` | Hub das soluções |
+| `solucoes/agentes-de-ia/index.html` | `/solucoes/agentes-de-ia/` | Agente de WhatsApp com IA |
+| `solucoes/automacao-de-processos/index.html` | `/solucoes/automacao-de-processos/` | Lembretes, documentos, integrações, CRM |
+| `solucoes/assistente-de-conhecimento/index.html` | `/solucoes/assistente-de-conhecimento/` | RAG sobre documentos e normas internas |
+| `solucoes/sistemas-sob-medida/index.html` | `/solucoes/sistemas-sob-medida/` | Painel, CRM próprio, portal do cliente |
+| `solucoes/aplicativos/index.html` | `/solucoes/aplicativos/` | Apps web e mobile sob medida |
+
+### Prova social
+
+| Arquivo | Rota | Finalidade |
+| :--- | :--- | :--- |
+| `casos/index.html` | `/casos/` | Hub dos casos |
+| `casos/app-agendamento-clinica/index.html` | `/casos/app-agendamento-clinica/` | Aplicativo de escala e agendamento em clínica |
+| `casos/atendimento-automatizado-whatsapp/index.html` | `/casos/atendimento-automatizado-whatsapp/` | Centralização do atendimento comercial |
+| `casos/painel-gestao-industria/index.html` | `/casos/painel-gestao-industria/` | Painel de gestão substituindo planilhas |
+
+### Institucionais e conteúdo
+
+| Arquivo | Rota | Finalidade |
+| :--- | :--- | :--- |
+| `sobre/index.html` | `/sobre/` | Quem somos, método e stack tecnológica |
+| `contato/index.html` | `/contato/` | Formulário completo com consentimento LGPD |
+| `seguranca-e-lgpd/index.html` | `/seguranca-e-lgpd/` | Tratamento de dados, acesso, retenção, dados de saúde |
+| `politica-de-privacidade/index.html` | `/politica-de-privacidade/` | Política de privacidade |
+| `blog/index.html` | `/blog/` | Índice dos artigos |
+| `blog/automacao-economia-de-horas/index.html` | `/blog/automacao-economia-de-horas/` | Artigo — Produtividade |
+| `blog/quando-investir-em-sistema-proprio/index.html` | `/blog/quando-investir-em-sistema-proprio/` | Artigo — Gestão |
+| `blog/organizar-atendimento-whatsapp/index.html` | `/blog/organizar-atendimento-whatsapp/` | Artigo — Atendimento |
+| `blog/7-motivos-para-colocar-seus-dados-na-nuvem/index.html` | `/blog/7-motivos-.../` | Artigo — Tecnologia e Segurança |
+| `blog/seguranca-de-guardar-dados-na-nuvem/index.html` | `/blog/seguranca-.../` | Artigo — Tecnologia e Segurança |
+
+**Total: 24 páginas indexáveis.** `sitemap.xml` é gerado a partir da árvore de arquivos por `node tools/build-sitemap.mjs`.
+
+### Arquivos que NÃO são publicados
+
+`partials/`, `tools/` e `docs/` são excluídos do deploy por `.vercelignore`. `partials/` contém fragmentos de HTML sem `<head>`; publicados, virariam páginas rasas indexáveis.
 
 ---
 
-## 📑 3. Estrutura de Seções da Landing Page (`index.html`)
+## 📑 3. Estrutura de Seções da Home (`index.html`)
 
-A página inicial é composta por 16 seções sequenciais e modulares:
+A home foi reorganizada para ordem de decisão: o visitante se identifica, reconhece o problema, vê a solução e a prova, e só então encontra o formulário. São **13 seções**, todas com `id`.
 
-1. **Header / Navbar (`.navbar`):**
-   - Logo da marca, links de navegação âncora (`#inicio`, `#desafios`, `#diagnostico`, `#servicos`, `#casos`, `#faq`, `#blog`), botão CTA "Falar no WhatsApp" e botão de menu hambúrguer para dispositivos móveis (`.mobile-menu-btn`).
-2. **Hero Section (`#inicio` / `.hero`):**
-   - Headline de alto impacto ("IA, automação e sistemas sob medida para clínicas e empresas de engenharia"), badges de nicho, botões de ação principal ("Quero um Diagnóstico de IA" e "Conhecer Serviços") e cards com métricas destacadas.
-3. **Desafios por Segmento (`#desafios`):**
-   - Abas/cards divididos em dois grandes blocos:
-     - *Clínicas & Consultórios:* No-show, sobrecarga na recepção, perda de agendamentos fora do horário comercial.
-     - *Empresas de Engenharia & Arquitetura:* Busca lenta em documentos/normas, propostas manuais demoradas, falha de comunicação interna.
-4. **Oferta do Diagnóstico de IA (`#diagnostico`):**
-   - Apresentação do produto de entrada (a partir de R$ 2.500), destacando entregáveis: mapeamento de processos, cálculo de ROI e roadmap de implementação, com cláusula de abatimento do valor em projetos subsequentes.
-5. **Sobre a Guadalupe Sistemas (`#sobre`):**
-   - Posicionamento da empresa como parceira técnica transparente focada em eficiência operacional e ROI real, sem promessas vazias.
-6. **Escada de Serviços (`#servicos`):**
-   - Grid com os 5 pilares de atuação:
-     1. Diagnóstico de IA
-     2. Agentes de WhatsApp & Atendimento 24h
-     3. Automação de Processos & Integrações
-     4. Assistente de Conhecimento (RAG / Treinamento em documentos internos)
-     5. Sites, Sistemas e Aplicativos sob Medida
-7. **Públicos-Alvo (`#publicos`):**
-   - Detalhamento de como as soluções se aplicam a clínicas médicas, odontologia, veterinária, escritórios de engenharia, arquitetura, contabilidade e indústrias.
-8. **Diferenciais / Por Que a Guadalupe (`#por-que`):**
-   - 4 pilares de confiança: Entrega ágil (4 a 12 semanas), ROI comprovado, soluções personalizadas e suporte contínuo.
-9. **Metodologia em 4 Passos (`.steps-section`):**
-   - Timeline do processo: 1. Diagnóstico → 2. Estratégia & Design → 3. Implementação & Treinamento → 4. Evolução Contínua.
-10. **Casos de Sucesso Reais (`#casos`):**
-    - Cards de estudo de caso práticos:
-      - *CliniMed:* Redução de 58% no no-show com agente de agendamento WhatsApp.
-      - *EngTech Soluções:* Geração de propostas técnicas automatizada de 4 horas para 15 minutos.
-11. **Stack Tecnológico (`.tech-section`):**
-    - Apresentação das tecnologias utilizadas pela equipe técnica: Python, LangChain, LlamaIndex, OpenAI, Claude, FastAPI, PostgreSQL, Supabase, Vercel e Docker.
-12. **Números de Impacto (`.numbers-section`):**
-    - Contadores animados: Horas economizadas (+5.000h), Redução média de faltas (-50%), Tempo de resposta imediato (<2min).
-13. **Depoimentos de Clientes (`.testimonials-section`):**
-    - Carrossel rotativo com depoimentos de médicos, diretores clínicos e sócios de engenharia.
-14. **Perguntas Frequentes (`#faq`):**
-    - Accordion interativo tratando as principais objeções de compra (ROI, substituição de equipe, segurança de dados/LGPD, complexidade técnica).
-15. **Formulário Multi-etapas (`#formulario`):**
-    - Formulário em 3 passos:
-      - *Passo 1:* Seleção da solução de interesse (Diagnóstico, Agente WhatsApp, Automação, Software Sob Medida).
-      - *Passo 2:* Descrição do principal desafio operacional atual.
-      - *Passo 3:* Identificação do contato (Nome) e botão de envio para o WhatsApp.
-16. **Prévia do Blog (`#blog`) & CTA Final (`.cta-final-section`) + Rodapé:**
-    - Chamadas para os artigos mais recentes, CTA de fechamento e rodapé com dados institucionais, links rápidos e termos de privacidade.
+| # | `id` | Seção | Papel |
+| :-- | :--- | :--- | :--- |
+| 1 | `#inicio` | Hero | Promessa concreta + CTA "Fazer meu diagnóstico" |
+| 2 | `#cenarios` | Escolha seu cenário | 3 cards → `/para-clinicas/`, `/para-engenharia/`, `/solucoes/` |
+| 3 | `#desafios` | Desafios | 8 dores em 3 grupos (clínicas, engenharia, geral) |
+| 4 | `#servicos` | Escada de serviços | 5 cards, cada um linkando para sua página em `/solucoes/` |
+| 5 | `#casos` | Casos reais | 3 cards, cada um linkando para `/casos/<slug>/` |
+| 6 | `#diagnostico` | Diagnóstico de IA | Oferta de entrada, a partir de R$ 2.500 |
+| 7 | `#como-funciona` | Método em 4 passos | Bate-papo → Planejamento → Construção → Acompanhamento |
+| 8 | `#resultados` | Números | Contadores 90% / 5 min-dia / 100% |
+| 9 | `#relatos` | Relatos por segmento | Carrossel sem nome ou foto fabricados |
+| 10 | `#por-que` | Por que a Guadalupe | 4 diferenciais concretos |
+| 11 | `#faq` | FAQ | Accordion de 5 objeções, espelhado no JSON-LD `FAQPage` |
+| 12 | `#formulario` | Formulário | 3 etapas → WhatsApp |
+| 13 | `#blog` | Leitura rápida | 3 artigos + "Ver todos os artigos" |
+
+Mais o CTA final (`.cta-final-section`), o nav e o footer.
+
+### Regras que valem para todas as páginas
+
+- Toda `<section class="section-dark">` precisa de `<div class="pixel-texture"></div>` como primeiro filho, e do `.container` interno em `position: relative; z-index: 1`.
+- Contadores só animam dentro de uma `<section class="numbers-section">` — o observador é `document.querySelector(".numbers-section")` e falha em silêncio, imprimindo o valor estático.
+- O valor final do contador fica no HTML (`>90%<`), não `0`. O JS anima de 0 até ele. Sem isso, crawlers e prévias de link leem zero.
+
+### Seções que saíram da home
+
+- **Stack tecnológica** (`.tech-section`) migrou para `/sobre/`: pilha técnica não é critério de decisão do comprador.
+- **"Nossa Essência"** foi absorvida por `#por-que` e por `/sobre/`. A foto que a ilustrava era de banco de imagem apresentada como a equipe.
 
 ---
 
@@ -121,138 +144,118 @@ A página inicial é composta por 16 seções sequenciais e modulares:
 
 ## ⚙️ 5. Especificação Funcional dos Scripts
 
-### 5.1. Script Principal ([`js/script.js`](file:///home/munraitoo13/Projects/guadalupesistemas-lp/js/script.js))
+Ordem de carregamento em toda página: `js/cookie-consent.js` (defer, no `<head>`), depois `js/analytics.js` e `js/script.js` antes de `</body>`. **`analytics.js` precisa vir antes de `script.js`** — `sendToWhatsApp()` usa `window.GS.waUrl()`.
 
-| Módulo | Gatilho / Evento | Comportamento e Regras |
+### 5.1. Script Principal (`js/script.js`)
+
+| Módulo | Gatilho | Comportamento |
 | :--- | :--- | :--- |
-| **Mobile Menu** | Clique em `.mobile-menu-btn` | Alterna `.active` na `.nav-links`, adiciona `.menu-open` na navbar e alterna ícone FontAwesome `fa-bars` ↔ `fa-xmark`. Fecha automaticamente ao clicar em links internos. |
-| **Navbar Scroll** | Evento `window.scroll` | Adiciona classe `.scrolled` quando `window.scrollY > 50` para alterar fundo e sombra. |
-| **Scroll-Spy** | Evento `window.scroll` | Calcula a seção visível (`scrollY + 120px`) e aplica `.active` no link correspondente na navbar. |
-| **Smooth Scroll** | Clique em `a[href^="#"]` | Realiza rolagem suave compensando o offset fixo da barra (`NAVBAR_OFFSET = 80px`). |
-| **Animações de Entrada** | `IntersectionObserver` (threshold: 0.15) | Elementos com `.reveal` recebem `.revealed`. Grids possuem *stagger* automático de `0.1s * index`. |
-| **FAQ Accordion** | Clique em `.faq-question` | Abre a resposta clicada animando `maxHeight = scrollHeight + 'px'` e fecha automaticamente todos os outros itens. |
-| **Multi-Step Form** | Cliques em `.form-next`, `.form-prev` e submit | Valida campos obrigatórios (`input`, `textarea`, `radio`) da etapa atual antes de avançar. Ao finalizar, chama `sendToWhatsApp`. |
-| **WhatsApp URL Generator** | Disparo do formulário | Monta payload codificado em URI com nome, solução e dor, redirecionando para `https://wa.me/5537998323232?text=...`. |
-| **Carrossel de Depoimentos** | Intervalo de 6000ms ou clique nas bolinhas | Alterna classe `.active` entre `.testimonial-slide`. Pausa rotação automática no evento `mouseenter` do container. |
-| **Contadores Numéricos** | `IntersectionObserver` (threshold: 0.3) | Anima valores de `0` até `data-target` ao longo de 2000ms com curva *ease-out quad*. |
+| **Mobile Menu** | Clique em `.mobile-menu-btn` | `setMenuState(open)` centraliza classes e `aria-expanded`, alternando `fa-bars` ↔ `fa-xmark`. Fecha ao clicar em qualquer link do menu. |
+| **Navbar Scroll** | `window.scroll` | Adiciona `.scrolled` quando `scrollY > 50`. |
+| **Link ativo** | Carga da página | Baseado em `location.pathname`, não em scroll. `tools/sync-layout.mjs` já grava `.active` no HTML; o JS só cobre páginas filhas e nunca apaga o estado do servidor. |
+| **Ano do rodapé** | Carga da página | Preenche `[data-current-year]` com o ano corrente. |
+| **Smooth Scroll** | Clique em `a[href^="#"]` | Rolagem suave com `NAVBAR_OFFSET = 80px`. Ignora `#` vazio. |
+| **Animações** | `IntersectionObserver` (0.15) | `.reveal` → `.revealed`, com *stagger* de `0.1s * index` nos grids. |
+| **FAQ Accordion** | Clique em `.faq-question` | Anima `maxHeight` e fecha os irmãos. |
+| **Multi-Step Form** | `.form-next`, `.form-prev`, submit | Valida a etapa antes de avançar. Radios são validados como grupo (`input.value` devolve o atributo mesmo sem seleção, então passariam na checagem comum). O destaque de erro usa `.chips-group`. |
+| **WhatsApp URL** | Submit do formulário | Lê `solucao`, `objetivo`, `nome` e `contato`; delega a montagem a `window.GS.waUrl(origem, mensagem)`. |
+| **Carrossel** | 6000ms ou clique nas bolinhas | Alterna `.active` entre slides, pausa no `mouseenter`. |
+| **Contadores** | `IntersectionObserver` (0.3) | Anima de 0 até `data-target` em 2000ms, *ease-out quad*. |
 
-### 5.2. Gestão de Consentimento e Cookies ([`js/cookie-consent.js`](file:///home/munraitoo13/Projects/guadalupesistemas-lp/js/cookie-consent.js))
+### 5.2. Consentimento e Analytics (`js/cookie-consent.js`)
 
-- **Chave de Armazenamento:** `localStorage.getItem('gs_cookie_consent')`.
-- **Estados Possíveis:**
-  - `'accepted'`: Dispara o agendamento do Google Analytics (`G-QPZ3J2WTTM`) sob demanda (ao interagir com a tela ou após 5s).
-  - `'rejected'`: Esconde o banner e bloqueia qualquer injeção de script de rastreamento.
-  - `null` (Primeiro acesso): Constrói e exibe dinamicamente o banner com as opções Aceitar / Recusar.
-- **Configuração GA4:** `anonymize_ip: true`.
+- **Chave:** `localStorage['gs_cookie_consent']` (`accepted` | `rejected` | ausente).
+- **Consent Mode v2:** declarado com tudo negado **antes** de qualquer tag do Google; `security_storage` permanece concedido. O "Aceitar" dispara `gtag('consent', 'update', ...)`.
+- **GA4:** `G-QPZ3J2WTTM`, com `anonymize_ip: true`. Carrega **imediatamente** após o consentimento — o atraso anterior de 5s/primeira interação descartava o pageview de quem saía rápido.
+- **GTM:** constante `GTM_ID`, vazia por padrão. Preenchida, injeta o container. Vazia, só o GA4 direto carrega.
+
+### 5.3. Camada de Eventos (`js/analytics.js`)
+
+Publica `window.GS` e envia cada evento para `window.dataLayer` **e** para `gtag`, funcionando com ou sem GTM.
+
+| API | Uso |
+| :--- | :--- |
+| `GS.track(nome, params)` | Dispara um evento. Anexa `page_group`, `page_slug` e os UTM da sessão. |
+| `GS.waUrl(origem, mensagem)` | Monta a URL do `wa.me` com `encodeURIComponent` e assinatura de origem. |
+| `GS.pageGroup` / `GS.pageSlug` | Contexto da página atual. |
+
+**Eventos:** `scroll_90`, `click_whatsapp`, `click_diagnostico`, `click_case`, `blog_article_view`, `form_start`, `form_step_1`, `form_step_2`, `generate_lead`.
+
+**`page_group`:** `home` · `clinicas` · `engenharia` · `diagnostico` · `solucao` · `caso` · `blog` · `institucional`. Precisa ser registrada como dimensão personalizada no GA4 para aparecer nos relatórios.
+
+Todo link `wa.me` é reescrito na carga para carregar a origem (`data-wa-origin`) na mensagem. Os UTM da primeira página ficam em `sessionStorage`, para que um lead que chega por anúncio, lê um artigo e só depois chama no WhatsApp continue atribuído à campanha.
+
+Detalhes completos em [`docs/analytics.md`](./docs/analytics.md).
+
+### 5.4. Ferramentas de Desenvolvimento (`tools/`)
+
+Node puro, sem dependências, **fora do deploy**. Rodar antes de todo commit:
+
+| Script | Verifica |
+| :--- | :--- |
+| `sync-layout.mjs` | Propaga `partials/nav.html` e `footer.html` para os blocos `gs:nav` / `gs:footer`. `--check` falha se houver divergência. |
+| `check-links.mjs` | Todo `href` interno resolve para um arquivo no disco. Rejeita `href="#"` e caminhos relativos. |
+| `check-seo.mjs` | `title`, `meta description` e `canonical` presentes e únicos. |
+| `check-quality.mjs` | Um `<h1>` por página, `FAQPage` idêntico à FAQ visível, `alt` em imagens, `rel` em `target="_blank"`. |
+| `build-sitemap.mjs` | Gera `sitemap.xml` a partir da árvore. |
 
 ---
 
 ## 🔍 6. Metadados, SEO e Arquivos Auxiliares
 
-- **`robots.txt`:** Permite indexação de todas as páginas públicas e aponta a localização de `https://guadalupesistemas.com.br/sitemap.xml`.
-- **`sitemap.xml`:** Lista todas as URLs canônicas (`/`, `/blog.html`, artigos e política de privacidade) com frequência de atualização e prioridade.
-- **`llms.txt`:** Resumo executivo para consumo rápido por agentes e robôs de IA.
-- **`llms-full.txt`:** Base de conhecimento completa (100% em Markdown) contendo todos os textos, serviços, metodologias, cases e artigos na íntegra.
-- **`site.webmanifest`:** Metadados para PWA e navegadores mobile (`name`, `theme_color: #0C0A23`, ícones de 192x192 e 512x512).
-- **JSON-LD Schemas:**
-  - `Organization`: Nome, URL, logo oficial, telefone de atendimento e redes sociais.
-  - `FAQPage`: Perguntas e respostas principais da seção de FAQ para exibição rica nos resultados de busca do Google.
+- **`robots.txt`:** libera indexação geral, bloqueia `/partials/`, `/tools/` e `/docs/`, e aponta o sitemap.
+- **`sitemap.xml`:** 24 URLs, gerado por `tools/build-sitemap.mjs`. Prioridade derivada do tipo de página.
+- **`vercel.json`:** 301 das 4 URLs `.html` antigas para as novas em pasta, `trailingSlash: true`, headers de segurança e cache longo para `/assets/`, `/css/` e `/js/`.
+- **`.vercelignore`:** remove `partials/`, `tools/`, `docs/` e `README.md` do publish.
+- **`llms.txt` / `llms-full.txt`:** contexto para agentes de IA.
+- **`site.webmanifest`:** metadados PWA (`theme_color: #0C0A23`).
+- **JSON-LD (51 blocos, todos validados):**
+
+| Tipo | Onde |
+| :--- | :--- |
+| `Organization`, `WebSite` | Home |
+| `BreadcrumbList` | Todas as páginas internas |
+| `Service` | Páginas de solução e verticais |
+| `Article` | Artigos do blog e páginas de caso |
+| `FAQPage` | Onde há FAQ visível — o texto precisa ser **idêntico** ao exibido |
+| `Blog` + `ItemList` | `/blog/` |
+| `AboutPage` / `ContactPage` | `/sobre/` e `/contato/` |
 
 ---
 
-## 📝 7. Template Padrão para Novos Artigos de Blog (Boilerplate HTML)
+## 📝 7. Publicando um Novo Artigo de Blog
 
-Ao adicionar um novo artigo ao blog, crie um arquivo HTML na raiz seguindo rigorosamente a estrutura abaixo:
+Artigos deixaram de ser arquivos soltos na raiz. Cada um vira uma pasta com `index.html`.
 
-```html
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="[Descrição resumida de 140 a 160 caracteres para o Google]">
-    <meta name="keywords" content="[palavras-chave separadas por vírgula]">
-    <meta name="robots" content="index, follow">
+### Passo a passo
 
-    <!-- Open Graph / Redes Sociais -->
-    <meta property="og:title" content="[Título do Artigo] | Guadalupe Sistemas">
-    <meta property="og:description" content="[Resumo do artigo para redes sociais]">
-    <meta property="og:url" content="https://guadalupesistemas.com.br/[slug-do-artigo].html">
-    <meta property="og:type" content="article">
-    <meta property="og:site_name" content="Guadalupe Sistemas">
-    <meta property="og:locale" content="pt_BR">
-    <meta property="og:image" content="[URL absoluta da imagem de capa 1200x630]">
-    <meta property="article:published_time" content="AAAA-MM-DDT00:00:00-03:00">
-    <meta property="article:author" content="Guadalupe Sistemas">
+1. **Crie a pasta:** `blog/<slug-do-artigo>/index.html`.
+2. **Clone o template:** copie `blog/organizar-atendimento-whatsapp/index.html`, o mais recente e completo.
+3. **Atualize o `<head>`:** `description`, `keywords`, `og:*`, `twitter:*`, `article:published_time`, `canonical` e `<title>` (≤65 caracteres, padrão `Assunto | Guadalupe`).
+4. **Atualize os dois blocos JSON-LD:** `Article` (headline, description, datePublished, dateModified, mainEntityOfPage) e `BreadcrumbList`.
+5. **Marcadores de layout:** deixe `<!-- gs:nav:start variant="solid" active="blog" -->` / `<!-- gs:nav:end -->` e `<!-- gs:footer:start -->` / `<!-- gs:footer:end -->` **vazios** e rode `node tools/sync-layout.mjs`.
+6. **Corpo:** hero com `.blog-tag`, `.article-title`, `.article-subtitle` e `.article-meta`; `.article-toc` com âncoras que batem com os `<h2 id="...">`; `.article-body`.
+7. **Botões de compartilhar:** URLs reais de Facebook, X, LinkedIn e WhatsApp, já codificadas. Nunca `href="#"`.
+8. **Cross-link comercial (obrigatório):** um link contextual no meio do texto para a página comercial correspondente, e um `.cta-box` no fim levando a `/diagnostico-de-ia/`. Artigo que não leva a lugar nenhum é conteúdo desperdiçado.
+9. **Recomendados:** aponte `.recommended-posts` para 2 artigos irmãos.
+10. **Índice:** adicione o card em `blog/index.html` (mais novo primeiro) e inclua a URL no `ItemList` do JSON-LD.
+11. **Sincronize:** `node tools/build-sitemap.mjs` e acrescente o link em `llms.txt` e `llms-full.txt`.
 
-    <link rel="canonical" href="https://guadalupesistemas.com.br/[slug-do-artigo].html">
+### Regras de conteúdo
 
-    <!-- Favicons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="shortcut icon" href="/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <meta name="theme-color" content="#0C0A23">
+- **Nunca invente estatística, pesquisa ou fonte.** Nada de "estudos mostram que 73%…". Para falar de ordem de grandeza, deixe a conta explícita e verificável: "3 minutos por confirmação × 40 por dia × 22 dias úteis".
+- **Nunca invente cliente, caso ou depoimento.** Onde faltar dado real, use `<!-- TODO: confirmar com o cliente — ... -->` sempre dentro de comentário HTML, nunca em texto visível.
+- Escreva para quem decide (dono de clínica, sócio de escritório), não para desenvolvedor.
+- 1.000 a 1.500 palavras, com 4 a 6 `<h2 id="...">`, todos listados na TOC.
 
-    <title>[Título do Artigo] | Guadalupe Sistemas</title>
+### Verificação
 
-    <!-- Schema Article (JSON-LD) -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "[Título do Artigo]",
-        "description": "[Resumo do artigo]",
-        "image": "[URL da imagem]",
-        "datePublished": "AAAA-MM-DDT00:00:00-03:00",
-        "author": { "@type": "Organization", "name": "Guadalupe Sistemas" },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Guadalupe Sistemas",
-            "logo": { "@type": "ImageObject", "url": "https://guadalupesistemas.com.br/assets/logo-completa.png" }
-        },
-        "mainEntityOfPage": "https://guadalupesistemas.com.br/[slug-do-artigo].html"
-    }
-    </script>
-
-    <!-- Cookie Consent & GA4 -->
-    <script src="js/cookie-consent.js" defer></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
-</head>
-<body>
-    <!-- Navbar padrão -->
-    <nav class="navbar scrolled">
-        <div class="container nav-container">
-            <a href="/" class="logo"><img src="assets/logo-completa.png" alt="Guadalupe Sistemas" height="42"></a>
-            <div class="nav-links">
-                <a href="/#inicio">Início</a>
-                <a href="/#servicos">Serviços</a>
-                <a href="/blog.html" class="active">Blog</a>
-                <a href="/#contato" class="btn btn-primary-violet btn-sm">Falar no WhatsApp</a>
-            </div>
-        </div>
-    </nav>
-
-    <main class="article-main container">
-        <article class="article-content">
-            <h1>[Título do Artigo]</h1>
-            <div class="article-meta">Por Guadalupe Sistemas • Publicado em [Data]</div>
-            <!-- Conteúdo em parágrafos, h2, h3, listas -->
-        </article>
-    </main>
-
-    <!-- Rodapé padrão -->
-    <script src="js/script.js" defer></script>
-</body>
-</html>
+```bash
+node tools/sync-layout.mjs
+node tools/check-links.mjs
+node tools/check-seo.mjs
+node tools/check-quality.mjs
+node tools/build-sitemap.mjs
 ```
 
-> **Checklist ao criar novo artigo:**
-> 1. Adicionar o novo card na listagem do [`blog.html`](./blog.html).
-> 2. Adicionar a URL no [`sitemap.xml`](./sitemap.xml).
-> 3. Adicionar o resumo do artigo no [`llms.txt`](./llms.txt) e o texto completo no [`llms-full.txt`](./llms-full.txt).
+Nenhum artigo precisa de CSS novo: o kit `.article-*` já cobre hero, TOC, corpo, destaque, compartilhamento, bio do autor e recomendados.
