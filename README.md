@@ -85,10 +85,11 @@ Cada página delimita os blocos assim:
 Rode os três antes de qualquer commit:
 
 ```bash
-node tools/check-links.mjs       # todo href interno resolve para um arquivo real
-node tools/check-seo.mjs         # title, description e canonical presentes e únicos
-node tools/sync-layout.mjs --check   # nav/footer em sincronia
-node tools/build-sitemap.mjs     # regenera sitemap.xml a partir da árvore
+node tools/sync-layout.mjs --check   # nav/footer em sincronia com partials/
+node tools/check-links.mjs          # todo href interno resolve para um arquivo real
+node tools/check-seo.mjs            # title, description e canonical presentes e únicos
+node tools/check-quality.mjs        # H1 único, FAQ x JSON-LD, alt, rel=noopener
+node tools/build-sitemap.mjs        # regenera sitemap.xml a partir da árvore
 ```
 
 `check-links.mjs` existe por um motivo específico: em agosto de 2026 os três
