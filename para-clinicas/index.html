@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Automatize confirmação de consultas, atendimento, follow-up e tarefas administrativas. IA e sistemas sob medida para clínicas e consultórios.">
+    <!-- SEO & Open Graph -->
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="IA e Automação para Clínicas e Consultórios | Guadalupe Sistemas">
+    <meta property="og:description"
+        content="Automatize confirmação de consultas, atendimento, follow-up e tarefas administrativas. IA e sistemas sob medida para clínicas e consultórios.">
+    <meta property="og:url" content="https://guadalupesistemas.com.br/para-clinicas/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Guadalupe Sistemas">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:image" content="https://guadalupesistemas.com.br/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Guadalupe Sistemas - IA, automação e sistemas sob medida">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="IA e Automação para Clínicas e Consultórios | Guadalupe Sistemas">
+    <meta name="twitter:description"
+        content="Automatize confirmação de consultas, atendimento, follow-up e tarefas administrativas. IA e sistemas sob medida para clínicas e consultórios.">
+    <meta name="twitter:image" content="https://guadalupesistemas.com.br/assets/og-image.jpg">
+    <link rel="canonical" href="https://guadalupesistemas.com.br/para-clinicas/">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0C0A23">
+
+    <title>IA e Automação para Clínicas e Consultórios | Guadalupe Sistemas</title>
+
+    <!-- Dados estruturados (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://guadalupesistemas.com.br/" },
+            { "@type": "ListItem", "position": 2, "name": "Para Clínicas", "item": "https://guadalupesistemas.com.br/para-clinicas/" }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "IA e automação para clínicas e consultórios",
+        "serviceType": "Automação administrativa e agentes de IA para clínicas e consultórios",
+        "description": "Automação de confirmação de consultas, agendamento, remarcação, retorno de pacientes e atendimento por WhatsApp para clínicas e consultórios. A IA cuida apenas da rotina administrativa; toda decisão clínica é do profissional de saúde.",
+        "url": "https://guadalupesistemas.com.br/para-clinicas/",
+        "provider": {
+            "@type": "Organization",
+            "name": "Guadalupe Sistemas",
+            "url": "https://guadalupesistemas.com.br/"
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": "BR"
+        },
+        "audience": {
+            "@type": "Audience",
+            "audienceType": "Clínicas, consultórios e profissionais de saúde"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "A IA pode atender pacientes?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sim, na parte administrativa. O agente atende o WhatsApp da clínica, responde dúvidas sobre horários de funcionamento, endereço, convênios aceitos, documentos necessários e preparo administrativo para o atendimento, além de agendar, confirmar e remarcar consultas. O que a IA não faz é qualquer tipo de orientação médica: ela não avalia sintomas, não faz triagem clínica, não sugere diagnóstico e não recomenda tratamento ou medicamento. Esse limite é configurado desde o primeiro dia do projeto."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Como funciona a confirmação de consultas?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A automação lê a agenda da clínica e dispara a mensagem de confirmação no prazo que você definir, por exemplo 48 horas e novamente 3 horas antes do horário marcado. O paciente responde ali mesmo no WhatsApp confirmando, pedindo para remarcar ou cancelando. A resposta volta para a agenda automaticamente e a recepção só entra em cena quando o caso foge do padrão. Quem não responde entra em uma lista de acompanhamento para a equipe ligar, em vez de a equipe ligar para todo mundo."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "A IA pode marcar consulta sozinha?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Pode, dentro das regras que a clínica definir. Você decide quais horários ficam disponíveis para agendamento automático, quais profissionais entram, qual a duração de cada tipo de atendimento, quais convênios são aceitos e quais situações precisam obrigatoriamente passar por uma pessoa. Muitas clínicas começam com um modo mais conservador, em que a IA sugere o horário e a recepção confirma, e vão abrindo o agendamento automático conforme ganham confiança no fluxo."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "E quando o paciente pede algo médico?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "O agente identifica o assunto, informa de forma clara que não pode dar orientação de saúde e encaminha a conversa para a equipe da clínica, marcando o atendimento como prioritário na fila humana. Nenhuma resposta clínica é gerada pela IA. Esse comportamento é testado antes de a automação entrar no ar e continua sendo revisado depois, porque é o ponto mais sensível de qualquer projeto na área da saúde."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Como ficam os dados dos pacientes?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Trabalhamos com o princípio de coletar o mínimo necessário para a tarefa administrativa: nome, contato, horário e tipo de atendimento. Dados sensíveis de saúde não precisam circular pela automação de agenda e, por padrão, não circulam. Todo o projeto segue as diretrizes da LGPD, com acesso controlado, registro de quem consultou o quê e tratamento definido em contrato. Explicamos ponto a ponto como isso funciona na página Segurança e LGPD."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Consentimento + Google Analytics -->
+    <script src="/js/cookie-consent.js" defer></script>
+
+    <!-- Fonts: Sora (headings) + Inter (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- Icons (Font Awesome - lazy) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
+</head>
+
+<body>
+
+    <!-- gs:nav:start variant="solid" active="clinicas" -->
+    <nav class="navbar navbar-solid" id="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo" aria-label="Guadalupe Sistemas - Página Inicial">
+                <img src="/assets/logo-simbolo.png" alt="Guadalupe Sistemas" class="logo-icon" width="40" height="40">
+                <span class="logo-text">Guadalupe <strong>Sistemas</strong></span>
+            </a>
+
+            <div class="nav-links" id="nav-links">
+                <a href="/solucoes/" data-nav="solucoes">Soluções</a>
+                <a href="/para-clinicas/" class="active" data-nav="clinicas">Para Clínicas</a>
+                <a href="/para-engenharia/" data-nav="engenharia">Para Engenharia</a>
+                <a href="/diagnostico-de-ia/" data-nav="diagnostico">Diagnóstico</a>
+                <a href="/casos/" data-nav="casos">Casos</a>
+                <a href="/blog/" data-nav="blog">Blog</a>
+            </div>
+
+            <a href="/diagnostico-de-ia/" class="btn btn-ghost nav-cta" data-cta="diagnostico">Fazer meu diagnóstico</a>
+
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menu de navegação"
+                aria-expanded="false" aria-controls="nav-links">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    <!-- gs:nav:end -->
+
+    <main>
+
+        <!-- ========== HERO ========== -->
+        <header class="page-hero section-white">
+            <div class="container">
+                <nav class="breadcrumbs" aria-label="Trilha de navegação">
+                    <ol>
+                        <li><a href="/">Início</a></li>
+                        <li><span aria-current="page">Para Clínicas</span></li>
+                    </ol>
+                </nav>
+                <span class="section-tag">Clínicas e consultórios</span>
+                <h1 class="article-title">IA e automação para clínicas e consultórios</h1>
+                <p class="page-hero-subtitle">Um agente que confirma as consultas do dia seguinte pelo WhatsApp, oferece
+                    horário para quem precisa remarcar, responde as dúvidas de sempre sobre convênio e documentos e
+                    devolve para a recepção só o que realmente exige uma pessoa. A parte clínica continua inteiramente
+                    com o profissional de saúde.</p>
+                <div class="hero-ctas">
+                    <a href="/diagnostico-de-ia/" class="btn btn-primary-violet" data-cta="clinicas-hero">Fazer meu
+                        diagnóstico</a>
+                    <a href="/casos/" class="btn-link-arrow">Ver casos reais <span class="arrow">↗</span></a>
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== DESAFIOS ========== -->
+        <section id="desafios" class="section-light">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">O dia a dia da recepção</span>
+                    <h2>
+                        <span class="title-light">Onde a agenda da sua clínica</span>
+                        <span class="title-bold">perde tempo e dinheiro</span>
+                    </h2>
+                    <p class="section-subtitle">Nenhum desses problemas é falta de esforço da equipe. São tarefas
+                        repetitivas demais para serem feitas uma a uma, todos os dias, sem falhar.</p>
+                </div>
+
+                <div class="challenges-grid-3">
+                    <div class="challenge-card reveal">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-calendar-xmark"></i>
+                        </div>
+                        <h3>Faltas que viram prejuízo</h3>
+                        <p>O paciente marca com semanas de antecedência, esquece e não aparece. O horário fica vazio,
+                            ninguém é chamado para o lugar dele e o custo daquela hora continua correndo: sala,
+                            profissional e estrutura parada.</p>
+                    </div>
+                    <div class="challenge-card reveal">
+                        <div class="card-icon">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <h3>Confirmação feita uma a uma</h3>
+                        <p>Alguém da recepção abre a agenda do dia seguinte e manda mensagem para cada paciente,
+                            copiando e colando texto, esperando resposta e voltando várias vezes na mesma conversa
+                            enquanto o telefone toca.</p>
+                    </div>
+                    <div class="challenge-card reveal">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-user-clock"></i>
+                        </div>
+                        <h3>Pacientes que não voltam</h3>
+                        <p>Quem deveria retornar em três meses simplesmente não é lembrado. O retorno depende de a
+                            recepção lembrar de olhar uma lista que quase nunca sobra tempo para olhar.</p>
+                    </div>
+                    <div class="challenge-card reveal">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
+                        <h3>Remarcação que trava a fila</h3>
+                        <p>O paciente avisa que não pode vir e o horário fica em aberto. Sem um fluxo automático de
+                            reposição, o buraco na agenda raramente é preenchido a tempo.</p>
+                    </div>
+                    <div class="challenge-card reveal">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+                        <h3>Mensagens fora do horário</h3>
+                        <p>Boa parte dos contatos chega à noite e no fim de semana, quando a clínica está fechada. Na
+                            segunda-feira, a fila de mensagens não lidas já começou grande.</p>
+                    </div>
+                    <div class="challenge-card reveal">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-table-cells"></i>
+                        </div>
+                        <h3>Gestão feita no achismo</h3>
+                        <p>Quantos faltaram no mês passado? Qual convênio mais cancela? Qual horário tem mais ausência?
+                            Sem número, a decisão sobre a agenda vira palpite.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== O QUE A AUTOMAÇÃO FAZ ========== -->
+        <section id="solucoes" class="section-white">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">O que fica automatizado</span>
+                    <h2>
+                        <span class="title-light">Tarefas que saem da mão da recepção</span>
+                        <span class="title-bold">e passam a acontecer sozinhas</span>
+                    </h2>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card reveal">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-calendar-check"></i>
+                        </div>
+                        <h3>Confirmação de consultas</h3>
+                        <p>A automação lê a agenda, dispara a confirmação no prazo definido por você e registra a
+                            resposta do paciente de volta no sistema, sem ninguém digitar nada.</p>
+                        <ul class="service-benefits">
+                            <li><i class="fa-solid fa-check"></i> Lembrete programado por tipo de atendimento</li>
+                            <li><i class="fa-solid fa-check"></i> Resposta do paciente volta para a agenda</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-calendar-plus"></i>
+                        </div>
+                        <h3>Agendamento e remarcação</h3>
+                        <p>Quem precisa desmarcar recebe na hora as opções de horário livre. Quando um horário abre, a
+                            automação oferece a vaga para quem está esperando.</p>
+                        <ul class="service-benefits">
+                            <li><i class="fa-solid fa-check"></i> Regras de agenda definidas pela clínica</li>
+                            <li><i class="fa-solid fa-check"></i> Reposição automática de horário cancelado</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <div class="service-icon">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <h3>Atendimento por WhatsApp</h3>
+                        <p>Endereço, estacionamento, convênios aceitos, documentos necessários, horário de
+                            funcionamento, valores de particular: as perguntas de sempre respondidas na hora, inclusive
+                            de madrugada.</p>
+                        <ul class="service-benefits">
+                            <li><i class="fa-solid fa-check"></i> Disponível fora do horário comercial</li>
+                            <li><i class="fa-solid fa-check"></i> Passa para a equipe quando o caso exige</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-rotate-right"></i>
+                        </div>
+                        <h3>Retorno e follow-up</h3>
+                        <p>O paciente que precisa voltar em três, seis ou doze meses entra em uma régua de contato
+                            automática, com a mensagem certa no mês certo.</p>
+                        <ul class="service-benefits">
+                            <li><i class="fa-solid fa-check"></i> Lembrete de retorno e de check-up</li>
+                            <li><i class="fa-solid fa-check"></i> Retomada de quem parou de vir</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== LIMITE CLÍNICO ========== -->
+        <section id="limite-clinico" class="section-light">
+            <div class="container">
+                <div class="article-container">
+                    <div class="section-header reveal" style="text-align: left; max-width: none;">
+                        <span class="section-tag">Limite inegociável</span>
+                        <h2>
+                            <span class="title-light">A IA cuida da administração.</span>
+                            <span class="title-bold">A decisão clínica é sempre sua.</span>
+                        </h2>
+                    </div>
+                    <div class="article-body reveal">
+                        <p>Esse ponto vem antes de qualquer discussão sobre tecnologia. Em clínicas e consultórios, a
+                            automação que construímos atua exclusivamente sobre a rotina administrativa: agenda,
+                            confirmação, remarcação, lembrete de retorno, dúvidas operacionais, organização de cadastro
+                            e indicadores de gestão. Nada além disso.</p>
+                        <p>Na prática, isso significa que o agente é configurado para nunca avaliar sintomas, nunca
+                            fazer triagem clínica, nunca sugerir diagnóstico e nunca recomendar exame, tratamento ou
+                            medicamento. Quando o paciente escreve algo que entra nesse território, o agente responde
+                            que não pode ajudar naquele assunto e encaminha a conversa para a equipe da clínica com
+                            prioridade.</p>
+                        <p>Esse comportamento não é uma promessa de marketing: é uma regra testada antes de a automação
+                            entrar no ar e revisada depois, com registro das conversas para que a clínica possa
+                            auditar. Quem decide sobre saúde é o profissional habilitado, com o paciente na frente. A
+                            tecnologia existe para devolver tempo de consultório a esse profissional, não para ocupar o
+                            lugar dele.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== ANTES E DEPOIS ========== -->
+        <section id="antes-depois" class="section-white">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Como a rotina muda</span>
+                    <h2>
+                        <span class="title-light">A mesma equipe,</span>
+                        <span class="title-bold">com muito menos trabalho manual</span>
+                    </h2>
+                </div>
+
+                <div class="article-container">
+                    <div class="comparison-grid reveal">
+                        <div class="comparison-card">
+                            <h4>Hoje, sem automação</h4>
+                            <ul>
+                                <li>A recepção reserva um bloco do dia só para confirmar a agenda de amanhã, uma
+                                    conversa por vez.</li>
+                                <li>Cancelamento de véspera deixa o horário vazio, porque não sobra tempo para ligar
+                                    para a fila de espera.</li>
+                                <li>Mensagens recebidas à noite ficam acumuladas até a clínica abrir.</li>
+                                <li>Retorno de paciente depende de alguém lembrar de conferir uma lista.</li>
+                                <li>Ninguém sabe ao certo a taxa de falta por profissional, por convênio ou por horário.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="comparison-card is-after">
+                            <h4>Com a automação no ar</h4>
+                            <ul>
+                                <li>A confirmação sai sozinha no horário programado e a resposta cai direto na agenda.
+                                </li>
+                                <li>Horário cancelado é oferecido automaticamente para quem está na fila de espera.</li>
+                                <li>Dúvidas operacionais são respondidas na hora, inclusive fora do expediente.</li>
+                                <li>A régua de retorno roda sozinha, mês a mês, sem depender de memória.</li>
+                                <li>O painel mostra faltas, cancelamentos e ocupação por período, com número.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== INTEGRAÇÃO E INDICADORES ========== -->
+        <section id="integracao" class="section-dark">
+            <div class="pixel-texture"></div>
+            <div class="container" style="position: relative; z-index: 1;">
+                <div class="section-header reveal">
+                    <span class="section-tag">Integração e gestão</span>
+                    <h2>
+                        <span class="title-light">Sem trocar o sistema que</span><br>
+                        <span class="title-bold">sua clínica já usa</span>
+                    </h2>
+                    <p class="section-subtitle">A automação conversa com o que já está rodando. Trocar de software não é
+                        pré-requisito para começar.</p>
+                </div>
+
+                <div class="glass-grid">
+                    <div class="glass-card reveal">
+                        <div class="glass-icon">
+                            <i class="fa-solid fa-plug-circle-check"></i>
+                        </div>
+                        <h3>Conecta ao seu sistema</h3>
+                        <p>Quando o software de gestão da clínica oferece integração, a automação lê e escreve na agenda
+                            diretamente. Quando não oferece, desenhamos um caminho alternativo junto com a equipe.</p>
+                    </div>
+                    <div class="glass-card reveal">
+                        <div class="glass-icon">
+                            <i class="fa-solid fa-chart-column"></i>
+                        </div>
+                        <h3>Indicadores de gestão</h3>
+                        <p>Taxa de falta, cancelamentos, tempo de resposta no WhatsApp, ocupação por profissional e por
+                            horário. Números atualizados em vez de impressão.</p>
+                    </div>
+                    <div class="glass-card reveal">
+                        <div class="glass-icon">
+                            <i class="fa-solid fa-user-shield"></i>
+                        </div>
+                        <h3>Dados sob controle</h3>
+                        <p>Coletamos o mínimo necessário para a tarefa administrativa, com acesso controlado e
+                            tratamento definido em contrato, seguindo as diretrizes da LGPD.</p>
+                    </div>
+                    <div class="glass-card reveal">
+                        <div class="glass-icon">
+                            <i class="fa-solid fa-headset"></i>
+                        </div>
+                        <h3>Equipe no comando</h3>
+                        <p>A recepção continua vendo todas as conversas e pode assumir qualquer atendimento a qualquer
+                            momento, com um clique.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== COMO IMPLANTAMOS ========== -->
+        <section id="como-funciona" class="section-white">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Passo a passo</span>
+                    <h2>
+                        <span class="title-light">Como colocamos isso</span>
+                        <span class="title-bold">para funcionar na sua clínica</span>
+                    </h2>
+                </div>
+
+                <div class="steps-timeline">
+                    <div class="step-item reveal">
+                        <div class="step-number">1</div>
+                        <h3>Mapeamento</h3>
+                        <p>Acompanhamos como a agenda é montada, confirmada e ajustada hoje, e onde a equipe gasta mais
+                            tempo.</p>
+                    </div>
+                    <div class="step-item reveal">
+                        <div class="step-number">2</div>
+                        <h3>Regras da clínica</h3>
+                        <p>Você define horários, tipos de atendimento, convênios, tom das mensagens e o que precisa
+                            obrigatoriamente passar por uma pessoa.</p>
+                    </div>
+                    <div class="step-item reveal">
+                        <div class="step-number">3</div>
+                        <h3>Piloto</h3>
+                        <p>A automação entra primeiro em um recorte da agenda, com a equipe acompanhando cada conversa
+                            antes de ampliar.</p>
+                    </div>
+                    <div class="step-item reveal">
+                        <div class="step-number">4</div>
+                        <h3>Ajuste e acompanhamento</h3>
+                        <p>Revisamos as conversas reais, corrigimos o que não ficou bom e acompanhamos os indicadores
+                            mês a mês.</p>
+                    </div>
+                </div>
+
+                <div class="text-center reveal" style="margin-top: 3rem;">
+                    <div class="cta-box">
+                        <h3>Quer saber quanto tempo a sua clínica ganharia?</h3>
+                        <a href="/diagnostico-de-ia/" class="btn btn-outline" data-cta="clinicas-meio">Conhecer o
+                            Diagnóstico de IA <span class="arrow">↗</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== FAQ ========== -->
+        <section id="faq" class="section-light faq-section">
+            <div class="container">
+                <div class="faq-layout">
+                    <div class="faq-header reveal">
+                        <span class="section-tag">Dúvidas de quem gerencia clínica</span>
+                        <h2>
+                            <span class="title-light">O que perguntam</span><br>
+                            <span class="title-bold">antes de automatizar</span>
+                        </h2>
+                    </div>
+
+                    <div class="faq-container reveal">
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>A IA pode atender pacientes?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Sim, na parte administrativa. O agente atende o WhatsApp da clínica, responde dúvidas
+                                    sobre horários de funcionamento, endereço, convênios aceitos, documentos necessários
+                                    e preparo administrativo para o atendimento, além de agendar, confirmar e remarcar
+                                    consultas. O que a IA não faz é qualquer tipo de orientação médica: ela não avalia
+                                    sintomas, não faz triagem clínica, não sugere diagnóstico e não recomenda tratamento
+                                    ou medicamento. Esse limite é configurado desde o primeiro dia do projeto.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Como funciona a confirmação de consultas?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>A automação lê a agenda da clínica e dispara a mensagem de confirmação no prazo que
+                                    você definir, por exemplo 48 horas e novamente 3 horas antes do horário marcado. O
+                                    paciente responde ali mesmo no WhatsApp confirmando, pedindo para remarcar ou
+                                    cancelando. A resposta volta para a agenda automaticamente e a recepção só entra em
+                                    cena quando o caso foge do padrão. Quem não responde entra em uma lista de
+                                    acompanhamento para a equipe ligar, em vez de a equipe ligar para todo mundo.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>A IA pode marcar consulta sozinha?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Pode, dentro das regras que a clínica definir. Você decide quais horários ficam
+                                    disponíveis para agendamento automático, quais profissionais entram, qual a duração
+                                    de cada tipo de atendimento, quais convênios são aceitos e quais situações precisam
+                                    obrigatoriamente passar por uma pessoa. Muitas clínicas começam com um modo mais
+                                    conservador, em que a IA sugere o horário e a recepção confirma, e vão abrindo o
+                                    agendamento automático conforme ganham confiança no fluxo.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>E quando o paciente pede algo médico?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>O agente identifica o assunto, informa de forma clara que não pode dar orientação de
+                                    saúde e encaminha a conversa para a equipe da clínica, marcando o atendimento como
+                                    prioritário na fila humana. Nenhuma resposta clínica é gerada pela IA. Esse
+                                    comportamento é testado antes de a automação entrar no ar e continua sendo revisado
+                                    depois, porque é o ponto mais sensível de qualquer projeto na área da saúde.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Como ficam os dados dos pacientes?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Trabalhamos com o princípio de coletar o mínimo necessário para a tarefa
+                                    administrativa: nome, contato, horário e tipo de atendimento. Dados sensíveis de
+                                    saúde não precisam circular pela automação de agenda e, por padrão, não circulam.
+                                    Todo o projeto segue as diretrizes da LGPD, com acesso controlado, registro de quem
+                                    consultou o quê e tratamento definido em contrato. Explicamos ponto a ponto como
+                                    isso funciona na página <a href="/seguranca-e-lgpd/">Segurança e LGPD</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== LINKS RELACIONADOS ========== -->
+        <section id="relacionados" class="section-white">
+            <div class="container">
+                <div class="article-container">
+                    <div class="section-header reveal">
+                        <h2>
+                            <span class="title-light">Continue por aqui</span>
+                        </h2>
+                    </div>
+                    <div class="related-links reveal">
+                        <a href="/diagnostico-de-ia/" data-cta="clinicas-relacionados">Diagnóstico de IA <span
+                                class="arrow">↗</span></a>
+                        <a href="/solucoes/agentes-de-ia/">Agentes de IA <span class="arrow">↗</span></a>
+                        <a href="/casos/app-agendamento-clinica/">Caso: app de agendamento para clínica <span
+                                class="arrow">↗</span></a>
+                        <a href="/seguranca-e-lgpd/">Segurança e LGPD <span class="arrow">↗</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CTA FINAL ========== -->
+        <section class="section-dark">
+            <div class="pixel-texture"></div>
+            <div class="container" style="position: relative; z-index: 1;">
+                <div class="section-header reveal">
+                    <h2>
+                        <span class="title-light">Vamos começar pela agenda</span><br>
+                        <span class="title-bold">e ver o que dá para automatizar</span>
+                    </h2>
+                    <p class="section-subtitle">No Diagnóstico de IA olhamos a rotina real da sua clínica e mostramos,
+                        com números, quais automações valem a pena primeiro.</p>
+                </div>
+                <div class="hero-ctas" style="justify-content: center;">
+                    <a href="/diagnostico-de-ia/" class="btn btn-primary-white" data-cta="clinicas-final">Quero
+                        automatizar minha clínica</a>
+                    <a href="https://wa.me/5537998323232" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-ghost" data-wa-origin="para-clinicas">Falar no WhatsApp</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- gs:footer:start -->
+    <footer id="contato" class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="/" class="logo footer-logo">
+                        <img src="/assets/logo-simbolo.png" alt="Guadalupe Sistemas" class="logo-icon" width="40"
+                            height="40">
+                        <span class="logo-text">Guadalupe <strong>Sistemas</strong></span>
+                    </a>
+                    <p class="footer-tagline">IA, automação e sistemas sob medida com propósito, parceria e confiança
+                        para o crescimento contínuo do seu negócio.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Soluções</h4>
+                    <ul>
+                        <li><a href="/solucoes/agentes-de-ia/">Agentes de IA</a></li>
+                        <li><a href="/solucoes/automacao-de-processos/">Automação de Processos</a></li>
+                        <li><a href="/solucoes/assistente-de-conhecimento/">Assistente de Conhecimento</a></li>
+                        <li><a href="/solucoes/sistemas-sob-medida/">Sistemas Sob Medida</a></li>
+                        <li><a href="/solucoes/aplicativos/">Aplicativos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Guadalupe</h4>
+                    <ul>
+                        <li><a href="/diagnostico-de-ia/">Diagnóstico de IA</a></li>
+                        <li><a href="/para-clinicas/">Para Clínicas</a></li>
+                        <li><a href="/para-engenharia/">Para Engenharia</a></li>
+                        <li><a href="/casos/">Casos Reais</a></li>
+                        <li><a href="/sobre/">Sobre nós</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Fale Conosco</h4>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <div>
+                            <span>Nosso WhatsApp:</span>
+                            <a href="https://wa.me/5537998323232" target="_blank" rel="noopener noreferrer"
+                                data-wa-origin="footer">(37) 99832-3232</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-instagram"></i>
+                        <div>
+                            <span>Acompanhe:</span>
+                            <a href="https://instagram.com/guadalupesistemas" target="_blank"
+                                rel="noopener noreferrer">@guadalupesistemas</a>
+                        </div>
+                    </div>
+                    <ul class="footer-legal-links">
+                        <li><a href="/contato/">Fale com a equipe</a></li>
+                        <li><a href="/seguranca-e-lgpd/">Segurança e LGPD</a></li>
+                        <li><a href="/politica-de-privacidade/">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span data-current-year>2026</span> Guadalupe Sistemas. Todos os direitos reservados. Feito com
+                    cuidado.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- gs:footer:end -->
+
+    <script src="/js/analytics.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

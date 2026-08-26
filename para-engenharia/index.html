@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Automatize propostas, follow-up, documentos e processos técnicos. Soluções de IA sob medida para empresas de engenharia e arquitetura.">
+    <!-- SEO & Open Graph -->
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="IA e Automação para Empresas de Engenharia | Guadalupe Sistemas">
+    <meta property="og:description"
+        content="Automatize propostas, follow-up, documentos e processos técnicos. Soluções de IA sob medida para empresas de engenharia e arquitetura.">
+    <meta property="og:url" content="https://guadalupesistemas.com.br/para-engenharia/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Guadalupe Sistemas">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:image" content="https://guadalupesistemas.com.br/assets/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Guadalupe Sistemas - IA, automação e sistemas sob medida">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="IA e Automação para Empresas de Engenharia | Guadalupe Sistemas">
+    <meta name="twitter:description"
+        content="Automatize propostas, follow-up, documentos e processos técnicos. Soluções de IA sob medida para empresas de engenharia e arquitetura.">
+    <meta name="twitter:image" content="https://guadalupesistemas.com.br/assets/og-image.jpg">
+    <link rel="canonical" href="https://guadalupesistemas.com.br/para-engenharia/">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0C0A23">
+
+    <title>IA e Automação para Empresas de Engenharia | Guadalupe Sistemas</title>
+
+    <!-- Dados estruturados (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://guadalupesistemas.com.br/" },
+            { "@type": "ListItem", "position": 2, "name": "Para Engenharia", "item": "https://guadalupesistemas.com.br/para-engenharia/" }
+        ]
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "IA e automação para empresas de engenharia e arquitetura",
+        "serviceType": "Automação de propostas, documentos técnicos e processos comerciais para engenharia e arquitetura",
+        "description": "Automação de propostas e orçamentos, follow-up comercial, organização de documentos de projeto, consulta a normas técnicas e contratos, integração com CRM e pesquisa interna no acervo técnico do escritório.",
+        "url": "https://guadalupesistemas.com.br/para-engenharia/",
+        "provider": {
+            "@type": "Organization",
+            "name": "Guadalupe Sistemas",
+            "url": "https://guadalupesistemas.com.br/"
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": "BR"
+        },
+        "audience": {
+            "@type": "Audience",
+            "audienceType": "Empresas de engenharia, escritórios de arquitetura e projetistas"
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "A IA consegue consultar meus documentos?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sim. O assistente é conectado ao acervo que você indicar: pastas de projeto, memoriais descritivos, planilhas de orçamento, contratos, atas e relatórios de obra. A pergunta é feita em português comum, no estilo de conversa, e a resposta vem com a indicação de qual documento e qual trecho originou aquela informação, para você conferir a fonte antes de usar. O assistente só enxerga o que foi liberado para ele, respeitando as permissões que o escritório definir por pasta ou por equipe."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Pode pesquisar normas técnicas?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Pode pesquisar dentro do acervo de normas que a sua empresa tem licença para usar, além de procedimentos internos, cadernos de encargos de clientes e especificações de fornecedores. O assistente localiza o trecho, cita a origem e mostra o contexto. Ele não substitui a leitura da norma nem a responsabilidade técnica do profissional: serve para encontrar em segundos aquilo que hoje leva meia hora de busca em PDF, e a conferência final continua sendo do engenheiro ou arquiteto responsável."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Pode montar propostas?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sim. A partir das informações do briefing, dos seus modelos de documento e da sua tabela de preços, a automação monta a primeira versão da proposta com escopo, premissas, exclusões, prazo e condições comerciais no padrão visual do escritório. O objetivo não é enviar sozinha: é entregar um rascunho pronto para o responsável revisar, ajustar valores e aprovar. O que hoje leva dias parados na fila de alguém passa a chegar para revisão no mesmo dia."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Integra com meu CRM?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Na maioria dos casos sim. Quando o CRM que você usa oferece integração, conectamos diretamente: o lead entra, é qualificado no primeiro contato, vira oportunidade com os campos preenchidos e o follow-up passa a ser disparado conforme o estágio do funil. Quando não há integração disponível, avaliamos alternativas com você, inclusive a construção de um controle próprio sob medida. Essa análise faz parte do Diagnóstico de IA, antes de qualquer promessa."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Consegue acessar projetos antigos?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Consegue, e costuma ser onde o retorno aparece mais rápido. Projetos antigos guardam detalhe de solução, fornecedor, preço praticado e decisão de obra que a equipe leva horas para reencontrar. Indexamos esse acervo e você passa a perguntar coisas como qual foi a solução de impermeabilização adotada em determinada obra, ou quanto custou determinado item em orçamentos anteriores, e recebe a resposta com o documento de origem. Arquivos digitalizados sem texto pesquisável exigem uma etapa extra de tratamento, que avaliamos caso a caso."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Consentimento + Google Analytics -->
+    <script src="/js/cookie-consent.js" defer></script>
+
+    <!-- Fonts: Sora (headings) + Inter (body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/styles.css">
+
+    <!-- Icons (Font Awesome - lazy) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    </noscript>
+</head>
+
+<body>
+
+    <!-- gs:nav:start variant="solid" active="engenharia" -->
+    <nav class="navbar navbar-solid" id="navbar">
+        <div class="container nav-container">
+            <a href="/" class="logo" aria-label="Guadalupe Sistemas - Página Inicial">
+                <img src="/assets/logo-simbolo.png" alt="Guadalupe Sistemas" class="logo-icon" width="40" height="40">
+                <span class="logo-text">Guadalupe <strong>Sistemas</strong></span>
+            </a>
+
+            <div class="nav-links" id="nav-links">
+                <a href="/solucoes/" data-nav="solucoes">Soluções</a>
+                <a href="/para-clinicas/" data-nav="clinicas">Para Clínicas</a>
+                <a href="/para-engenharia/" class="active" data-nav="engenharia">Para Engenharia</a>
+                <a href="/diagnostico-de-ia/" data-nav="diagnostico">Diagnóstico</a>
+                <a href="/casos/" data-nav="casos">Casos</a>
+                <a href="/blog/" data-nav="blog">Blog</a>
+            </div>
+
+            <a href="/diagnostico-de-ia/" class="btn btn-ghost nav-cta" data-cta="diagnostico">Fazer meu diagnóstico</a>
+
+            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Abrir menu de navegação"
+                aria-expanded="false" aria-controls="nav-links">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+    <!-- gs:nav:end -->
+
+    <main>
+
+        <!-- ========== HERO ========== -->
+        <header class="page-hero section-white">
+            <div class="container">
+                <nav class="breadcrumbs" aria-label="Trilha de navegação">
+                    <ol>
+                        <li><a href="/">Início</a></li>
+                        <li><span aria-current="page">Para Engenharia</span></li>
+                    </ol>
+                </nav>
+                <span class="section-tag">Engenharia e arquitetura</span>
+                <h1 class="article-title">IA e automação para empresas de engenharia e arquitetura</h1>
+                <p class="page-hero-subtitle">Um assistente que monta a primeira versão da proposta a partir do
+                    briefing, encontra em segundos aquele detalhe enterrado em um projeto de três anos atrás e cobra o
+                    follow-up do cliente que ficou de responder na semana passada. Sua equipe técnica volta a fazer
+                    engenharia.</p>
+                <div class="hero-ctas">
+                    <a href="/diagnostico-de-ia/" class="btn btn-primary-violet" data-cta="engenharia-hero">Fazer meu
+                        diagnóstico</a>
+                    <a href="/casos/" class="btn-link-arrow">Ver casos reais <span class="arrow">↗</span></a>
+                </div>
+            </div>
+        </header>
+
+        <!-- ========== DESAFIOS ========== -->
+        <section id="desafios" class="section-light">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">O gargalo do escritório</span>
+                    <h2>
+                        <span class="title-light">Onde o tempo técnico</span>
+                        <span class="title-bold">vai embora todo mês</span>
+                    </h2>
+                    <p class="section-subtitle">Em escritório de projeto, quem monta orçamento e quem responde cliente é
+                        quase sempre a mesma pessoa que precisa estar projetando.</p>
+                </div>
+
+                <div class="challenges-grid-3">
+                    <div class="challenge-card reveal">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-file-invoice"></i>
+                        </div>
+                        <h3>Propostas que demoram dias</h3>
+                        <p>Cada proposta é montada quase do zero: escopo copiado de um arquivo antigo, preço conferido
+                            em outra planilha, texto revisado no fim do expediente. O cliente espera e, às vezes,
+                            desiste.</p>
+                    </div>
+                    <div class="challenge-card reveal">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-phone-slash"></i>
+                        </div>
+                        <h3>Leads que esfriam</h3>
+                        <p>A proposta foi enviada, o cliente não respondeu e ninguém retomou. Três semanas depois, o
+                            contrato saiu para outro escritório que simplesmente lembrou de ligar.</p>
+                    </div>
+                    <div class="challenge-card reveal">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-folder-open"></i>
+                        </div>
+                        <h3>Acervo que ninguém acha</h3>
+                        <p>A informação existe, está em algum lugar do servidor, mas encontrar exige lembrar o nome da
+                            pasta, o ano da obra e quem salvou o arquivo.</p>
+                    </div>
+                    <div class="challenge-card reveal">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-book-open"></i>
+                        </div>
+                        <h3>Consulta a norma lenta</h3>
+                        <p>Conferir uma exigência técnica vira uma caça ao PDF certo, no capítulo certo, enquanto o
+                            projeto para de andar.</p>
+                    </div>
+                    <div class="challenge-card reveal">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-file-signature"></i>
+                        </div>
+                        <h3>Contratos e aditivos manuais</h3>
+                        <p>Cada contrato é montado por edição de um modelo antigo, com risco de sobrar cláusula de outro
+                            cliente e faltar o que era específico deste.</p>
+                    </div>
+                    <div class="challenge-card reveal">
+                        <div class="card-icon">
+                            <i class="fa-solid fa-table-cells"></i>
+                        </div>
+                        <h3>Funil no caderno</h3>
+                        <p>Quantas propostas estão em aberto? Qual o valor total? Qual a taxa de conversão por tipo de
+                            serviço? Sem CRM organizado, a resposta é sempre uma estimativa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== O QUE AUTOMATIZAMOS ========== -->
+        <section id="solucoes" class="section-white">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">O que fica automatizado</span>
+                    <h2>
+                        <span class="title-light">Da chegada do lead</span>
+                        <span class="title-bold">até o contrato assinado</span>
+                    </h2>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card reveal">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-file-invoice-dollar"></i>
+                        </div>
+                        <h3>Propostas e orçamentos</h3>
+                        <p>A partir do briefing, dos seus modelos e da sua tabela de preços, a automação monta a
+                            primeira versão com escopo, premissas, exclusões, prazo e condições comerciais.</p>
+                        <ul class="service-benefits">
+                            <li><i class="fa-solid fa-check"></i> Rascunho pronto para revisão no mesmo dia</li>
+                            <li><i class="fa-solid fa-check"></i> Padrão visual e cláusulas sempre iguais</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-bell"></i>
+                        </div>
+                        <h3>Follow-up automático</h3>
+                        <p>Proposta enviada entra em uma régua de retomada. O cliente recebe o contato certo no prazo
+                            certo e a equipe recebe o alerta de quem precisa de uma ligação de verdade.</p>
+                        <ul class="service-benefits">
+                            <li><i class="fa-solid fa-check"></i> Nenhuma proposta esquecida na caixa de entrada</li>
+                            <li><i class="fa-solid fa-check"></i> Histórico registrado no CRM</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <h3>Pesquisa no acervo técnico</h3>
+                        <p>Pergunte em português comum e receba a resposta com o documento e o trecho de origem, seja em
+                            memorial, contrato, ata de obra ou orçamento antigo.</p>
+                        <ul class="service-benefits">
+                            <li><i class="fa-solid fa-check"></i> Resposta com a fonte citada</li>
+                            <li><i class="fa-solid fa-check"></i> Permissão por pasta e por equipe</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card reveal">
+                        <div class="service-icon">
+                            <i class="fa-solid fa-folder-tree"></i>
+                        </div>
+                        <h3>Documentos e contratos</h3>
+                        <p>Organização automática dos arquivos por projeto, geração de contratos a partir de modelos
+                            aprovados e controle de versões e prazos.</p>
+                        <ul class="service-benefits">
+                            <li><i class="fa-solid fa-check"></i> Estrutura de pastas sempre igual</li>
+                            <li><i class="fa-solid fa-check"></i> Menos erro de copiar e colar cláusula</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== ANTES E DEPOIS ========== -->
+        <section id="antes-depois" class="section-light">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Como o processo muda</span>
+                    <h2>
+                        <span class="title-light">O mesmo time técnico,</span>
+                        <span class="title-bold">com o comercial rodando sozinho</span>
+                    </h2>
+                </div>
+
+                <div class="article-container">
+                    <div class="comparison-grid reveal">
+                        <div class="comparison-card">
+                            <h4>Hoje, sem automação</h4>
+                            <ul>
+                                <li>A proposta espera o engenheiro ter uma janela livre para escrever escopo e premissas
+                                    do zero.</li>
+                                <li>O follow-up depende de alguém lembrar, e normalmente ninguém lembra.</li>
+                                <li>Buscar um detalhe de um projeto antigo significa abrir pasta por pasta no servidor.
+                                </li>
+                                <li>Conferir uma norma trava a tarefa por vinte ou trinta minutos.</li>
+                                <li>O contrato sai de um modelo editado à mão, com risco de cláusula do cliente errado.
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="comparison-card is-after">
+                            <h4>Com a automação no ar</h4>
+                            <ul>
+                                <li>O briefing vira rascunho de proposta automaticamente, e o engenheiro só revisa e
+                                    aprova.</li>
+                                <li>A régua de follow-up roda sozinha e avisa a equipe quando o contato precisa ser
+                                    humano.</li>
+                                <li>A pergunta é feita em texto e a resposta vem com o documento de origem citado.</li>
+                                <li>A consulta ao acervo de normas e procedimentos internos leva segundos.</li>
+                                <li>Contratos são gerados a partir de modelos aprovados, com os campos do projeto certo.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CRM E ATENDIMENTO ========== -->
+        <section id="crm" class="section-dark">
+            <div class="pixel-texture"></div>
+            <div class="container" style="position: relative; z-index: 1;">
+                <div class="section-header reveal">
+                    <span class="section-tag">Comercial e atendimento</span>
+                    <h2>
+                        <span class="title-light">Um funil que existe de verdade,</span><br>
+                        <span class="title-bold">não só na cabeça do sócio</span>
+                    </h2>
+                    <p class="section-subtitle">A automação organiza o comercial do escritório sem exigir que a equipe
+                        técnica vire operadora de sistema.</p>
+                </div>
+
+                <div class="glass-grid">
+                    <div class="glass-card reveal">
+                        <div class="glass-icon">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <h3>Primeiro contato qualificado</h3>
+                        <p>O agente responde o WhatsApp, entende que tipo de projeto o cliente procura, coleta os dados
+                            essenciais e encaminha para o responsável certo com o resumo pronto.</p>
+                    </div>
+                    <div class="glass-card reveal">
+                        <div class="glass-icon">
+                            <i class="fa-solid fa-diagram-project"></i>
+                        </div>
+                        <h3>CRM sempre atualizado</h3>
+                        <p>Oportunidade criada, campos preenchidos, estágio movido e histórico registrado sem ninguém
+                            precisar digitar depois da reunião.</p>
+                    </div>
+                    <div class="glass-card reveal">
+                        <div class="glass-icon">
+                            <i class="fa-solid fa-chart-line"></i>
+                        </div>
+                        <h3>Números do comercial</h3>
+                        <p>Propostas em aberto, valor total do funil, taxa de conversão por tipo de serviço e tempo
+                            médio até o fechamento, atualizados sozinhos.</p>
+                    </div>
+                    <div class="glass-card reveal">
+                        <div class="glass-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3>Acervo protegido</h3>
+                        <p>Projeto de cliente é informação sensível. O acesso é controlado por equipe e por pasta,
+                            seguindo as diretrizes da LGPD e o que estiver previsto em contrato.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== COMO IMPLANTAMOS ========== -->
+        <section id="como-funciona" class="section-white">
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Passo a passo</span>
+                    <h2>
+                        <span class="title-light">Como colocamos isso</span>
+                        <span class="title-bold">para funcionar no seu escritório</span>
+                    </h2>
+                </div>
+
+                <div class="steps-timeline">
+                    <div class="step-item reveal">
+                        <div class="step-number">1</div>
+                        <h3>Mapeamento</h3>
+                        <p>Entendemos como o lead chega, como a proposta é montada hoje e onde o acervo técnico está
+                            guardado.</p>
+                    </div>
+                    <div class="step-item reveal">
+                        <div class="step-number">2</div>
+                        <h3>Modelos e regras</h3>
+                        <p>Padronizamos escopo, premissas, tabela de preços e cláusulas com os responsáveis técnicos do
+                            escritório.</p>
+                    </div>
+                    <div class="step-item reveal">
+                        <div class="step-number">3</div>
+                        <h3>Piloto</h3>
+                        <p>Começamos por um tipo de serviço, comparando o resultado da automação com o que a equipe faria
+                            à mão.</p>
+                    </div>
+                    <div class="step-item reveal">
+                        <div class="step-number">4</div>
+                        <h3>Expansão</h3>
+                        <p>Com o fluxo aprovado, ampliamos para os demais serviços e conectamos o acervo completo.</p>
+                    </div>
+                </div>
+
+                <div class="text-center reveal" style="margin-top: 3rem;">
+                    <div class="cta-box">
+                        <h3>Quanto tempo o seu escritório gasta montando proposta?</h3>
+                        <a href="/diagnostico-de-ia/" class="btn btn-outline" data-cta="engenharia-meio">Conhecer o
+                            Diagnóstico de IA <span class="arrow">↗</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== RESPONSABILIDADE TÉCNICA ========== -->
+        <section id="responsabilidade" class="section-light">
+            <div class="container">
+                <div class="article-container">
+                    <div class="section-header reveal" style="text-align: left; max-width: none;">
+                        <span class="section-tag">Onde entra o profissional</span>
+                        <h2>
+                            <span class="title-light">A automação acelera a busca.</span>
+                            <span class="title-bold">A responsabilidade técnica continua sua.</span>
+                        </h2>
+                    </div>
+                    <div class="article-body reveal">
+                        <p>O assistente de conhecimento existe para encurtar o caminho até a informação, não para
+                            assinar projeto. Quando ele responde uma pergunta sobre norma, procedimento interno ou
+                            memorial antigo, a resposta vem sempre acompanhada da fonte: qual documento, qual trecho.
+                            Isso é proposital. A conferência final é do engenheiro ou arquiteto responsável, e ela fica
+                            mais rápida justamente porque o caminho até o documento certo já foi percorrido.</p>
+                        <p>O mesmo vale para propostas e contratos. A automação entrega um rascunho consistente, no
+                            padrão do escritório, com os campos do projeto correto preenchidos. Nada é enviado ao
+                            cliente sem passar pela aprovação de quem responde pelo trabalho. O ganho não está em tirar
+                            a decisão da mão do profissional: está em eliminar as duas horas de digitação, formatação e
+                            conferência de preço que vinham antes da decisão.</p>
+                        <p>Se você já usa um CRM, um sistema de gestão de projetos ou um servidor de arquivos
+                            organizado, começamos por aí. Trocar as ferramentas que a equipe já domina raramente é o
+                            primeiro passo certo, e o Diagnóstico de IA existe para descobrir qual é.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== FAQ ========== -->
+        <section id="faq" class="section-white faq-section">
+            <div class="container">
+                <div class="faq-layout">
+                    <div class="faq-header reveal">
+                        <span class="section-tag">Dúvidas de quem toca escritório</span>
+                        <h2>
+                            <span class="title-light">O que perguntam</span><br>
+                            <span class="title-bold">antes de automatizar</span>
+                        </h2>
+                    </div>
+
+                    <div class="faq-container reveal">
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>A IA consegue consultar meus documentos?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Sim. O assistente é conectado ao acervo que você indicar: pastas de projeto,
+                                    memoriais descritivos, planilhas de orçamento, contratos, atas e relatórios de obra.
+                                    A pergunta é feita em português comum, no estilo de conversa, e a resposta vem com a
+                                    indicação de qual documento e qual trecho originou aquela informação, para você
+                                    conferir a fonte antes de usar. O assistente só enxerga o que foi liberado para ele,
+                                    respeitando as permissões que o escritório definir por pasta ou por equipe.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Pode pesquisar normas técnicas?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Pode pesquisar dentro do acervo de normas que a sua empresa tem licença para usar,
+                                    além de procedimentos internos, cadernos de encargos de clientes e especificações de
+                                    fornecedores. O assistente localiza o trecho, cita a origem e mostra o contexto. Ele
+                                    não substitui a leitura da norma nem a responsabilidade técnica do profissional:
+                                    serve para encontrar em segundos aquilo que hoje leva meia hora de busca em PDF, e a
+                                    conferência final continua sendo do engenheiro ou arquiteto responsável.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Pode montar propostas?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Sim. A partir das informações do briefing, dos seus modelos de documento e da sua
+                                    tabela de preços, a automação monta a primeira versão da proposta com escopo,
+                                    premissas, exclusões, prazo e condições comerciais no padrão visual do escritório. O
+                                    objetivo não é enviar sozinha: é entregar um rascunho pronto para o responsável
+                                    revisar, ajustar valores e aprovar. O que hoje leva dias parados na fila de alguém
+                                    passa a chegar para revisão no mesmo dia.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Integra com meu CRM?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Na maioria dos casos sim. Quando o CRM que você usa oferece integração, conectamos
+                                    diretamente: o lead entra, é qualificado no primeiro contato, vira oportunidade com
+                                    os campos preenchidos e o follow-up passa a ser disparado conforme o estágio do
+                                    funil. Quando não há integração disponível, avaliamos alternativas com você,
+                                    inclusive a construção de um controle próprio sob medida. Essa análise faz parte do
+                                    Diagnóstico de IA, antes de qualquer promessa.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Consegue acessar projetos antigos?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Consegue, e costuma ser onde o retorno aparece mais rápido. Projetos antigos guardam
+                                    detalhe de solução, fornecedor, preço praticado e decisão de obra que a equipe leva
+                                    horas para reencontrar. Indexamos esse acervo e você passa a perguntar coisas como
+                                    qual foi a solução de impermeabilização adotada em determinada obra, ou quanto custou
+                                    determinado item em orçamentos anteriores, e recebe a resposta com o documento de
+                                    origem. Arquivos digitalizados sem texto pesquisável exigem uma etapa extra de
+                                    tratamento, que avaliamos caso a caso.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== LINKS RELACIONADOS ========== -->
+        <section id="relacionados" class="section-light">
+            <div class="container">
+                <div class="article-container">
+                    <div class="section-header reveal">
+                        <h2>
+                            <span class="title-light">Continue por aqui</span>
+                        </h2>
+                    </div>
+                    <div class="related-links reveal">
+                        <a href="/diagnostico-de-ia/" data-cta="engenharia-relacionados">Diagnóstico de IA <span
+                                class="arrow">↗</span></a>
+                        <a href="/solucoes/assistente-de-conhecimento/">Assistente de Conhecimento <span
+                                class="arrow">↗</span></a>
+                        <a href="/solucoes/automacao-de-processos/">Automação de Processos <span
+                                class="arrow">↗</span></a>
+                        <a href="/casos/">Casos reais <span class="arrow">↗</span></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CTA FINAL ========== -->
+        <section class="section-dark">
+            <div class="pixel-texture"></div>
+            <div class="container" style="position: relative; z-index: 1;">
+                <div class="section-header reveal">
+                    <h2>
+                        <span class="title-light">Comece pelo processo</span><br>
+                        <span class="title-bold">que mais consome sua equipe</span>
+                    </h2>
+                    <p class="section-subtitle">No Diagnóstico de IA mapeamos a rotina do seu escritório e mostramos,
+                        com números, quais automações valem a pena primeiro.</p>
+                </div>
+                <div class="hero-ctas" style="justify-content: center;">
+                    <a href="/diagnostico-de-ia/" class="btn btn-primary-white" data-cta="engenharia-final">Quero
+                        automatizar meu escritório</a>
+                    <a href="https://wa.me/5537998323232" target="_blank" rel="noopener noreferrer"
+                        class="btn btn-ghost" data-wa-origin="para-engenharia">Falar no WhatsApp</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- gs:footer:start -->
+    <footer id="contato" class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="/" class="logo footer-logo">
+                        <img src="/assets/logo-simbolo.png" alt="Guadalupe Sistemas" class="logo-icon" width="40"
+                            height="40">
+                        <span class="logo-text">Guadalupe <strong>Sistemas</strong></span>
+                    </a>
+                    <p class="footer-tagline">IA, automação e sistemas sob medida com propósito, parceria e confiança
+                        para o crescimento contínuo do seu negócio.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Soluções</h4>
+                    <ul>
+                        <li><a href="/solucoes/agentes-de-ia/">Agentes de IA</a></li>
+                        <li><a href="/solucoes/automacao-de-processos/">Automação de Processos</a></li>
+                        <li><a href="/solucoes/assistente-de-conhecimento/">Assistente de Conhecimento</a></li>
+                        <li><a href="/solucoes/sistemas-sob-medida/">Sistemas Sob Medida</a></li>
+                        <li><a href="/solucoes/aplicativos/">Aplicativos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Guadalupe</h4>
+                    <ul>
+                        <li><a href="/diagnostico-de-ia/">Diagnóstico de IA</a></li>
+                        <li><a href="/para-clinicas/">Para Clínicas</a></li>
+                        <li><a href="/para-engenharia/">Para Engenharia</a></li>
+                        <li><a href="/casos/">Casos Reais</a></li>
+                        <li><a href="/sobre/">Sobre nós</a></li>
+                        <li><a href="/blog/">Blog</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Fale Conosco</h4>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <div>
+                            <span>Nosso WhatsApp:</span>
+                            <a href="https://wa.me/5537998323232" target="_blank" rel="noopener noreferrer"
+                                data-wa-origin="footer">(37) 99832-3232</a>
+                        </div>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-instagram"></i>
+                        <div>
+                            <span>Acompanhe:</span>
+                            <a href="https://instagram.com/guadalupesistemas" target="_blank"
+                                rel="noopener noreferrer">@guadalupesistemas</a>
+                        </div>
+                    </div>
+                    <ul class="footer-legal-links">
+                        <li><a href="/contato/">Fale com a equipe</a></li>
+                        <li><a href="/seguranca-e-lgpd/">Segurança e LGPD</a></li>
+                        <li><a href="/politica-de-privacidade/">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; <span data-current-year>2026</span> Guadalupe Sistemas. Todos os direitos reservados. Feito com
+                    cuidado.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- gs:footer:end -->
+
+    <script src="/js/analytics.js"></script>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>
