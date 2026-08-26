@@ -151,8 +151,108 @@ A página inicial é composta por 16 seções sequenciais e modulares:
 
 - **`robots.txt`:** Permite indexação de todas as páginas públicas e aponta a localização de `https://guadalupesistemas.com.br/sitemap.xml`.
 - **`sitemap.xml`:** Lista todas as URLs canônicas (`/`, `/blog.html`, artigos e política de privacidade) com frequência de atualização e prioridade.
-- **`llms.txt`:** Arquivo padronizado para IA descrevendo a empresa, síntese dos serviços oferecidos, links de âncoras e contatos oficiais.
+- **`llms.txt`:** Resumo executivo para consumo rápido por agentes e robôs de IA.
+- **`llms-full.txt`:** Base de conhecimento completa (100% em Markdown) contendo todos os textos, serviços, metodologias, cases e artigos na íntegra.
 - **`site.webmanifest`:** Metadados para PWA e navegadores mobile (`name`, `theme_color: #0C0A23`, ícones de 192x192 e 512x512).
 - **JSON-LD Schemas:**
   - `Organization`: Nome, URL, logo oficial, telefone de atendimento e redes sociais.
   - `FAQPage`: Perguntas e respostas principais da seção de FAQ para exibição rica nos resultados de busca do Google.
+
+---
+
+## 📝 7. Template Padrão para Novos Artigos de Blog (Boilerplate HTML)
+
+Ao adicionar um novo artigo ao blog, crie um arquivo HTML na raiz seguindo rigorosamente a estrutura abaixo:
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="[Descrição resumida de 140 a 160 caracteres para o Google]">
+    <meta name="keywords" content="[palavras-chave separadas por vírgula]">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:title" content="[Título do Artigo] | Guadalupe Sistemas">
+    <meta property="og:description" content="[Resumo do artigo para redes sociais]">
+    <meta property="og:url" content="https://guadalupesistemas.com.br/[slug-do-artigo].html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Guadalupe Sistemas">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:image" content="[URL absoluta da imagem de capa 1200x630]">
+    <meta property="article:published_time" content="AAAA-MM-DDT00:00:00-03:00">
+    <meta property="article:author" content="Guadalupe Sistemas">
+
+    <link rel="canonical" href="https://guadalupesistemas.com.br/[slug-do-artigo].html">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0C0A23">
+
+    <title>[Título do Artigo] | Guadalupe Sistemas</title>
+
+    <!-- Schema Article (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "[Título do Artigo]",
+        "description": "[Resumo do artigo]",
+        "image": "[URL da imagem]",
+        "datePublished": "AAAA-MM-DDT00:00:00-03:00",
+        "author": { "@type": "Organization", "name": "Guadalupe Sistemas" },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Guadalupe Sistemas",
+            "logo": { "@type": "ImageObject", "url": "https://guadalupesistemas.com.br/assets/logo-completa.png" }
+        },
+        "mainEntityOfPage": "https://guadalupesistemas.com.br/[slug-do-artigo].html"
+    }
+    </script>
+
+    <!-- Cookie Consent & GA4 -->
+    <script src="js/cookie-consent.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+</head>
+<body>
+    <!-- Navbar padrão -->
+    <nav class="navbar scrolled">
+        <div class="container nav-container">
+            <a href="/" class="logo"><img src="assets/logo-completa.png" alt="Guadalupe Sistemas" height="42"></a>
+            <div class="nav-links">
+                <a href="/#inicio">Início</a>
+                <a href="/#servicos">Serviços</a>
+                <a href="/blog.html" class="active">Blog</a>
+                <a href="/#contato" class="btn btn-primary-violet btn-sm">Falar no WhatsApp</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="article-main container">
+        <article class="article-content">
+            <h1>[Título do Artigo]</h1>
+            <div class="article-meta">Por Guadalupe Sistemas • Publicado em [Data]</div>
+            <!-- Conteúdo em parágrafos, h2, h3, listas -->
+        </article>
+    </main>
+
+    <!-- Rodapé padrão -->
+    <script src="js/script.js" defer></script>
+</body>
+</html>
+```
+
+> **Checklist ao criar novo artigo:**
+> 1. Adicionar o novo card na listagem do [`blog.html`](./blog.html).
+> 2. Adicionar a URL no [`sitemap.xml`](./sitemap.xml).
+> 3. Adicionar o resumo do artigo no [`llms.txt`](./llms.txt) e o texto completo no [`llms-full.txt`](./llms-full.txt).

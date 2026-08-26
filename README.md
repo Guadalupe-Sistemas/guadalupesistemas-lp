@@ -27,11 +27,12 @@ Este repositório adota uma documentação modular projetada tanto para desenvol
 
 | Documento | Descrição e Finalidade |
 | :--- | :--- |
-| 🤖 [**`AGENTS.md`**](./AGENTS.md) | **Diretrizes para IA e Desenvolvedores:** Regras de ouro, padrões de código (HTML/CSS/JS), tom de voz da marca (Brand Voice), convenções de Git (Conventional Commits) e checklist pré-entrega. |
-| 📐 [**`SPEC.md`**](./SPEC.md) | **Especificação Técnica e de Produto:** Inventário de rotas, detalhamento das 16 seções do `index.html`, tokens do Design System v2, especificação dos scripts (`js/script.js` e `js/cookie-consent.js`) e metadados SEO. |
+| 🤖 [**`AGENTS.md`**](./AGENTS.md) | **Diretrizes para IA e Desenvolvedores:** Regras de ouro, protocolo de sincronização de docs, padrões de código (HTML/CSS/JS), tom de voz da marca, glossário terminológico, segurança e checklist pré-entrega. |
+| 📐 [**`SPEC.md`**](./SPEC.md) | **Especificação Técnica e de Produto:** Inventário de rotas, detalhamento das 16 seções do `index.html`, tokens do Design System v2, especificação dos scripts (`js/script.js` e `js/cookie-consent.js`), metadados SEO e template padrão para blog. |
 | 🏛 [**`DECISIONS.md`**](./DECISIONS.md) | **Registro de Decisões Técnicas:** Narrativa por tópicos justificando escolhas de engenharia e produto (Zero-Build vs. Frameworks, Funil via WhatsApp, conformidade LGPD, animações nativas). |
 | 🗺 [**`PLAN.md`**](./PLAN.md) | **Roadmap de Evolução:** Backlog priorizado com fases de curto, médio e longo prazo (testes E2E com Playwright, persistência de leads via Webhooks/Serverless, CMS Headless para o blog). |
-| 🔍 [**`llms.txt`**](./llms.txt) | **Contexto para LLMs:** Arquivo padronizado para consumo sintético por crawlers e assistentes de IA sobre os serviços e canais da Guadalupe Sistemas. |
+| 🔍 [**`llms.txt`**](./llms.txt) | **Contexto Sintético para IA:** Resumo executivo para consumo rápido por crawlers e assistentes de IA sobre os serviços e canais da Guadalupe Sistemas. |
+| 📖 [**`llms-full.txt`**](./llms-full.txt) | **Base de Conhecimento Completa para IA:** Conteúdo integral do site em Markdown puro (serviços, metodologias, cases, FAQs e artigos do blog). |
 
 ---
 
@@ -57,7 +58,8 @@ guadalupesistemas-lp/
 ├── SPEC.md                                         # Especificação técnica e funcional
 ├── DECISIONS.md                                    # Registro narrativo de decisões
 ├── PLAN.md                                         # Roadmap técnico e backlog futuro
-├── llms.txt                                        # Resumo padronizado para IA/crawlers
+├── llms.txt                                        # Resumo executivo para IA/crawlers
+├── llms-full.txt                                   # Conhecimento completo para IA em Markdown
 ├── robots.txt                                      # Regras de indexação para buscadores
 ├── sitemap.xml                                     # Mapa de URLs do site
 └── site.webmanifest                                # Manifesto PWA e favicons

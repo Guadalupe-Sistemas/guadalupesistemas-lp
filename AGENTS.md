@@ -33,11 +33,13 @@ Ao interagir com este repositório, o agente de IA ou desenvolvedor humano deve 
    - Mantenha hierarquia de títulos consistente (`h1` único por página, seguido de `h2`, `h3`).
    - Não remova meta tags de SEO, tags Open Graph, tags canônicas ou blocos de dados estruturados JSON-LD (`<script type="application/ld+json">`).
 5. **Mantenha os arquivos de IA e SEO sincronizados:**
-   - Ao adicionar ou renomear páginas, atualize imediatamente o `sitemap.xml` e o `llms.txt`.
+   - Ao adicionar ou renomear páginas, atualize imediatamente o `sitemap.xml`, `llms.txt` e `llms-full.txt`.
 6. **Respeite o Design System (`css/styles.css`):**
    - Sempre utilize as variáveis CSS declaradas no `:root` (ex.: `--violet-500`, `--navy-950`, `--font-heading`, `--font-body`). Não adicione cores arbitrárias *hardcoded* ou estilos *inline*.
 7. **Preserve a conformidade LGPD e Analytics:**
    - O Google Analytics (gtag.js) **nunca** deve ser carregado diretamente no `<head>` sem passar pelo controle do banner de cookies (`js/cookie-consent.js`).
+8. **SEGURANÇA E ZERO CREDENCIAIS NO REPOSITÓRIO:**
+   - **Nunca** comite chaves de API (OpenAI, Claude, Supabase, Vercel), tokens de webhook, senhas ou dados sensíveis de clientes no Git. Utilize exclusivamente variáveis de ambiente no painel da Vercel ou arquivos `.env.local` (assegurando que estejam listados no `.gitignore`).
 
 ---
 
@@ -62,7 +64,7 @@ Ao efetuar alterações no projeto, identifique o gatilho e atualize obrigatoria
 | **Nova decisão técnica, mudança de arquitetura, stack ou infra** | [`DECISIONS.md`](./DECISIONS.md) | Registre o contexto, as alternativas consideradas e a justificativa da decisão no formato narrativo por tópicos. |
 | **Nova rota, alteração de seções, classes CSS, tokens ou lógica JS** | [`SPEC.md`](./SPEC.md) | Atualize a especificação técnica: parâmetros de scripts, variáveis do Design System, inventário de páginas ou seções. |
 | **Nova funcionalidade planejada, item concluído ou repriorização** | [`PLAN.md`](./PLAN.md) | Marque tarefas concluídas (`[x]`), adicione novos planos nas fases correspondentes e ajuste o roadmap. |
-| **Criação/remoção de páginas ou alteração na proposta de valor da marca** | [`llms.txt`](./llms.txt) & [`sitemap.xml`](./sitemap.xml) | Atualize a lista de páginas e o resumo executivo para robôs de busca e modelos de IA. |
+| **Criação/remoção de páginas ou alteração na proposta de valor da marca** | [`llms.txt`](./llms.txt), [`llms-full.txt`](./llms-full.txt) & [`sitemap.xml`](./sitemap.xml) | Atualize a lista de páginas e o resumo executivo/completo para robôs de busca e modelos de IA. |
 | **Mudança em diretrizes para agentes, padrões de código ou tom de voz** | [`AGENTS.md`](./AGENTS.md) | Atualize regras de conduta, convenções de código, tom de voz ou checklists. |
 | **Alteração na visão geral do repositório ou estrutura de diretórios** | [`README.md`](./README.md) | Atualize a árvore de arquivos, badges ou instruções de execução local. |
 
@@ -114,6 +116,17 @@ A **Guadalupe Sistemas** é uma parceira técnica séria e estratégica que entr
 - **Empática e Acessível:** Reconheça que o cliente não é da área de TI e quer soluções seguras, estáveis e com suporte humanizado.
 - **Ética e Transparência:** Deixar claro que na área de saúde a IA atua na parte **administrativa e de atendimento**, sem jamais substituir o julgamento clínico do profissional de saúde.
 
+### 5.4. Glossário de Terminologia Oficial
+
+| Termo Padronizado (Preferir) | Termos a Evitar / Inadequados | Contexto de Uso |
+| :--- | :--- | :--- |
+| **Diagnóstico de IA** | Consultoria genérica de TI, auditoria fria | Produto de entrada que analisa processos e calcula ROI prévio. |
+| **Agente de WhatsApp com IA** | Chatbot burro, URA, robôzinho, bot de menu | Atendimento conversacional com IA e linguagem natural empática. |
+| **Assistente de Conhecimento** | ChatGPT da empresa, banco de dados comum | IA treinada sobre documentos técnicos e normas internas (RAG). |
+| **Redução de No-show / Faltas** | Faltas de clientes, cancelamentos | Indicador chave de desempenho para clínicas e consultórios. |
+| **Sistemas e Apps sob Medida** | Fábrica de software, sistema de prateleira | Desenvolvimento personalizado adaptado ao fluxo do cliente. |
+| **Menos tarefa manual, mais resultado** | Otimize seus processos, impulsione seu negócio | Slogan e proposta de valor principal da marca. |
+
 ---
 
 ## 🌿 6. Diretrizes de Versionamento e Git
@@ -145,7 +158,8 @@ Exemplos:
 
 Antes de finalizar qualquer tarefa ou propor alterações:
 - [ ] **Leitura Prévia:** A documentação (`AGENTS.md`, `SPEC.md`, `DECISIONS.md`, `PLAN.md`) foi consultada antes da implementação?
-- [ ] **Sincronização de Docs:** Todos os arquivos de documentação impactados (`SPEC.md`, `DECISIONS.md`, `PLAN.md`, `llms.txt`, `sitemap.xml`, `README.md`) foram atualizados?
+- [ ] **Sincronização de Docs:** Todos os arquivos de documentação impactados (`SPEC.md`, `DECISIONS.md`, `PLAN.md`, `llms.txt`, `llms-full.txt`, `sitemap.xml`, `README.md`) foram atualizados?
+- [ ] **Segurança:** Nenhuma chave de API, segredo ou dado confidencial foi inserido no código-fonte?
 - [ ] **Execução e Console:** O site carrega perfeitamente via servidor local estático sem erros no console?
 - [ ] **Responsividade:** O layout foi validado em viewport mobile (375px–480px) e desktop (1200px+)?
 - [ ] **Links e Conversão:** Todas as âncoras e botões de CTA abrem o WhatsApp ou a seção correta?
