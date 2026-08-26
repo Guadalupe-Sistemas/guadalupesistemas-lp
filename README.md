@@ -82,7 +82,7 @@ Cada página delimita os blocos assim:
 
 ## ✅ Verificadores
 
-Rode os três antes de qualquer commit:
+Rode todos antes de qualquer commit:
 
 ```bash
 node tools/sync-layout.mjs --check   # nav/footer em sincronia com partials/
