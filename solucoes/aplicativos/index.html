@@ -103,6 +103,22 @@
                     "@type": "Answer",
                     "text": "Precisa, e isso não é opcional. Android e iOS lançam versões novas todo ano e as lojas passam a exigir atualização técnica para manter o app publicado. Um aplicativo abandonado por dois anos costuma parar de funcionar ou sair do ar. Por isso a manutenção é combinada desde o início do projeto, e não tratada como custo surpresa."
                 }
+            },
+            {
+                "@type": "Question",
+                "name": "Quanto custa desenvolver um aplicativo para empresa?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "O valor sai da soma de fatores que dá para listar: quantas telas o app tem, quantos perfis de usuário, quais integrações precisa, se usa câmera e localização, se precisa funcionar sem internet e quanto dado antigo será migrado. App costuma custar mais do que o mesmo escopo em versão web, porque envolve publicação nas lojas e manutenção obrigatória. Detalhamos cada fator na página sobre quanto custa um sistema personalizado."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "O aplicativo funciona no Android e no iPhone?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Sim. Desenvolvemos com uma base de código única que gera as duas versões, em vez de dois projetos separados — o que reduz bastante o custo e faz com que uma correção valha para os dois sistemas ao mesmo tempo. Quando o projeto é um PWA, ele roda direto no navegador de qualquer celular, sem passar pelas lojas. Qual dos dois caminhos faz sentido depende dos recursos do aparelho que o app precisa usar."
+                }
             }
         ]
     }
@@ -432,6 +448,68 @@
             </div>
         </section>
 
+        <!-- ========== QUANDO COMPENSA ========== -->
+        <section class="section-dark">
+            <div class="pixel-texture"></div>
+            <div class="container">
+                <div class="section-header reveal">
+                    <span class="section-tag">Quando compensa</span>
+                    <h2>
+                        <span class="title-light">Desenvolvimento de aplicativos:</span><br>
+                        <span class="title-bold">quando a empresa realmente precisa de um</span>
+                    </h2>
+                    <p class="section-subtitle">Nem toda empresa precisa de app — e vender app para quem não precisa é
+                        a forma mais cara de resolver um problema que um sistema web resolveria. Estes são os quatro
+                        casos em que ele se paga.</p>
+                </div>
+
+                <div class="glass-grid">
+                    <div class="glass-card reveal">
+                        <div class="glass-icon">
+                            <i class="fa-solid fa-truck-field"></i>
+                        </div>
+                        <h3>Equipe em campo</h3>
+                        <p>Técnico, vendedor externo, equipe de obra ou de entrega. Quem trabalha fora do escritório
+                            precisa registrar no celular, na hora, sem voltar para digitar depois — que é quando o dado
+                            se perde.</p>
+                    </div>
+
+                    <div class="glass-card reveal">
+                        <div class="glass-icon">
+                            <i class="fa-solid fa-camera"></i>
+                        </div>
+                        <h3>Recursos do aparelho</h3>
+                        <p>Foto de comprovante ou de serviço executado, leitura de código de barras, localização,
+                            assinatura na tela. Um site consegue parte disso; app instalado consegue tudo, com melhor
+                            experiência.</p>
+                    </div>
+
+                    <div class="glass-card reveal">
+                        <div class="glass-icon">
+                            <i class="fa-solid fa-wifi"></i>
+                        </div>
+                        <h3>Internet instável</h3>
+                        <p>Zona rural, subsolo, galpão. O app guarda o registro no aparelho e sincroniza quando o sinal
+                            volta. É o caso em que web simplesmente não atende.</p>
+                    </div>
+
+                    <div class="glass-card reveal">
+                        <div class="glass-icon">
+                            <i class="fa-solid fa-bell"></i>
+                        </div>
+                        <h3>Uso frequente pelo cliente final</h3>
+                        <p>Quando o cliente abre várias vezes por semana e você precisa de notificação na tela dele.
+                            Para consulta esporádica, um endereço no navegador converte mais do que um app que ninguém
+                            quer instalar.</p>
+                    </div>
+                </div>
+
+                <div class="hero-ctas hero-ctas--center stack-md">
+                    <a href="/desenvolvimento-de-sistemas/" class="btn btn-ghost">Ver desenvolvimento de sistemas</a>
+                </div>
+            </div>
+        </section>
+
         <!-- ========== O QUE NÃO FAZ ========== -->
         <section class="section-light">
             <div class="container">
@@ -543,6 +621,40 @@
                                 </p>
                             </div>
                         </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>Quanto custa desenvolver um aplicativo para empresa?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    O valor sai da soma de fatores que dá para listar: quantas telas o app
+                                    tem, quantos perfis de usuário, quais integrações precisa, se usa câmera e
+                                    localização, se precisa funcionar sem internet e quanto dado antigo será
+                                    migrado. App costuma custar mais do que o mesmo escopo em versão web,
+                                    porque envolve publicação nas lojas e manutenção obrigatória. Detalhamos
+                                    cada fator na página sobre quanto custa um sistema personalizado.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question" aria-expanded="false">
+                                <span>O aplicativo funciona no Android e no iPhone?</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p>
+                                    Sim. Desenvolvemos com uma base de código única que gera as duas versões,
+                                    em vez de dois projetos separados — o que reduz bastante o custo e faz com
+                                    que uma correção valha para os dois sistemas ao mesmo tempo. Quando o
+                                    projeto é um PWA, ele roda direto no navegador de qualquer celular, sem
+                                    passar pelas lojas. Qual dos dois caminhos faz sentido depende dos
+                                    recursos do aparelho que o app precisa usar.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -600,6 +712,9 @@
                     </a>
                     <p class="footer-tagline">IA, automação e sistemas sob medida com propósito, parceria e confiança
                         para o crescimento contínuo do seu negócio.</p>
+                    <p class="footer-region">Atendemos a partir do <a
+                            href="/automacao-e-sistemas-em-minas-gerais/">Centro-Oeste de Minas Gerais</a>, de forma
+                        remota, para empresas de todo o Brasil.</p>
                 </div>
 
                 <div class="footer-col">
@@ -607,6 +722,7 @@
                     <ul>
                         <li><a href="/solucoes/agentes-de-ia/">Agentes de IA</a></li>
                         <li><a href="/solucoes/automacao-de-processos/">Automação de Processos</a></li>
+                        <li><a href="/automacao-de-whatsapp/">Automação de WhatsApp</a></li>
                         <li><a href="/solucoes/assistente-de-conhecimento/">Assistente de Conhecimento</a></li>
                         <li><a href="/solucoes/sistemas-sob-medida/">Sistemas Sob Medida</a></li>
                         <li><a href="/solucoes/aplicativos/">Aplicativos</a></li>
@@ -614,14 +730,24 @@
                 </div>
 
                 <div class="footer-col">
-                    <h4>Guadalupe</h4>
+                    <h4>Para o seu problema</h4>
                     <ul>
-                        <li><a href="/diagnostico-de-ia/">Diagnóstico de IA</a></li>
+                        <li><a href="/inteligencia-artificial-para-empresas/">IA para Empresas</a></li>
+                        <li><a href="/desenvolvimento-de-sistemas/">Desenvolvimento de Sistemas</a></li>
+                        <li><a href="/quanto-custa-um-sistema-personalizado/">Quanto custa um sistema?</a></li>
                         <li><a href="/para-clinicas/">Para Clínicas</a></li>
                         <li><a href="/para-engenharia/">Para Engenharia</a></li>
+                        <li><a href="/diagnostico-de-ia/">Diagnóstico de IA</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Guadalupe</h4>
+                    <ul>
                         <li><a href="/casos/">Casos Reais</a></li>
                         <li><a href="/sobre/">Sobre nós</a></li>
                         <li><a href="/blog/">Blog</a></li>
+                        <li><a href="/automacao-e-sistemas-em-minas-gerais/">Onde atendemos</a></li>
                     </ul>
                 </div>
 

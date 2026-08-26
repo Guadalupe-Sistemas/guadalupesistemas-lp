@@ -875,6 +875,16 @@ img {
     margin: 0 auto;
 }
 
+/* Passo a passo dentro de seção escura: o anel branco do .step-number e a cor
+   de título vinda do h1..h6 global ficariam ilegíveis sobre o navy. */
+.section-dark .step-number {
+    box-shadow: 0 0 0 8px var(--navy-950), var(--shadow-glow);
+}
+
+.section-dark .step-item h3 {
+    color: var(--white);
+}
+
 /* ---------------------------------------------------------------
    13. CASES / CASOS DE SUCESSO
    --------------------------------------------------------------- */
@@ -1084,6 +1094,23 @@ img {
     color: rgba(255, 255, 255, 0.55);
     font-size: 0.85rem;
     line-height: 1.4;
+}
+
+.number-source {
+    display: inline-block;
+    margin-top: 0.9rem;
+    color: var(--violet-300);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(183, 166, 247, 0.35);
+    padding-bottom: 2px;
+    transition: var(--transition);
+}
+
+.number-source:hover {
+    color: var(--white);
+    border-bottom-color: var(--white);
 }
 
 /* ---------------------------------------------------------------
@@ -1644,8 +1671,8 @@ img {
 
 .footer-top {
     display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr 1.1fr;
-    gap: 2.5rem;
+    grid-template-columns: 1.5fr 1fr 1.15fr 0.8fr 1.15fr;
+    gap: 2rem;
     margin-bottom: 3rem;
 }
 
@@ -1657,6 +1684,25 @@ img {
     font-size: 0.9rem;
     line-height: 1.7;
     max-width: 300px;
+}
+
+/* Região de atendimento: sinal geográfico explícito em todas as páginas. */
+.footer-region {
+    font-size: 0.85rem;
+    line-height: 1.7;
+    max-width: 300px;
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.footer-region a {
+    color: var(--violet-300);
+    border-bottom: 1px solid rgba(183, 166, 247, 0.3);
+}
+
+.footer-region a:hover {
+    color: var(--white);
+    border-bottom-color: var(--white);
 }
 
 .footer-col h4 {
