@@ -210,7 +210,7 @@
                             </div>
                         </div>
 
-                        <p style="margin-top: 1rem;">
+                        <p class="stack-sm">
                             <a href="https://instagram.com/guadalupesistemas" target="_blank"
                                 rel="noopener noreferrer" class="btn-link-arrow">
                                 <i class="fa-brands fa-instagram" aria-hidden="true"></i> @guadalupesistemas
@@ -240,8 +240,8 @@
                                 <option value="Outro">Outro</option>
                             </select>
 
-                            <label class="form-label" for="whatsapp">WhatsApp</label>
-                            <input type="tel" id="whatsapp" name="whatsapp" class="form-input"
+                            <label class="form-label" for="contato">WhatsApp</label>
+                            <input type="tel" id="contato" name="contato" class="form-input"
                                 placeholder="(00) 00000-0000" autocomplete="tel" required>
 
                             <label class="form-label" for="email">E-mail</label>
@@ -329,7 +329,7 @@
         <!-- ========== CTA FINAL ========== -->
         <section class="section-dark">
             <div class="pixel-texture"></div>
-            <div class="container" style="position: relative; z-index: 1;">
+            <div class="container">
                 <div class="section-header reveal">
                     <h2>
                         <span class="title-light">Sem formulário,</span><br>
@@ -338,7 +338,7 @@
                     <p class="section-subtitle">Uma mensagem no WhatsApp resolve. E se quiser chegar com o problema já
                         mapeado, comece pelo diagnóstico.</p>
                 </div>
-                <div class="hero-ctas" style="justify-content: center;">
+                <div class="hero-ctas hero-ctas--center">
                     <a href="/diagnostico-de-ia/" class="btn btn-primary-white" data-cta="contato-final">Fazer meu
                         diagnóstico</a>
                     <a href="https://wa.me/5537998323232" target="_blank" rel="noopener noreferrer"
@@ -427,7 +427,7 @@
       Envio do formulário desta página.
 
       js/script.js já liga qualquer form:not(.multi-step-form) ao WhatsApp, mas
-      a função sendToWhatsApp() só lê os campos solucao/objetivo/contato_nome —
+      a função sendToWhatsApp() só lê os campos solucao/objetivo/nome/contato —
       os campos daqui ficariam de fora da mensagem. Este handler é registrado
       durante o parse, ou seja, ANTES do listener que script.js adiciona no
       DOMContentLoaded; por isso stopImmediatePropagation() impede o genérico de
@@ -456,7 +456,7 @@
                     '*Nome:* ' + (value('nome') || 'Não informado'),
                     '*Empresa:* ' + (value('empresa') || 'Não informada'),
                     '*Segmento:* ' + (value('segmento') || 'Não informado'),
-                    '*WhatsApp:* ' + (value('whatsapp') || 'Não informado'),
+                    '*WhatsApp:* ' + (value('contato') || 'Não informado'),
                     '*E-mail:* ' + (value('email') || 'Não informado'),
                     '*Número de funcionários:* ' + (value('num_funcionarios') || 'Não informado'),
                     '',

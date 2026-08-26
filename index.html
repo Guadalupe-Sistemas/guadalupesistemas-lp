@@ -282,7 +282,7 @@
                                 faturamento da clínica.</p>
                         </div>
                     </div>
-                    <p class="text-center reveal" style="margin-top: 1.5rem;">
+                    <p class="text-center reveal stack-md">
                         <a href="/para-clinicas/" class="btn-link-arrow">Ver como resolvemos isso em clínicas <span
                                 class="arrow">↗</span></a>
                     </p>
@@ -320,7 +320,7 @@
                                 espalhados em pastas.</p>
                         </div>
                     </div>
-                    <p class="text-center reveal" style="margin-top: 1.5rem;">
+                    <p class="text-center reveal stack-md">
                         <a href="/para-engenharia/" class="btn-link-arrow">Ver como resolvemos isso em engenharia <span
                                 class="arrow">↗</span></a>
                     </p>
@@ -457,7 +457,7 @@
                     </div>
                 </div>
 
-                <p class="text-center reveal" style="margin-top: 2.5rem;">
+                <p class="text-center reveal stack-lg">
                     <a href="/solucoes/" class="btn btn-outline">Ver todas as soluções</a>
                 </p>
             </div>
@@ -530,7 +530,7 @@
                     </a>
                 </div>
 
-                <p class="text-center reveal" style="margin-top: 2.5rem;">
+                <p class="text-center reveal stack-lg">
                     <a href="/casos/" class="btn btn-outline">Ver todos os casos</a>
                 </p>
             </div>
@@ -539,11 +539,11 @@
         <!-- ========== 6. DIAGNÓSTICO DE IA (Dark) ========== -->
         <section id="diagnostico" class="section-dark diagnostico-section">
             <div class="pixel-texture"></div>
-            <div class="container" style="position: relative; z-index: 1;">
+            <div class="container">
                 <div class="diagnostico-layout">
                     <div class="diagnostico-text">
-                        <div class="section-header reveal"
-                            style="text-align: left; margin-bottom: 2rem; max-width: none;">
+                        <div class="section-header reveal section-header--left stack-below"
+                           >
                             <span class="section-tag">Ponto de partida</span>
                             <h2>
                                 <span class="title-light">Antes de qualquer sistema,</span><br>
@@ -568,7 +568,7 @@
                                 data-cta="home-diagnostico">Fazer meu diagnóstico</a>
                             <a href="https://wa.me/5537998323232" target="_blank" rel="noopener noreferrer"
                                 class="btn-link-arrow" data-wa-origin="home-diagnostico"
-                                style="color: rgba(255,255,255,.8);">Falar no WhatsApp <span
+                               >Falar no WhatsApp <span
                                     class="arrow">↗</span></a>
                         </div>
                     </div>
@@ -662,7 +662,7 @@
                         <span class="title-light">Nossos</span>
                         <span class="title-bold">Resultados</span>
                     </h2>
-                    <p class="section-subtitle" style="color: rgba(255,255,255,.7);">Números medidos em projetos que já
+                    <p class="section-subtitle">Números medidos em projetos que já
                         estão rodando. Cada um deles vem de um caso que você pode ler por inteiro.</p>
                 </div>
 
@@ -796,7 +796,7 @@
         <!-- ========== 9. POR QUE A GUADALUPE (Dark + Glass) ========== -->
         <section id="por-que" class="section-dark why-section">
             <div class="pixel-texture"></div>
-            <div class="container" style="position: relative; z-index: 1;">
+            <div class="container">
                 <div class="why-header">
                     <div class="section-header reveal">
                         <h2>
@@ -841,13 +841,13 @@
                             <i class="fa-solid fa-shield-halved"></i>
                         </div>
                         <h3>LGPD desde o início</h3>
-                        <p>Tratamento de dados definido no projeto, não depois. <a href="/seguranca-e-lgpd/"
-                                style="color: var(--violet-300); text-decoration: underline;">Veja como cuidamos
+                        <p>Tratamento de dados definido no projeto, não depois. <a class="link-inline" href="/seguranca-e-lgpd/"
+                               >Veja como cuidamos
                                 disso</a>.</p>
                     </div>
                 </div>
 
-                <p class="text-center reveal" style="margin-top: 2.5rem;">
+                <p class="text-center reveal stack-lg">
                     <a href="/sobre/" class="btn btn-ghost">Conhecer a Guadalupe</a>
                 </p>
             </div>
@@ -960,7 +960,7 @@
                             </div>
                         </div>
 
-                        <p style="margin-top: 1.5rem;">
+                        <p class="stack-md">
                             <a href="/contato/" class="btn-link-arrow">Prefere um formulário completo? <span
                                     class="arrow">↗</span></a>
                         </p>
@@ -1024,10 +1024,12 @@
 
                             <!-- Step 3 -->
                             <div class="form-step" data-step="3">
-                                <label class="form-label" for="contato_nome">Como podemos chamar você e qual seu
+                                <label class="form-label" for="nome">Como podemos chamar você e qual seu
                                     WhatsApp?</label>
-                                <input type="text" id="contato_nome" name="contato_nome" class="form-input"
-                                    placeholder="Seu nome completo e número com DDD" required>
+                                <input type="text" id="nome" name="nome" class="form-input"
+                                    placeholder="Seu nome completo" required>
+                                <input type="text" id="contato" name="contato" class="form-input" 
+                                    placeholder="Seu número com DDD"/>
                                 <div class="form-nav-buttons">
                                     <button type="button" class="btn btn-ghost-dark form-prev">Voltar</button>
                                     <button type="submit" class="btn btn-primary-violet">
@@ -1078,32 +1080,42 @@
                     </h2>
                 </div>
 
+                <!-- .blog-grid-featured é grid de 2 colunas (max 820px); aqui são
+                     3 cards, então fica o grid padrão. Os resumos e o bloco
+                     .blog-see-all vieram da PR #1 e foram mantidos. -->
                 <div class="blog-grid">
                     <article class="blog-card reveal">
                         <span class="blog-tag">Produtividade</span>
                         <h3>Como a automação economiza dezenas de horas no mês</h3>
-                        <a href="/blog/automacao-economia-de-horas/" class="btn-link-arrow">Ler artigo <span
-                                class="arrow">↗</span></a>
+                        <p>A conta que quase ninguém faz: 3 minutos por confirmação, 40 confirmações por dia, 22 dias
+                            úteis. Faça a multiplicação e veja o que a repetição custa.</p>
+                        <a href="/blog/automacao-economia-de-horas/" class="btn-link-arrow">Ler artigo
+                            <span class="arrow">↗</span></a>
                     </article>
 
                     <article class="blog-card reveal">
                         <span class="blog-tag">Gestão</span>
-                        <h3>Quando vale a pena investir em um sistema próprio para sua empresa?</h3>
-                        <a href="/blog/quando-investir-em-sistema-proprio/" class="btn-link-arrow">Ler artigo <span
-                                class="arrow">↗</span></a>
+                        <h3>Quando vale a pena investir em um sistema próprio?</h3>
+                        <p>Os sinais de que a planilha chegou ao limite, a diferença real entre software pronto e sob
+                            medida, e como calcular em quantos meses o investimento se paga.</p>
+                        <a href="/blog/quando-investir-em-sistema-proprio/" class="btn-link-arrow">Ler artigo
+                            <span class="arrow">↗</span></a>
                     </article>
 
                     <article class="blog-card reveal">
                         <span class="blog-tag">Atendimento</span>
                         <h3>O guia simples para organizar o atendimento via WhatsApp</h3>
-                        <a href="/blog/organizar-atendimento-whatsapp/" class="btn-link-arrow">Ler artigo <span
-                                class="arrow">↗</span></a>
+                        <p>Cinco passos, em ordem de esforço: número único, mapeamento das perguntas que se repetem,
+                            quem responde o quê, automação e medição.</p>
+                        <a href="/blog/organizar-atendimento-whatsapp/" class="btn-link-arrow">Ler artigo
+                            <span class="arrow">↗</span></a>
                     </article>
                 </div>
 
-                <p class="text-center reveal" style="margin-top: 2.5rem;">
-                    <a href="/blog/" class="btn btn-outline">Ver todos os artigos</a>
-                </p>
+                <div class="blog-see-all reveal">
+                    <a href="/blog/" class="btn btn-outline">Ver todos os artigos <span
+                            class="arrow">↗</span></a>
+                </div>
             </div>
         </section>
 

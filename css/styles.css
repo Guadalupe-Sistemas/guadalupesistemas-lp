@@ -1537,12 +1537,31 @@ img {
     margin-bottom: 1rem;
 }
 
+/* Destaque na home: apenas os artigos publicados, grid centralizado */
+.blog-grid-featured {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 820px;
+    margin: 0 auto;
+}
+
 .blog-card h3 {
     font-size: 1.15rem;
     font-weight: 600;
     line-height: 1.4;
+    margin-bottom: 0.75rem;
+}
+
+.blog-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--ink-500);
     margin-bottom: 1.5rem;
     flex-grow: 1;
+}
+
+.blog-see-all {
+    text-align: center;
+    margin-top: 2.5rem;
 }
 
 /* ---------------------------------------------------------------
@@ -1973,6 +1992,14 @@ img {
 
     .cta-box {
         padding: 1.75rem 1.5rem;
+    }
+
+    .cta-box .btn {
+        display: flex;
+        width: 100%;
+        white-space: normal;
+        padding: 0.875rem 1.25rem;
+        line-height: 1.35;
     }
 }
 
@@ -3001,4 +3028,73 @@ a.case-card .btn-link-arrow {
         border-radius: 50%;
         font-size: 2rem;
     }
+}
+
+/* --------------------------------------------------------------------------
+   Utilitários que substituem estilos inline
+   A regra 6 do AGENTS.md proíbe estilo inline. Os padrões abaixo se repetiam
+   dezenas de vezes no HTML e passam a viver aqui.
+   -------------------------------------------------------------------------- */
+
+/* Seções escuras têm .pixel-texture/.diamond-pattern posicionados de forma
+   absoluta atrás do conteúdo; o container precisa subir na pilha. Antes isso
+   era um style="position: relative; z-index: 1" repetido em 33 lugares. */
+.section-dark .container {
+    position: relative;
+    z-index: 1;
+}
+
+.section-dark .section-subtitle {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.section-dark .btn-link-arrow {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Link dentro de texto em seção escura. */
+.section-dark .link-inline {
+    color: var(--violet-300);
+    text-decoration: underline;
+}
+
+/* Cabeçalho de seção alinhado à esquerda (layouts de duas colunas). */
+.section-header--left {
+    text-align: left;
+    max-width: none;
+}
+
+/* Grupo de CTAs centralizado. */
+.hero-ctas--center {
+    justify-content: center;
+}
+
+/* Espaçamento vertical pontual. */
+.stack-sm {
+    margin-top: 1rem;
+}
+
+.stack-md {
+    margin-top: 1.5rem;
+}
+
+.stack-lg {
+    margin-top: 2.5rem;
+}
+
+.stack-xl {
+    margin-top: 3rem;
+}
+
+.stack-block {
+    margin: 3rem 0;
+}
+
+.stack-below {
+    margin-bottom: 1.5rem;
+}
+
+/* Página de texto puro sem hero (política de privacidade). */
+.page-plain {
+    padding-top: 9rem;
 }
