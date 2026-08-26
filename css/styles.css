@@ -1537,12 +1537,31 @@ img {
     margin-bottom: 1rem;
 }
 
+/* Destaque na home: apenas os artigos publicados, grid centralizado */
+.blog-grid-featured {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 820px;
+    margin: 0 auto;
+}
+
 .blog-card h3 {
     font-size: 1.15rem;
     font-weight: 600;
     line-height: 1.4;
+    margin-bottom: 0.75rem;
+}
+
+.blog-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--ink-500);
     margin-bottom: 1.5rem;
     flex-grow: 1;
+}
+
+.blog-see-all {
+    text-align: center;
+    margin-top: 2.5rem;
 }
 
 /* ---------------------------------------------------------------
@@ -1973,6 +1992,14 @@ img {
 
     .cta-box {
         padding: 1.75rem 1.5rem;
+    }
+
+    .cta-box .btn {
+        display: flex;
+        width: 100%;
+        white-space: normal;
+        padding: 0.875rem 1.25rem;
+        line-height: 1.35;
     }
 }
 
